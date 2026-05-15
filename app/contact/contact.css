@@ -1,0 +1,457 @@
+
+/* ─────────────────────────────
+   BRAND TOKENS
+───────────────────────────── */
+:root {
+  --c1: #E7F0FA;
+  --c2: #7BA4D0;
+  --c3: #2E5E99;
+  --c4: #0D2440;
+
+  --white: #ffffff;
+  --text-body: #2a3f57;
+  --text-muted: #5a7a9a;
+  --border: rgba(123, 164, 208, 0.22);
+
+  --ease: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius: 16px;
+  --shadow-sm: 0 2px 12px rgba(13, 36, 64, 0.07);
+  --shadow-md: 0 10px 36px rgba(13, 36, 64, 0.13);
+}
+
+/* ─────────────────────────────
+   BASE
+───────────────────────────── */
+.contact-page {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-body);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────
+   HERO
+───────────────────────────── */
+.contact-hero {
+  position: relative;
+  background: var(--c4);
+  padding: 96px 48px 86px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-hero-shape-1 {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46, 94, 153, 0.5) 0%, transparent 70%);
+  top: -160px;
+  left: -100px;
+  pointer-events: none;
+}
+
+.contact-hero-shape-2 {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(123, 164, 208, 0.18) 0%, transparent 70%);
+  bottom: -110px;
+  right: -70px;
+  pointer-events: none;
+}
+
+.contact-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.contact-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(123, 164, 208, 0.14);
+  border: 1px solid rgba(123, 164, 208, 0.32);
+  color: var(--c2);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 26px;
+}
+
+.contact-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+}
+
+.contact-hero-em {
+  color: var(--c2);
+  font-style: italic;
+}
+
+.contact-hero-sub {
+  font-size: clamp(15px, 1.8vw, 18px);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ─────────────────────────────
+   SHARED LABEL
+───────────────────────────── */
+.section-label-wrap {
+  margin-bottom: 52px;
+}
+
+.section-label-wrap.centered {
+  text-align: center;
+}
+
+.section-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--c3);
+  margin-bottom: 10px;
+}
+
+/* ─────────────────────────────
+   LOCATIONS SECTION
+───────────────────────────── */
+.locations-section {
+  background: var(--c1);
+  padding: 86px 48px;
+}
+
+.locations-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.locations-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--c4);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── LOCATION CARD ── */
+.location-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 36px 28px 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+
+.location-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--c2);
+}
+
+.location-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--c1);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: background var(--ease), border-color var(--ease);
+}
+
+.location-card:hover .location-icon-wrap {
+  background: var(--c3);
+  border-color: var(--c3);
+}
+
+.location-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+  color: var(--c3);
+  transition: color var(--ease);
+}
+
+.location-card:hover .location-icon-wrap svg {
+  color: var(--white);
+}
+
+.location-country {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--c4);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.location-city {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c3);
+  margin: 0 0 16px;
+}
+
+.location-address {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin: 0 0 20px;
+}
+
+.location-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.location-phone {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c3);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+
+.location-phone:hover {
+  color: var(--c4);
+}
+
+.location-email {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c2);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+
+.location-email:hover {
+  color: var(--c3);
+}
+
+.location-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1.5px solid var(--c3);
+  color: var(--c3);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 22px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background var(--ease), color var(--ease), border-color var(--ease);
+  margin-top: auto;
+}
+
+.location-map-btn:hover {
+  background: var(--c3);
+  color: var(--white);
+}
+
+/* ─────────────────────────────
+   DEPARTMENT SECTION
+───────────────────────────── */
+.dept-section {
+  background: var(--white);
+  padding: 86px 48px;
+}
+
+.dept-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.dept-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--c4);
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.dept-subheading {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ── DEPT CARD ── */
+.dept-card {
+  background: var(--c1);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 32px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease), background var(--ease);
+}
+
+.dept-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--c3);
+  background: var(--white);
+}
+
+.dept-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: background var(--ease), border-color var(--ease);
+}
+
+.dept-card:hover .dept-icon-wrap {
+  background: var(--c3);
+  border-color: var(--c3);
+}
+
+.dept-icon-wrap svg {
+  width: 20px;
+  height: 20px;
+  color: var(--c3);
+  transition: color var(--ease);
+}
+
+.dept-card:hover .dept-icon-wrap svg {
+  color: var(--white);
+}
+
+.dept-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--c4);
+  margin: 0 0 8px;
+}
+
+.dept-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.dept-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.dept-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c3);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+
+.dept-phone:hover {
+  color: var(--c4);
+}
+
+.dept-phone svg {
+  flex-shrink: 0;
+  color: var(--c2);
+}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+@media (max-width: 1024px) {
+  .dept-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .contact-hero {
+    padding: 72px 24px 64px;
+  }
+
+  .locations-section,
+  .dept-section {
+    padding: 64px 24px;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .dept-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-hero {
+    padding: 56px 20px;
+  }
+
+  .locations-section,
+  .dept-section {
+    padding: 52px 20px;
+  }
+
+  .dept-grid {
+    grid-template-columns: 1fr;
+  }
+}
