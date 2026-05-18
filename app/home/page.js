@@ -1,11 +1,8 @@
+import "./home.css";
 
-import "./home.css"
-
-export default function Home(){
-    return(
-      
-<div>
-   <main className="hm">
+export default function Home() {
+  return (
+    <main className="hm">
 
       {/* ═══════════════════ HERO ═══════════════════ */}
       <section className="hm-hero">
@@ -13,7 +10,7 @@ export default function Home(){
         <div className="hm-blob hm-blob--2" />
 
         <div className="hm-hero__text">
-          <span className="hm-eyebrow"> Trusted Nursing Consultancy</span>
+          <span className="hm-eyebrow">Trusted Nursing Consultancy</span>
           <h1 className="hm-hero__h1">
             Your Dream Career<br />
             in <em>New Zealand</em><br />
@@ -155,18 +152,19 @@ export default function Home(){
         </div>
 
         <div className="hm-enquiry__box">
-          <iframe
-            aria-label="Client Details"
-            frameBorder="0"
-            scrolling="no"
-            src="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc"
-            title="Enquiry Form"
-            loading="lazy"
-          />
+          <div className="hm-enquiry__iframe-wrap">
+            <iframe
+              aria-label="Client Details"
+              frameBorder="0"
+              scrolling="no"
+              src="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc"
+              title="Enquiry Form"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
     </main>
-    </div>
-    )
+  );
 }

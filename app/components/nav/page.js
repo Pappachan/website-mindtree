@@ -1,11 +1,40 @@
+"use client";
 
-import Link from "next/link"
-import "./nav.css"
-export default function nav(){
-    return(
-    
-<div>
-     <div className="topbar">
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import "./nav.css";
+
+export default function Nav() {
+  const pathname  = usePathname();
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [dropOpen,   setDropOpen]   = useState(false);
+
+  /* close drawer automatically whenever the route changes */
+  useEffect(() => {
+    setDrawerOpen(false);
+    setDropOpen(false);
+  }, [pathname]);
+
+  /* lock body scroll when drawer is open */
+  useEffect(() => {
+    document.body.style.overflow = drawerOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [drawerOpen]);
+
+  /* helpers */
+  const isActive = (href) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const closeAll = () => {
+    setDrawerOpen(false);
+    setDropOpen(false);
+  };
+
+  return (
+    <>
+      {/* ── TOP BAR ── */}
+      <div className="topbar">
         <div className="topbar-left">
           <span className="topbar-item">
             <svg className="topbar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -52,8 +81,6 @@ export default function nav(){
       </div>
 
       {/* ── MAIN NAVBAR ── */}
-      <input type="checkbox" id="nav-toggle" className="nav-toggle-input" />
-
       <nav className="navbar">
         <Link href="/" className="logo-wrap">
           <img className="logo-img" src="/logo1.png" alt="MindTree Nursing Solutions" />
@@ -61,117 +88,158 @@ export default function nav(){
 
         <div className="nav-right">
           <ul className="menu">
+
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" className={isActive("/") ? "active" : ""}>Home</Link>
             </li>
 
-            {/* KEY FIX: The dropdown wrapper covers both the trigger and the menu */}
-            <li className="dropdown">
-              <Link href="/services" className="dropdown-trigger">
+            <li
+              className="dropdown"
+              onMouseEnter={() => setDropOpen(true)}
+              onMouseLeave={() => setDropOpen(false)}
+            >
+              <Link
+                href="/services"
+                className={`dropdown-trigger${isActive("/services") ? " active" : ""}`}
+              >
                 Services
-                <svg className="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <svg className={`chevron${dropOpen ? " chevron-open" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </Link>
-              {/* Bridge element fills the gap between trigger and menu */}
-              <div className="dropdown-bridge" />
-              <ul className="dropdown-menu">
-                <li>
-                  <Link href="/oet">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
-                    </svg>
-                    OET
-                    <span className="menu-tag">Exam</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/iqn">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
-                    </svg>
-                    IQN
-                  </Link>
-                </li>
-                <li className="dropdown-sep-li"><div className="dropdown-sep" /></li>
-                <li>
-                  <Link href="/osce-kerala">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    OSCE Kerala
-                    <span className="menu-tag">India</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/osce-newzealand">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    OSCE New Zealand
-                    <span className="menu-tag">NZ</span>
-                  </Link>
-                </li>
-              </ul>
+
+              {dropOpen && <div className="dropdown-bridge" />}
+
+              {dropOpen && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link href="/services/cgfns" onClick={closeAll} className={isActive("/services/cgfns") ? "active" : ""}>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                      CGFNS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/oet" onClick={closeAll} className={isActive("/oet") ? "active" : ""}>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                      OET
+                      <span className="menu-tag">Exam</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/best-iqn-coaching" onClick={closeAll} className={isActive("/services/best-iqn-coaching") ? "active" : ""}>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                      IQN
+                    </Link>
+                  </li>
+                  <li className="dropdown-sep-li"><div className="dropdown-sep" /></li>
+                  <li>
+                    <Link href="/services/osce-training-kerala" onClick={closeAll} className={isActive("/services/osce-training-kerala") ? "active" : ""}>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      OSCE Kerala
+                      <span className="menu-tag">India</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/osce-training-new-zealand" onClick={closeAll} className={isActive("/services/osce-training-new-zealand") ? "active" : ""}>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      OSCE New Zealand
+                      <span className="menu-tag">NZ</span>
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
 
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog" className={isActive("/blog") ? "active" : ""}>Blog</Link>
             </li>
-
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/about" className={isActive("/about") ? "active" : ""}>About</Link>
             </li>
-
-              <li>
-              <Link href="/contact">Contact Us</Link>
+            <li>
+              <Link href="/contact" className={isActive("/contact") ? "active" : ""}>Contact Us</Link>
             </li>
           </ul>
 
-        <a
-  href="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="cta-btn"
->
-  Get in Touch
-</a>
-          <label htmlFor="nav-toggle" className="hamburger" aria-label="Toggle menu">
+          <a
+            href="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-btn"
+          >
+            Get in Touch
+          </a>
+
+          {/* Hamburger — pure React, no checkbox */}
+          <button
+            className={`hamburger${drawerOpen ? " hamburger--open" : ""}`}
+            onClick={() => setDrawerOpen(!drawerOpen)}
+            aria-label="Toggle menu"
+          >
             <span />
             <span />
             <span />
-          </label>
+          </button>
         </div>
       </nav>
 
       {/* ── MOBILE DRAWER ── */}
-      <label htmlFor="nav-toggle" className="drawer-backdrop" />
 
-      <div className="drawer-panel">
-        <label htmlFor="nav-toggle" className="drawer-close" aria-label="Close menu">
+      {/* Backdrop — click to close */}
+      {drawerOpen && (
+        <div className="drawer-backdrop" onClick={closeAll} />
+      )}
+
+      <div className={`drawer-panel${drawerOpen ? " drawer-panel--open" : ""}`}>
+        <button className="drawer-close" onClick={closeAll} aria-label="Close menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="20" height="20">
             <path d="M18 6L6 18M6 6l12 12" />
           </svg>
-        </label>
-        <img className="drawer-logo" src="/logo1.png" alt="MindTree" />
-        <ul className="drawer-menu">
-          <li><Link href="/">Home</Link></li>
-          <li>
-            <Link href="/services">Services</Link>
-            <ul className="drawer-submenu">
-              <li><Link href="/oet">OET</Link></li>
-              <li><Link href="/iqn">IQN</Link></li>
-              <li><Link href="/osce-kerala">OSCE Kerala</Link></li>
-              <li><Link href="/osce-newzealand">OSCE New Zealand</Link></li>
-            </ul>
-          </li>
-          <li><Link href="/blog">Blog</Link></li>
-          <li><Link href="/about">About</Link></li>
-        </ul>
-        <Link className="cta-btn" href="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc">
-        Get in Touch</Link>
-      </div>
-</div>
+        </button>
 
-    )
+        <img className="drawer-logo" src="/logo1.png" alt="MindTree" />
+
+        <ul className="drawer-menu">
+          <li>
+            <Link href="/" className={isActive("/") ? "active" : ""}>Home</Link>
+          </li>
+
+          {/* Services with accordion toggle */}
+          <li>
+            <button
+              className={`drawer-services-btn${isActive("/services") ? " active" : ""}`}
+              onClick={() => setDropOpen(!dropOpen)}
+            >
+              Services
+              <svg className={`chevron${dropOpen ? " chevron-open" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="14" height="14">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            {dropOpen && (
+              <ul className="drawer-submenu">
+                <li><Link href="/services/cgfns" className={isActive("/services/cgfns") ? "active" : ""}>CGFNS</Link></li>
+                <li><Link href="/oet" className={isActive("/oet") ? "active" : ""}>OET</Link></li>
+                <li><Link href="/services/best-iqn-coaching" className={isActive("/services/best-iqn-coaching") ? "active" : ""}>IQN</Link></li>
+                <li><Link href="/services/osce-training-kerala" className={isActive("/services/osce-training-kerala") ? "active" : ""}>OSCE Kerala</Link></li>
+                <li><Link href="/services/osce-training-new-zealand" className={isActive("/services/osce-training-new-zealand") ? "active" : ""}>OSCE New Zealand</Link></li>
+              </ul>
+            )}
+          </li>
+
+          <li><Link href="/blog"    className={isActive("/blog")    ? "active" : ""}>Blog</Link></li>
+          <li><Link href="/about"   className={isActive("/about")   ? "active" : ""}>About</Link></li>
+          <li><Link href="/contact" className={isActive("/contact") ? "active" : ""}>Contact Us</Link></li>
+        </ul>
+
+        <a
+          href="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-btn drawer-cta-btn"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </>
+  );
 }

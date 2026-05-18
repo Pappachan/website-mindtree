@@ -32,7 +32,7 @@ export default function BlogPage() {
             {/* Card 1 */}
             <Link href="/blog/the-success-stories-of-nurses-who-have-chosen-mindtree-nursing-solution-for-their-careers" className="blog-card">
               <div className="blog-card-img-wrap">
-                <img src="/the-success.jpg" alt="Success Stories" className="blog-card-img" />
+                <img src="/blogimg/the-success.jpg" alt="Success Stories" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
                     <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
@@ -52,9 +52,9 @@ export default function BlogPage() {
             </Link>
  
             {/* Card 2 — duplicate, change later */}
-            <Link href="/blog/blog-post-two" className="blog-card">
+            <Link href="/blog/why-is-mindtree-nursing-solution-the-best-choice-for-your-career" className="blog-card">
               <div className="blog-card-img-wrap">
-                <img src="/blog/blog2.jpg" alt="Blog Post" className="blog-card-img" />
+                <img src="/blogimg/why-is-mindtree-nursing-solution.jpg" alt="Blog Post" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
                     <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
@@ -64,19 +64,19 @@ export default function BlogPage() {
               </div>
               <div className="blog-card-body">
                 <h2 className="blog-card-title">
-                  Blog Post Title Two
+                 Why is Mindtree Nursing Solution the Best Choice for Your Career?
                 </h2>
                 <p className="blog-card-excerpt">
-                  Replace this with your blog excerpt. A short summary of the post content that gives readers a taste of what to expect inside...
+                  Mindtree Nursing Solution is the best choice for your career due to their unparalleled commitment to your professional growth and success. They offer a wide range of global study opportunities, job placements in prestigious healthcare systems like New Zealand and Australia, and specialised services for CGFNS and nursing council requirements....
                 </p>
                 <span className="blog-card-read">Read more →</span>
               </div>
             </Link>
  
             {/* Card 3 — duplicate, change later */}
-            <Link href="/blog/blog-post-three" className="blog-card">
+            <Link href="/blog/what-is-mindtree-nursing-solution-and-what-it-offers " className="blog-card">
               <div className="blog-card-img-wrap">
-                <img src="/blog/blog3.jpg" alt="Blog Post" className="blog-card-img" />
+                <img src="/blogimg/what-is-mindtree-nursing-solution-and-what-it-offers.jpg" alt="Blog Post" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
                     <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
@@ -86,10 +86,10 @@ export default function BlogPage() {
               </div>
               <div className="blog-card-body">
                 <h2 className="blog-card-title">
-                  Blog Post Title Three
+                What is Mindtree Nursing Solution and what it offers
                 </h2>
                 <p className="blog-card-excerpt">
-                  Replace this with your blog excerpt. A short summary of the post content that gives readers a taste of what to expect inside...
+                  Mindtree Nursing Solutions is a comprehensive platform dedicated to empowering nursing professionals worldwide. It offers a wide array of services, including global study opportunities, job placements in countries like New Zealand and Australia, specialised support for CGFNS and nursing council requirements, a 24/7 helpline, and free training programs for OSCE and OET....
                 </p>
                 <span className="blog-card-read">Read more →</span>
               </div>

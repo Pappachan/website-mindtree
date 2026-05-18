@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import "../blog.css";
 
-export default function BlogPostOne() {
+export default function BlogPostThree() {
   return (
     <main className="blog-page">
 
@@ -24,7 +24,7 @@ export default function BlogPostOne() {
         <div className="post-hero-inner">
           <span className="blog-hero-badge">Success Stories</span>
           <h1 className="post-title">
-            The Success Stories of Nurses Who Have Chosen Mindtree Nursing Solution for Their Careers
+           What is Mindtree Nursing Solution and what it offers
           </h1>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function BlogPostOne() {
 
           {/* Featured image */}
           <div className="post-featured-img-wrap">
-            <img src="/blogimg/the-success.jpg" alt="Success Stories" className="post-featured-img" />
+            <img src="/blogimg/what-is-mindtree-nursing-solution-and-what-it-offers.jpg" alt="Success Stories" className="post-featured-img" />
             <div className="post-featured-placeholder">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="52" height="52">
                 <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
@@ -46,10 +46,11 @@ export default function BlogPostOne() {
           {/* Article body */}
           <article className="post-article">
             <p className="post-para">
-              Mindtree Nursing Solution has witnessed numerous success stories of nurses who have chosen their services for their careers. From securing prestigious job placements in countries like New Zealand and Australia to successfully navigating the CGFNS and nursing council processes, nurses have achieved their goals with Mindtree's support.
+            Mindtree Nursing Solutions is a comprehensive platform dedicated to empowering nursing professionals worldwide. It offers a wide array of services, including global study opportunities, job placements in countries like New Zealand and Australia, specialised support for CGFNS and nursing council requirements, a 24/7 helpline, and free training programs for OSCE and OET.
             </p>
             <p className="post-para">
-              The personalised guidance, access to global study opportunities, and comprehensive training programs have empowered nurses to excel in their professions. These success stories highlight Mindtree Nursing Solution's commitment to fostering the growth and success of nurses, making it a trusted choice for those seeking a fulfilling and rewarding career in the field of nursing.
+             With their vast network and expertise, Mindtree Nursing Solutions provides personalised guidance, resources, and mentorship, ensuring nurses have the tools they need to succeed in their careers. Their commitment to professional growth, cultural diversity, and excellence in nursing makes them a top choice for nurses seeking comprehensive support and opportunities.
+
             </p>
           </article>
 

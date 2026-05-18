@@ -2,12 +2,11 @@
    nav.css — MindTree Nursing Solutions
    ============================================================ */
 
-/* ── CSS Variables ── */
 :root {
-  --color-primary:    #244178;;
-  --color-primary-dk: #244178;;
+  --color-primary:    #244178;
+  --color-primary-dk: #1a2f58;
   --color-accent:     #123c89;
-  --color-accent-lt:  #e6f7f5;
+  --color-accent-lt:  #e6eef8;
   --color-text:       #1a2633;
   --color-muted:      #5a6a76;
   --color-white:      #ffffff;
@@ -17,21 +16,18 @@
 
   --font-body: 'Outfit', sans-serif;
 
-  --shadow-nav:  0 4px 24px rgba(14, 107, 94, 0.10);
-  --shadow-drop: 0 8px 32px rgba(14, 107, 94, 0.14);
+  --shadow-nav:  0 4px 24px rgba(36, 65, 120, 0.10);
+  --shadow-drop: 0 8px 32px rgba(36, 65, 120, 0.14);
 
-  --radius-sm:  6px;
+  --radius-sm: 6px;
   --radius-md: 10px;
-
   --transition: 0.2s ease;
 }
 
-
-
-/* ── Reset helpers ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-ul { list-style: none; }
-a { text-decoration: none; color: inherit; }
+ul  { list-style: none; }
+a   { text-decoration: none; color: inherit; }
+button { border: none; background: none; cursor: pointer; font-family: var(--font-body); }
 
 /* ============================================================
    TOP BAR
@@ -42,13 +38,11 @@ a { text-decoration: none; color: inherit; }
   justify-content: space-between;
   height: var(--topbar-h);
   padding: 0 40px;
-  background: var(--color-primary-dk);
+  background: var(--color-primary);
   color: rgba(255,255,255,0.85);
   font-family: var(--font-body);
   font-size: 12.5px;
   font-weight: 400;
-   background-color: #244178;
- 
 }
 
 .topbar-left  { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
@@ -63,20 +57,9 @@ a { text-decoration: none; color: inherit; }
   opacity: 0.9;
 }
 
-.topbar-icon {
-  width: 13px;
-  height: 13px;
-  flex-shrink: 0;
-  opacity: 0.75;
-}
+.topbar-icon { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.75; }
+.topbar-sep  { width: 1px; height: 14px; background: rgba(255,255,255,0.2); }
 
-.topbar-sep {
-  width: 1px;
-  height: 14px;
-  background: rgba(255,255,255,0.2);
-}
-
-/* Social buttons */
 .social-btn {
   display: flex;
   align-items: center;
@@ -107,11 +90,9 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-body);
 }
 
-/* Logo */
 .logo-wrap { display: flex; align-items: center; flex-shrink: 0; }
 .logo-img  { height: 130px; width: auto; object-fit: contain; }
 
-/* Nav right cluster */
 .nav-right {
   display: flex;
   align-items: center;
@@ -136,8 +117,9 @@ a { text-decoration: none; color: inherit; }
   font-size: 14.5px;
   font-weight: 500;
   letter-spacing: 0.01em;
-  transition: color var(--transition), background var(--transition);
   white-space: nowrap;
+  position: relative;
+  transition: color var(--transition), background var(--transition);
 }
 
 .menu > li > a:hover,
@@ -146,80 +128,71 @@ a { text-decoration: none; color: inherit; }
   background: var(--color-accent-lt);
 }
 
-/* Chevron icon */
+/* ── ACTIVE — desktop ── */
+.menu > li > a.active,
+.dropdown-trigger.active {
+  color: var(--color-primary);
+  background: var(--color-accent-lt);
+  font-weight: 600;
+}
+
+.menu > li > a.active::after,
+.dropdown-trigger.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-primary);
+}
+
+/* ── Chevron ── */
 .chevron {
   width: 14px;
   height: 14px;
   transition: transform var(--transition);
   flex-shrink: 0;
 }
+.chevron-open { transform: rotate(180deg) !important; }
 
 /* ============================================================
-   DROPDOWN  — The hover-gap fix
+   DROPDOWN
    ============================================================ */
+.menu > li.dropdown { position: relative; }
 
-/*
-   PROBLEM: When you move your mouse from the trigger down to the menu,
-   there's a gap (caused by the box-shadow / padding). The mouse briefly
-   leaves the <li>, so the dropdown closes before you reach it.
-
-   FIX: We use padding-top on the dropdown-menu equal to the gap, and
-   push it up with a negative margin so it visually appears in the same
-   place. That way the hoverable area is continuous.
-
-   Alternative fix: a transparent "bridge" pseudo-element.
-*/
-
-.menu > li.dropdown {
-  position: relative;  /* anchor for the absolute dropdown */
-}
-
-/* The trigger link stays in normal flow — no changes needed */
-
-/* Invisible bridge fills the visual gap between trigger and menu */
 .dropdown-bridge {
   position: absolute;
-  top: 100%;          /* sits right below the <li> */
+  top: 100%;
   left: 0;
   width: 100%;
-  height: 10px;       /* matches the gap */
+  height: 14px;
   background: transparent;
-  /* This element is between the trigger and the menu,
-     so hovering it keeps the dropdown open */
+  z-index: 150;
 }
 
-/* Dropdown menu — hidden by default */
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 10px); /* 10px gap = same as bridge height */
+  top: calc(100% + 2px);
   left: 50%;
   transform: translateX(-50%);
-  min-width: 230px;
+  min-width: 240px;
   background: var(--color-white);
-  border: 1px solid rgba(14,107,94,0.1);
+  border: 1px solid rgba(36,65,120,0.1);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-drop);
   padding: 8px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateX(-50%) translateY(6px);
-  transition:
-    opacity   0.2s ease,
-    transform 0.2s ease,
-    visibility 0.2s ease;
+  z-index: 200;
+  animation: dropIn 0.18s ease both;
 }
 
-/* Show dropdown when hovering the <li> OR the bridge OR the menu itself */
-.menu > li.dropdown:hover .dropdown-menu,
-.menu > li.dropdown:hover .dropdown-bridge {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+@keyframes dropIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-/* Dropdown items */
 .dropdown-menu li a {
   display: flex;
   align-items: center;
@@ -232,20 +205,15 @@ a { text-decoration: none; color: inherit; }
   transition: background var(--transition), color var(--transition);
 }
 
-.dropdown-menu li a:hover {
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
   background: var(--color-accent-lt);
   color: var(--color-primary);
+  font-weight: 600;
 }
 
-.dropdown-menu li a svg {
-  flex-shrink: 0;
-  color: var(--color-accent);
-  transition: transform var(--transition);
-}
+.dropdown-menu li a svg { flex-shrink: 0; color: var(--color-accent); }
 
-.dropdown-menu li a:hover svg { transform: scale(1.15); }
-
-/* Tag badges */
 .menu-tag {
   margin-left: auto;
   padding: 2px 7px;
@@ -258,12 +226,8 @@ a { text-decoration: none; color: inherit; }
   text-transform: uppercase;
 }
 
-/* Separator */
 .dropdown-sep-li { padding: 2px 4px; }
-.dropdown-sep    { height: 1px; background: rgba(14,107,94,0.1); }
-
-/* Rotate chevron when dropdown is open */
-.menu > li.dropdown:hover .chevron { transform: rotate(180deg); }
+.dropdown-sep    { height: 1px; background: rgba(36,65,120,0.1); }
 
 /* ============================================================
    CTA BUTTON
@@ -271,6 +235,7 @@ a { text-decoration: none; color: inherit; }
 .cta-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 9px 20px;
   margin-left: 8px;
   border-radius: var(--radius-sm);
@@ -281,25 +246,18 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .cta-btn:hover {
   background: var(--color-primary-dk);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px #0e6b5e4d;
+  box-shadow: 0 4px 16px rgba(36,65,120,0.3);
 }
 
 /* ============================================================
-   HAMBURGER (hidden checkbox trick)
+   HAMBURGER — React-controlled, no checkbox
    ============================================================ */
-.nav-toggle-input {
-  display: none;
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
 .hamburger {
   display: none;
   flex-direction: column;
@@ -308,10 +266,12 @@ a { text-decoration: none; color: inherit; }
   gap: 5px;
   width: 40px;
   height: 40px;
-  cursor: pointer;
   border-radius: var(--radius-sm);
   transition: background var(--transition);
   margin-left: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .hamburger:hover { background: var(--color-accent-lt); }
@@ -322,35 +282,24 @@ a { text-decoration: none; color: inherit; }
   height: 2px;
   background: var(--color-primary);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
 }
 
-/* Animate hamburger → X when checked */
-.nav-toggle-input:checked ~ nav .hamburger span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.nav-toggle-input:checked ~ nav .hamburger span:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
-}
-.nav-toggle-input:checked ~ nav .hamburger span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
+/* X state when open */
+.hamburger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ============================================================
-   MOBILE DRAWER
+   MOBILE DRAWER — React-state driven
    ============================================================ */
 .drawer-backdrop {
-  display: none;
   position: fixed;
   inset: 0;
-  background: rgba(252, 252, 252, 0.35);
+  background: rgba(13,36,64,0.4);
   backdrop-filter: blur(3px);
   z-index: 1099;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
 }
 
 .drawer-panel {
@@ -365,26 +314,16 @@ a { text-decoration: none; color: inherit; }
   padding: 24px 20px 32px;
   display: flex;
   flex-direction: column;
-  gap: 0;
   transform: translateX(100%);
   transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: -4px 0 32px rgba(14,107,94,0.12);
+  box-shadow: -4px 0 32px rgba(36,65,120,0.12);
   font-family: var(--font-body);
   overflow-y: auto;
 }
 
-/* Show drawer when checkbox is checked */
-.nav-toggle-input:checked ~ .drawer-backdrop {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
-}
+/* Open state — just adds translateX(0) */
+.drawer-panel--open { transform: translateX(0); }
 
-.nav-toggle-input:checked ~ .drawer-panel {
-  transform: translateX(0);
-}
-
-/* Close button */
 .drawer-close {
   display: flex;
   align-self: flex-end;
@@ -398,10 +337,10 @@ a { text-decoration: none; color: inherit; }
   cursor: pointer;
   margin-bottom: 16px;
   transition: background var(--transition);
+  border: none;
 }
-.drawer-close:hover { background: #c5ede8; }
+.drawer-close:hover { background: #c8d8f0; }
 
-/* Drawer logo */
 .drawer-logo {
   height: 44px;
   width: auto;
@@ -410,7 +349,6 @@ a { text-decoration: none; color: inherit; }
   align-self: flex-start;
 }
 
-/* Drawer menu */
 .drawer-menu {
   display: flex;
   flex-direction: column;
@@ -418,22 +356,38 @@ a { text-decoration: none; color: inherit; }
   flex: 1;
 }
 
-.drawer-menu > li > a {
-  display: block;
+/* All links and buttons inside drawer menu */
+.drawer-menu > li > a,
+.drawer-services-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   padding: 11px 14px;
   border-radius: var(--radius-sm);
   color: var(--color-text);
   font-size: 15px;
   font-weight: 500;
+  text-align: left;
   transition: background var(--transition), color var(--transition);
 }
 
-.drawer-menu > li > a:hover {
+.drawer-menu > li > a:hover,
+.drawer-services-btn:hover {
   background: var(--color-accent-lt);
   color: var(--color-primary);
 }
 
-/* Drawer submenu */
+/* ── ACTIVE — mobile ── */
+.drawer-menu > li > a.active,
+.drawer-services-btn.active {
+  background: var(--color-accent-lt);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-left: 3px solid var(--color-primary);
+  padding-left: 11px;
+}
+
 .drawer-submenu {
   margin: 4px 0 4px 14px;
   padding-left: 14px;
@@ -453,31 +407,19 @@ a { text-decoration: none; color: inherit; }
   transition: background var(--transition), color var(--transition);
 }
 
-.drawer-submenu li a:hover {
+.drawer-submenu li a:hover,
+.drawer-submenu li a.active {
   background: var(--color-accent-lt);
   color: var(--color-primary);
-}
-
-/* Drawer CTA */
-.drawer-cta {
-  display: block;
-  margin-top: 24px;
-  padding: 13px 20px;
-  border-radius: var(--radius-sm);
-  background: var(--color-primary);
-  color: var(--color-white);
-  font-family: var(--font-body);
-  font-size: 14.5px;
   font-weight: 600;
-  text-align: center;
-  letter-spacing: 0.02em;
-  box-shadow: 0 2px 10px rgba(14,107,94,0.25);
-  transition: background var(--transition), box-shadow var(--transition);
 }
 
-.drawer-cta:hover {
-  background: var(--color-primary-dk);
-  box-shadow: 0 4px 16px rgba(14,107,94,0.3);
+.drawer-cta-btn {
+  margin-top: 24px;
+  margin-left: 0;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 /* ============================================================
@@ -490,8 +432,12 @@ a { text-decoration: none; color: inherit; }
 
   .navbar { padding: 0 20px; }
 
-  .menu, .cta-btn { display: none; }
-  .hamburger      { display: flex; }
+  /* Hide desktop menu only */
+  .menu      { display: none; }
+  .hamburger { display: flex; }
+
+  /* Hide the navbar CTA on mobile — it moves into the drawer instead */
+  .navbar .cta-btn { display: none; }
 }
 
 @media (max-width: 600px) {

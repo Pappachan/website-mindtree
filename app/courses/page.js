@@ -1,7 +1,7 @@
 import Link from "next/link";
-import "./service.css";
+import "./courses.css";
 
-export default function Service() {
+export default function Courses() {
   return (
     <main className="service-page">
 
