@@ -1,7 +1,7 @@
 import Link from "next/link";
 import "./service.css";
 
-export default function Service() {
+export default function ServicesPage() {
   return (
     <main className="service-page">
 
@@ -13,7 +13,7 @@ export default function Service() {
           <span className="service-hero-badge">What We Offer</span>
           <h1 className="service-hero-title">
             Mindtree Nursing
-            <em className="service-hero-em"> Consultancy</em>
+            <em className="service-hero-em"> Services</em>
           </h1>
           <div className="service-hero-divider">
             <span className="service-divider-line" />
@@ -21,8 +21,8 @@ export default function Service() {
             <span className="service-divider-line" />
           </div>
           <p className="service-hero-sub">
-            From licensing exams to language certifications and travel logistics,
-            we guide nurses at every step of their international career journey.
+            Beyond training and certification, we take care of every practical detail
+            of your move abroad — so you can focus on your new career, not the paperwork.
           </p>
         </div>
       </section>
@@ -32,114 +32,8 @@ export default function Service() {
         <div className="service-cards-inner">
           <div className="service-grid">
 
-            {/* IQN */}
-            <div className="svc-card svc-card--featured">
-              <div className="svc-card-topbar" />
-              <div className="svc-card-top">
-                <div className="svc-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                    <polyline points="2 17 12 22 22 17" />
-                    <polyline points="2 12 12 17 22 12" />
-                  </svg>
-                </div>
-                <span className="svc-card-badge">Featured</span>
-              </div>
-              <h2 className="svc-card-abbr">IQN</h2>
-              <p className="svc-card-name">International Qualifications in Nursing</p>
-              <p className="svc-card-desc">
-                We help nurses verify and authenticate their qualifications for recognition abroad.
-                Our team provides end-to-end guidance on document preparation, submission to regulatory
-                bodies, and follow-up so your credentials are accepted in your target country without delays.
-              </p>
-              <div className="svc-card-tags">
-                <span className="svc-tag">Credential Verification</span>
-                <span className="svc-tag">Regulatory Body Submission</span>
-                <span className="svc-tag">Document Support</span>
-              </div>
-              <a href="#" className="svc-card-link">Learn more →</a>
-            </div>
-
-            {/* OSCE */}
-            <div className="svc-card">
-              <div className="svc-card-topbar" />
-              <div className="svc-card-top">
-                <div className="svc-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="svc-card-abbr">OSCE</h2>
-              <p className="svc-card-name">Objective Structured Clinical Examination</p>
-              <p className="svc-card-desc">
-                Prepare confidently for your OSCE with our structured coaching programmes. We cover
-                clinical communication, station-by-station practice, patient assessment techniques,
-                and examiner expectations — ensuring you walk in prepared and walk out successful.
-              </p>
-              <div className="svc-card-tags">
-                <span className="svc-tag">Clinical Skills</span>
-                <span className="svc-tag">Station Practice</span>
-                <span className="svc-tag">Mock Exams</span>
-              </div>
-              <a href="#" className="svc-card-link">Learn more →</a>
-            </div>
-
-            {/* OET */}
-            <div className="svc-card">
-              <div className="svc-card-topbar" />
-              <div className="svc-card-top">
-                <div className="svc-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="svc-card-abbr">OET</h2>
-              <p className="svc-card-name">Occupational English Test</p>
-              <p className="svc-card-desc">
-                OET is the healthcare-specific English test required by nursing councils across the UK,
-                Australia, and beyond. We provide targeted preparation covering listening, reading,
-                writing, and speaking sub-tests with healthcare scenarios relevant to nurses.
-              </p>
-              <div className="svc-card-tags">
-                <span className="svc-tag">Writing Letters</span>
-                <span className="svc-tag">Speaking Practice</span>
-                <span className="svc-tag">Healthcare English</span>
-              </div>
-              <a href="#" className="svc-card-link">Learn more →</a>
-            </div>
-
-            {/* IELTS */}
-            <div className="svc-card">
-              <div className="svc-card-topbar" />
-              <div className="svc-card-top">
-                <div className="svc-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <polyline points="4 7 4 4 20 4 20 7" />
-                    <line x1="9" y1="20" x2="15" y2="20" />
-                    <line x1="12" y1="4" x2="12" y2="20" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="svc-card-abbr">IELTS</h2>
-              <p className="svc-card-name">International English Language Testing System</p>
-              <p className="svc-card-desc">
-                Achieve the band score your visa or registration requires. Our IELTS coaching is
-                tailored for nurses — practising academic and general writing tasks, improving
-                speaking fluency, and mastering reading and listening under timed conditions.
-              </p>
-              <div className="svc-card-tags">
-                <span className="svc-tag">Band Score Strategy</span>
-                <span className="svc-tag">Academic &amp; General</span>
-                <span className="svc-tag">Timed Practice</span>
-              </div>
-              <a href="#" className="svc-card-link">Learn more →</a>
-            </div>
-
             {/* Flight Tickets */}
-            <div className="svc-card">
+            <div className="svc-card svc-card--featured">
               <div className="svc-card-topbar" />
               <div className="svc-card-top">
                 <div className="svc-card-icon">
@@ -148,20 +42,134 @@ export default function Service() {
                     <path d="M22 2L15 22 11 13 2 9l20-7z" />
                   </svg>
                 </div>
+                <span className="svc-card-badge">Featured</span>
               </div>
               <h2 className="svc-card-abbr svc-card-abbr--sm">Flight Tickets</h2>
               <p className="svc-card-name">International Travel Booking</p>
               <p className="svc-card-desc">
                 Relocating for work should not add to your stress. We assist in booking cost-effective
                 international flights aligned with your joining dates and visa requirements. We also
-                advise on baggage allowances, transit procedures, and airport formalities.
+                advise on baggage allowances, transit procedures, and airport formalities so your
+                departure is smooth and well-prepared.
               </p>
               <div className="svc-card-tags">
                 <span className="svc-tag">Travel Planning</span>
                 <span className="svc-tag">Visa-Aligned Dates</span>
                 <span className="svc-tag">Departure Support</span>
               </div>
-              <a href="#" className="svc-card-link">Learn more →</a>
+              <a href="/services/flight-ticketing" className="svc-card-link">Enquire now →</a>
+            </div>
+
+            {/* CV Preparation */}
+            <div className="svc-card">
+              <div className="svc-card-topbar" />
+              <div className="svc-card-top">
+                <div className="svc-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                </div>
+              </div>
+              <h2 className="svc-card-abbr svc-card-abbr--sm">CV Preparation</h2>
+              <p className="svc-card-name">Professional Resume Building</p>
+              <p className="svc-card-desc">
+                A strong CV is your first impression with international employers. Our team helps
+                nurses craft professionally formatted CVs that meet the expectations of New Zealand
+                and overseas healthcare recruiters — highlighting your qualifications, experience,
+                and clinical skills in the right way.
+              </p>
+              <div className="svc-card-tags">
+                <span className="svc-tag">NZ Format</span>
+                <span className="svc-tag">Clinical Highlight</span>
+                <span className="svc-tag">ATS Friendly</span>
+              </div>
+              <a href="/services/cv-preparation" className="svc-card-link">Enquire now →</a>
+            </div>
+
+            {/* Visa */}
+            <div className="svc-card">
+              <div className="svc-card-topbar" />
+              <div className="svc-card-top">
+                <div className="svc-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="M7 9h.01M7 15h.01M11 9h6M11 15h6" />
+                  </svg>
+                </div>
+              </div>
+              <h2 className="svc-card-abbr">Visa</h2>
+              <p className="svc-card-name">Work Visa Assistance</p>
+              <p className="svc-card-desc">
+                Navigating immigration paperwork can be overwhelming. We guide you through the
+                correct visa category for your nursing role, assist with documentation checklists,
+                application timelines, and liaise with the relevant authorities to ensure your
+                application is complete and submitted without delays.
+              </p>
+              <div className="svc-card-tags">
+                <span className="svc-tag">Documentation</span>
+                <span className="svc-tag">Work Visa</span>
+                <span className="svc-tag">Application Support</span>
+              </div>
+              <a href="/services/visa" className="svc-card-link">Enquire now →</a>
+            </div>
+
+            {/* Accommodation */}
+            <div className="svc-card">
+              <div className="svc-card-topbar" />
+              <div className="svc-card-top">
+                <div className="svc-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
+                </div>
+              </div>
+              <h2 className="svc-card-abbr svc-card-abbr--sm">Accommodation</h2>
+              <p className="svc-card-name">Housing &amp; Stay Arrangements</p>
+              <p className="svc-card-desc">
+                Finding a safe and comfortable place to stay when you first arrive is critical.
+                We help nurses secure short-term and long-term accommodation options close to their
+                place of work — so you settle in quickly and start your new role with peace of mind.
+              </p>
+              <div className="svc-card-tags">
+                <span className="svc-tag">Short-Term Stay</span>
+                <span className="svc-tag">Long-Term Rental</span>
+                <span className="svc-tag">Location Guidance</span>
+              </div>
+              <a href="/services/accommodaton" className="svc-card-link">Enquire now →</a>
+            </div>
+
+            {/* Transportation */}
+            <div className="svc-card">
+              <div className="svc-card-topbar" />
+              <div className="svc-card-top">
+                <div className="svc-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+                    <rect x="1" y="3" width="15" height="13" rx="2" />
+                    <path d="M16 8h4l3 5v3h-7V8z" />
+                    <circle cx="5.5" cy="18.5" r="2.5" />
+                    <circle cx="18.5" cy="18.5" r="2.5" />
+                  </svg>
+                </div>
+              </div>
+              <h2 className="svc-card-abbr svc-card-abbr--sm">Transportation</h2>
+              <p className="svc-card-name">Local &amp; Airport Transfer Support</p>
+              <p className="svc-card-desc">
+                From airport pick-up on arrival to daily commute guidance, we ensure you know
+                exactly how to get around your new city. We advise on public transport routes,
+                local travel cards, and arrange transfers where needed — making your transition
+                as smooth as possible from day one.
+              </p>
+              <div className="svc-card-tags">
+                <span className="svc-tag">Airport Transfers</span>
+                <span className="svc-tag">Commute Planning</span>
+                <span className="svc-tag">Local Transport</span>
+              </div>
+              <a href="/services/transportation" className="svc-card-link">Enquire now →</a>
             </div>
 
           </div>
@@ -173,18 +181,18 @@ export default function Service() {
         <div className="service-values-inner">
           <div className="svc-value-card">
             <span className="svc-value-icon">◈</span>
-            <h3>Expert Guidance</h3>
-            <p>Advisors with deep knowledge of international nursing registration processes.</p>
+            <h3>All-In-One Support</h3>
+            <p>Every practical aspect of your relocation handled under one roof — no chasing multiple agencies.</p>
           </div>
           <div className="svc-value-card">
             <span className="svc-value-icon">◉</span>
-            <h3>End-to-End Support</h3>
-            <p>From your first query to landing your dream role — we are with you throughout.</p>
+            <h3>Stress-Free Move</h3>
+            <p>We manage the logistics so you can focus entirely on your career and settling in.</p>
           </div>
           <div className="svc-value-card">
             <span className="svc-value-icon">◆</span>
-            <h3>Proven Results</h3>
-            <p>Hundreds of nurses successfully placed in New Zealand, Australia, and beyond.</p>
+            <h3>Trusted by Nurses</h3>
+            <p>Hundreds of nurses have relied on us for a smooth transition to New Zealand and beyond.</p>
           </div>
         </div>
       </section>
@@ -193,10 +201,10 @@ export default function Service() {
       <section className="service-cta">
         <div className="service-cta-shape" />
         <div className="service-cta-inner">
-          <h2 className="service-cta-heading">Not sure where to start?</h2>
+          <h2 className="service-cta-heading">Ready to make the move?</h2>
           <p className="service-cta-sub">
-            Book a free consultation and our advisors will map out the exact steps
-            you need to begin your international nursing career.
+            Book a free consultation and our team will walk you through every service
+            you need for a confident, well-prepared relocation.
           </p>
           <Link href="/contact" className="service-cta-btn">Book a Free Consultation</Link>
         </div>

@@ -21,7 +21,7 @@ export default function Footer(){
           <div className="footer-logo">
             <span className="footer-logo-star">✦</span>
             <span className="footer-logo-text">
-              Mindtree<span className="footer-logo-accent">Nursing</span>
+              Mindtree<span className="footer-logo-accent"> Nursing Solutions</span>
             </span>
           </div>
           <p className="footer-tagline">
@@ -51,19 +51,22 @@ export default function Footer(){
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/courses">Courses</Link></li>
+              <li><Link href="/services">Service</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4 className="footer-col-title">Programs</h4>
+            <h4 className="footer-col-title">Courses</h4>
             <ul className="footer-link-list">
-              <li><Link href="#">General Nursing</Link></li>
-              <li><Link href="#">Midwifery</Link></li>
-              <li><Link href="#">Critical Care</Link></li>
-              <li><Link href="#">Pediatric Care</Link></li>
-              <li><Link href="#">IELTS Prep</Link></li>
+              <li><Link href="#">IQN</Link></li>
+              <li><Link href="#">OET</Link></li>
+              <li><Link href="#">CGFNS</Link></li>
+              <li><Link href="#">OSCE Kerala</Link></li>
+              <li><Link href="#">OSCE Auckland</Link></li>
+              <li><Link href="#">OSCE Christchurch</Link></li>
+            
             </ul>
           </div>
         </div>
@@ -85,7 +88,7 @@ export default function Footer(){
 
           <div className="footer-contact-item">
             <MdEmail className="footer-contact-icon" />
-            <a href="mailto:wilonpedbin@gmail.com">wilonpedbin@gmail.com</a>
+            <a href="mailto:wilonpedbin@gmail.com">info@mindtreenursing.com</a>
           </div>
 
           <div className="footer-contact-item">

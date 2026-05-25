@@ -11,8 +11,8 @@
   --color-muted:      #5a6a76;
   --color-white:      #ffffff;
 
-  --topbar-h:  40px;
-  --navbar-h:  72px;
+  --topbar-h:  48px;
+  --navbar-h:  88px;
 
   --font-body: 'Outfit', sans-serif;
 
@@ -41,7 +41,7 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   background: var(--color-primary);
   color: rgba(255,255,255,0.85);
   font-family: var(--font-body);
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -57,21 +57,21 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   opacity: 0.9;
 }
 
-.topbar-icon { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.75; }
-.topbar-sep  { width: 1px; height: 14px; background: rgba(255,255,255,0.2); }
+.topbar-icon { width: 14px; height: 14px; flex-shrink: 0; opacity: 0.75; }
+.topbar-sep  { width: 1px; height: 16px; background: rgba(255,255,255,0.2); }
 
 .social-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: rgba(255,255,255,0.1);
   transition: background var(--transition), transform var(--transition);
 }
 .social-btn:hover { background: var(--color-accent); transform: translateY(-1px); }
-.social-btn svg   { width: 13px; height: 13px; fill: #fff; }
+.social-btn svg   { width: 14px; height: 14px; fill: #fff; }
 
 /* ============================================================
    MAIN NAVBAR
@@ -91,7 +91,7 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
 }
 
 .logo-wrap { display: flex; align-items: center; flex-shrink: 0; }
-.logo-img  { height: 130px; width: auto; object-fit: contain; }
+.logo-img  { height: 150px; width: auto; object-fit: contain; }
 
 .nav-right {
   display: flex;
@@ -111,10 +111,10 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 8px 14px;
+  padding: 9px 15px;
   border-radius: var(--radius-sm);
   color: var(--color-text);
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -178,7 +178,7 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   top: calc(100% + 2px);
   left: 50%;
   transform: translateX(-50%);
-  min-width: 240px;
+  min-width: 290px;        /* ← increased from 240px */
   background: var(--color-white);
   border: 1px solid rgba(36,65,120,0.1);
   border-radius: var(--radius-md);
@@ -202,6 +202,7 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   color: var(--color-text);
   font-size: 13.5px;
   font-weight: 500;
+  white-space: nowrap;     /* ← added: prevents text wrapping */
   transition: background var(--transition), color var(--transition);
 }
 
@@ -236,7 +237,7 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 9px 20px;
+  padding: 10px 22px;
   margin-left: 8px;
   border-radius: var(--radius-sm);
   background: var(--color-primary);
@@ -256,7 +257,7 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
 }
 
 /* ============================================================
-   HAMBURGER — React-controlled, no checkbox
+   HAMBURGER
    ============================================================ */
 .hamburger {
   display: none;
@@ -286,13 +287,12 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   transform-origin: center;
 }
 
-/* X state when open */
 .hamburger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ============================================================
-   MOBILE DRAWER — React-state driven
+   MOBILE DRAWER
    ============================================================ */
 .drawer-backdrop {
   position: fixed;
@@ -321,7 +321,6 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   overflow-y: auto;
 }
 
-/* Open state — just adds translateX(0) */
 .drawer-panel--open { transform: translateX(0); }
 
 .drawer-close {
@@ -356,7 +355,6 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   flex: 1;
 }
 
-/* All links and buttons inside drawer menu */
 .drawer-menu > li > a,
 .drawer-services-btn {
   display: flex;
@@ -378,7 +376,6 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
   color: var(--color-primary);
 }
 
-/* ── ACTIVE — mobile ── */
 .drawer-menu > li > a.active,
 .drawer-services-btn.active {
   background: var(--color-accent-lt);
@@ -432,11 +429,8 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
 
   .navbar { padding: 0 20px; }
 
-  /* Hide desktop menu only */
   .menu      { display: none; }
   .hamburger { display: flex; }
-
-  /* Hide the navbar CTA on mobile — it moves into the drawer instead */
   .navbar .cta-btn { display: none; }
 }
 

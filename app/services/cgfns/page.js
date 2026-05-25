@@ -68,7 +68,7 @@ export default function CGFNSPage() {
                 </div>
                 <div className="cgfns-doc-item">
                   <div className="cgfns-doc-num">02</div>
-                  <span className="cgfns-doc-name">College Verification</span>
+                  <span className="cgfns-doc-name">All Professional Education Documents</span>
                 </div>
                 <div className="cgfns-doc-item">
                   <div className="cgfns-doc-num">03</div>
@@ -76,7 +76,7 @@ export default function CGFNSPage() {
                 </div>
                 <div className="cgfns-doc-item">
                   <div className="cgfns-doc-num">04</div>
-                  <span className="cgfns-doc-name">Employment Verification</span>
+                  <span className="cgfns-doc-name">Experience Certificate</span>
                 </div>
                 <div className="cgfns-doc-item">
                   <div className="cgfns-doc-num">05</div>
@@ -167,12 +167,12 @@ export default function CGFNSPage() {
 
             <div className="cgfns-include-card">
               <div className="cgfns-include-num">4</div>
-              <p>Completion requires a $300 payment, accepted via international transaction-enabled Visa or Mastercard.</p>
+              <p>Completion requires a $380 payment, accepted via international transaction-enabled Visa or Mastercard.</p>
             </div>
 
             <div className="cgfns-include-card">
               <div className="cgfns-include-num">5</div>
-              <p>CGFNS validity is 1 year, renewable at $120 if necessary.</p>
+              <p>CGFNS validity is 1 year, renewable at $155 if necessary.</p>
             </div>
 
             <div className="cgfns-include-card">
