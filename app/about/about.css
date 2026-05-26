@@ -233,8 +233,10 @@
    VALUES
 ───────────────────────────── */
 .values-section {
-  background: var(--c4);
   padding: 70px 48px;
+    background: linear-gradient(135deg, var(--c3) 0%, var(--c2) 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .values-grid {
@@ -262,7 +264,7 @@
 .value-icon {
   display: block;
   font-size: 28px;
-  color: var(--c2);
+  color: var(--c1);
   margin-bottom: 20px;
   line-height: 1;
 }

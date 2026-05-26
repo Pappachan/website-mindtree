@@ -12,25 +12,25 @@ const courses = [
     title: "OET Training",
     desc: "Specialised Occupational English Test preparation for healthcare professionals targeting New Zealand registration.",
     href: "/courses/oet-training",
-    tag: "Most Popular",
+    tag: null,
   },
   {
     icon: "📘",
-    title: "IELTS Preparation",
+    title: "IQN Training",
     desc: "Structured IELTS coaching with expert tutors to help you achieve the band score required for NCNZ registration.",
     href: "/courses/ielts-preparation",
     tag: null,
   },
   {
     icon: "🏥",
-    title: "Clinical Skills Training",
+    title: "OSCE Training",
     desc: "Hands-on clinical competency training tailored to meet New Zealand healthcare workplace standards.",
     href: "/courses/clinical-skills",
-    tag: null,
+    tag: "Most Popular",
   },
   {
     icon: "📋",
-    title: "NCNZ Registration Guidance",
+    title: "THERAPEUTIC COMMUNICATION",
     desc: "Step-by-step support through the Nursing Council of New Zealand application and documentation process.",
     href: "/courses/ncnz-guidance",
     tag: null,
@@ -69,8 +69,8 @@ const services = [
     href: "/services/document-verification",
   },
   {
-    icon: "💼",
-    title: "Job Placement",
+    icon: "📋",
+    title: "AHPRA",
     desc: "We connect you directly with New Zealand healthcare employers and guide you through the entire hiring process.",
     href: "/services/job-placement",
   },
@@ -104,7 +104,7 @@ const GALLERY_ITEMS = [
   {
     id: "g4",
     type: "video",
-    youtubeId: "7npWMm9akiE",
+    youtubeId: "4T4KSbaXZTo",
     alt: "Nursing Solutions Explained",
     caption: "Nursing Solutions Explained",
     category: "Videos",
@@ -474,11 +474,14 @@ export default function Home() {
                       onKeyDown={(e) => e.key === "Enter" && setActiveVideo(item.youtubeId)}
                       aria-label={`Play ${item.caption}`}
                     >
-                      <img
-                        src={`https://img.youtube.com/vi/${item.youtubeId}/maxresdefault.jpg`}
-                        alt={item.alt}
-                        className="hp-gallery-card__img"
-                      />
+                  <iframe
+  className="hp-gallery-card__video"
+  src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.youtubeId}`}
+  title={item.caption}
+  frameBorder="0"
+  allow="autoplay; encrypted-media"
+  allowFullScreen
+/>
                       <div className="hp-gallery-card__overlay">
                         <div className="hp-play-btn">
                           <span className="hp-play-icon">▶</span>

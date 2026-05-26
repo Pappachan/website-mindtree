@@ -759,6 +759,20 @@ img   { display: block; max-width: 100%; }
   padding: 24px;
   animation: hp-fadeIn 0.25s ease both;
 }
+
+
+
+.hp-gallery-card__video{
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+
+
+
 @keyframes hp-fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }

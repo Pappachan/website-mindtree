@@ -123,7 +123,7 @@ export default function AboutPage(){
  
           <div className="member-card card-leader">
             <div className="member-img-wrap">
-              <img src="/team/ceo.jpg" alt="CEO" className="member-img" />
+              <img src="/team/jijo.jpeg" alt="CEO" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
@@ -132,14 +132,14 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">CEO Name</h3>
-              <span className="member-role">Chief Executive Officer</span>
+              <h3 className="member-name">Jijo John</h3>
+              <span className="member-role">CEO</span>
             </div>
           </div>
  
           <div className="member-card card-leader">
             <div className="member-img-wrap">
-              <img src="/team/director.jpg" alt="Director" className="member-img" />
+              <img src="/team/melvin.jpg.jpeg" alt="Director" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
@@ -148,8 +148,8 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Director Name</h3>
-              <span className="member-role">Director</span>
+              <h3 className="member-name">Melvin Mathew</h3>
+              <span className="member-role">Director (Academic & Operations)</span>
             </div>
           </div>
  
@@ -160,7 +160,7 @@ export default function AboutPage(){
  
           <div className="member-card">
             <div className="member-img-wrap">
-              <img src="/team/member1.jpg" alt="Team Member" className="member-img" />
+              <img src="/team/joby.jpg.jpeg" alt="Team Member" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -168,14 +168,14 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Team Member</h3>
-              <span className="member-role">Role Title</span>
+              <h3 className="member-name">Joby John</h3>
+              <span className="member-role">Manager (HR & Finance)</span>
             </div>
           </div>
  
           <div className="member-card">
             <div className="member-img-wrap">
-              <img src="/team/member2.jpg" alt="Team Member" className="member-img" />
+              <img src="/team/anju.jpg.jpeg" alt="Team Member" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -183,14 +183,14 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Team Member</h3>
-              <span className="member-role">Role Title</span>
+              <h3 className="member-name">Anju Iype</h3>
+              <span className="member-role">Lead Instructor</span>
             </div>
           </div>
  
           <div className="member-card">
             <div className="member-img-wrap">
-              <img src="/team/member3.jpg" alt="Team Member" className="member-img" />
+              <img src="/team/surya.jpg.jpeg" alt="Team Member" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -198,8 +198,8 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Team Member</h3>
-              <span className="member-role">Role Title</span>
+              <h3 className="member-name">Surya M</h3>
+              <span className="member-role">Facilities Manager</span>
             </div>
           </div>
  
@@ -213,14 +213,14 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Team Member</h3>
+              <h3 className="member-name">Reshma V R</h3>
               <span className="member-role">Role Title</span>
             </div>
           </div>
  
           <div className="member-card">
             <div className="member-img-wrap">
-              <img src="/team/member5.jpg" alt="Team Member" className="member-img" />
+              <img src="/team/nandan.jpg.jpeg" alt="Team Member" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -228,14 +228,14 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Team Member</h3>
-              <span className="member-role">Role Title</span>
+              <h3 className="member-name">Nandan R Ajay</h3>
+              <span className="member-role">Software Developer</span>
             </div>
           </div>
  
           <div className="member-card">
             <div className="member-img-wrap">
-              <img src="/team/member6.jpg" alt="Team Member" className="member-img" />
+              <img src="/team/edbin.jpg.jpeg" alt="Team Member" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -243,14 +243,14 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Team Member</h3>
-              <span className="member-role">Role Title</span>
+              <h3 className="member-name">Edbin P Wilson</h3>
+              <span className="member-role">Software Developer</span>
             </div>
           </div>
  
           <div className="member-card">
             <div className="member-img-wrap">
-              <img src="/team/member7.jpg" alt="Team Member" className="member-img" />
+              <img src="/team/sujith.jpg.jpeg" alt="Team Member" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -258,14 +258,29 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Team Member</h3>
-              <span className="member-role">Role Title</span>
+              <h3 className="member-name">Sujith Padmanabhan</h3>
+              <span className="member-role">Manager (Marketing & Media)</span>
             </div>
           </div>
  
-          <div className="member-card">
+    <div className="member-card">
             <div className="member-img-wrap">
-              <img src="/team/member8.jpg" alt="Team Member" className="member-img" />
+              <img src="/team/sreeja.jpg.jpeg" alt="Team Member" className="member-img" />
+              <div className="member-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+            </div>
+            
+            <div className="member-info">
+              <h3 className="member-name">Sreeja S</h3>
+              <span className="member-role">TL (CGFNS & ICHC)</span>
+            </div>
+          </div>
+              <div className="member-card">
+            <div className="member-img-wrap">
+              <img src="/team/leema.jpg.jpeg" alt="Team Member" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -273,12 +288,99 @@ export default function AboutPage(){
               </div>
             </div>
             <div className="member-info">
-              <h3 className="member-name">Team Member</h3>
-              <span className="member-role">Role Title</span>
+              <h3 className="member-name">Leema</h3>
+              <span className="member-role">Instructor</span>
             </div>
           </div>
- 
+              <div className="member-card">
+            <div className="member-img-wrap">
+              <img src="/team/raji.jpg.jpeg" alt="Team Member" className="member-img" />
+              <div className="member-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Raji O</h3>
+              <span className="member-role">OET Trainer</span>
+            </div>
+          </div>
+              <div className="member-card">
+            <div className="member-img-wrap">
+              <img src="/team/febin.jpg.jpeg" alt="Team Member" className="member-img" />
+              <div className="member-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Febin Abraham Joseph</h3>
+              <span className="member-role">Nurse Educator</span>
+            </div>
+          </div>
+              <div className="member-card">
+            <div className="member-img-wrap">
+              <img src="/team/reenaa.jpg.jpeg" alt="Team Member" className="member-img" />
+              <div className="member-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Reena Babu</h3>
+              <span className="member-role">IQN Document Specialist</span>
+            </div>
+          </div>
+              <div className="member-card">
+            <div className="member-img-wrap">
+              <img src="/team/priya.jpg.jpeg" alt="Team Member" className="member-img" />
+              <div className="member-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Priya Philip</h3>
+              <span className="member-role">TL (IQN)</span>
+            </div>
+          </div>
+              <div className="member-card">
+            <div className="member-img-wrap">
+              <img src="/team/rincy.jpg.jpeg" alt="Team Member" className="member-img" />
+              <div className="member-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Rincy</h3>
+              <span className="member-role">Accounts</span>
+            </div>
+          </div>
+
+          <div className="member-card">
+            <div className="member-img-wrap">
+              <img src="/team/anuja.jpg.jpeg" alt="Team Member" className="member-img" />
+              <div className="member-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+            </div>
+            <div className="member-info">
+              <h3 className="member-name">Anuja</h3>
+              <span className="member-role">CGFNS Document Specialist</span>
+            </div>
+
+            
+          </div>
         </div>
+        
       </section>
  
       {/* ── CTA ── */}

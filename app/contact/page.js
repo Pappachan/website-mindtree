@@ -169,7 +169,7 @@ export default function ContactPage() {
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                   </svg>
-                  +91 9778 286 707
+                  +91 9778162650
                 </a>
               
               </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                   </svg>
-                  +91 9778 286 707
+                  +91 9778585329
                 </a>
               
               </div>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                   </svg>
-                  +91 9778 286 707
+                     +91 8075255213
                 </a>
               </div>
 
@@ -222,13 +222,13 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="dept-name">Visa</h3>
-              <p className="dept-desc">Occupational English Test preparation and guidance.</p>
+              <p className="dept-desc">A visa is permission to enter another country.</p>
               <div className="dept-contact-list">
                 <a href="tel:+919778286707" className="dept-phone">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                   </svg>
-                  +91 9778 286 707
+                  +91 8921491752
                 </a>
 
               </div>
@@ -239,8 +239,26 @@ export default function ContactPage() {
                   <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
                 </svg>
               </div>
-              <h3 className="dept-name">OET</h3>
-              <p className="dept-desc">Occupational English Test preparation and guidance.</p>
+              <h3 className="dept-name">AHPRA</h3>
+              <p className="dept-desc">Australian Health Practitioner Regulation Agency.</p>
+              <div className="dept-contact-list">
+                <a href="tel:+919778286707" className="dept-phone">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                  +91 8921284622
+                </a>
+                
+              </div>
+            </div>
+            <div className="dept-card">
+              <div className="dept-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                </svg>
+              </div>
+              <h3 className="dept-name">Flight Ticket</h3>
+              <p className="dept-desc">A flight ticket confirms your seat on an airline journey.</p>
               <div className="dept-contact-list">
                 <a href="tel:+919778286707" className="dept-phone">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
@@ -257,32 +275,14 @@ export default function ContactPage() {
                   <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
                 </svg>
               </div>
-              <h3 className="dept-name">OET</h3>
-              <p className="dept-desc">Occupational English Test preparation and guidance.</p>
+              <h3 className="dept-name">TruMerit</h3>
+              <p className="dept-desc">Internationally educated nurses verify their qualifications for working abroad.</p>
               <div className="dept-contact-list">
                 <a href="tel:+919778286707" className="dept-phone">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                   </svg>
-                  +91 9778 286 707
-                </a>
-                
-              </div>
-            </div>
-            <div className="dept-card">
-              <div className="dept-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                  <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
-                </svg>
-              </div>
-              <h3 className="dept-name">OET</h3>
-              <p className="dept-desc">Occupational English Test preparation and guidance.</p>
-              <div className="dept-contact-list">
-                <a href="tel:+919778286707" className="dept-phone">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                  </svg>
-                  +91 9778 286 707
+                  +91 9995487593
                 </a>
   
               </div>
