@@ -494,11 +494,6 @@ export default function Nav() {
             </li>
 
             <li onClick={goToTop}>
-              <Link href="/blog" className={isActive('/blog') ? 'active' : ''}>
-                Blog
-              </Link>
-            </li>
-            <li onClick={goToTop}>
               <Link
                 href="/about"
                 className={isActive('/about') ? 'active' : ''}
@@ -508,10 +503,16 @@ export default function Nav() {
             </li>
             <li onClick={goToTop}>
               <Link
-                href="/contact"
-                className={isActive('/contact') ? 'active' : ''}
+                href="/career"
+                className={isActive('/career') ? 'active' : ''}
               >
-                Contact Us
+                Career
+              </Link>
+            </li>
+
+            <li onClick={goToTop}>
+              <Link href="/blog" className={isActive('/blog') ? 'active' : ''}>
+                Blog
               </Link>
             </li>
           </ul>
@@ -659,17 +660,27 @@ export default function Nav() {
               </ul>
             )}
           </li>
+          <li>
+            <Link href="/about" className={isActive('/about') ? 'active' : ''}>
+              About
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/career"
+              className={isActive('/career') ? 'active' : ''}
+            >
+              Career
+            </Link>
+          </li>
 
           <li>
             <Link href="/blog" className={isActive('/blog') ? 'active' : ''}>
               Blog
             </Link>
           </li>
-          <li>
-            <Link href="/about" className={isActive('/about') ? 'active' : ''}>
-              About
-            </Link>
-          </li>
+
           <li>
             <Link
               href="/contact"
