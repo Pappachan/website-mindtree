@@ -498,7 +498,7 @@ export default function Nav() {
                 href="/about"
                 className={isActive('/about') ? 'active' : ''}
               >
-                About
+                About Us
               </Link>
             </li>
             <li onClick={goToTop}>
@@ -662,7 +662,7 @@ export default function Nav() {
           </li>
           <li>
             <Link href="/about" className={isActive('/about') ? 'active' : ''}>
-              About
+              About Us
             </Link>
           </li>
 

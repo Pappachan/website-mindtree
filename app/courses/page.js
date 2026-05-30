@@ -1,19 +1,93 @@
 import Link from "next/link";
 import "./courses.css";
 
+/* ── Inline SVG icons ── */
+const IconLayers = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+    <polyline points="2 17 12 22 22 17" />
+    <polyline points="2 12 12 17 22 12" />
+  </svg>
+);
+const IconCheck = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+    <polyline points="22 4 12 14.01 9 11.01" />
+  </svg>
+);
+const IconChat = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+  </svg>
+);
+const IconGlobe = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+    <circle cx="12" cy="12" r="10" />
+    <line x1="2" y1="12" x2="22" y2="12" />
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+  </svg>
+);
+const ArrowRight = () => (
+  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+    <path d="M3 8h10M9 4l4 4-4 4" />
+  </svg>
+);
+
+/* ── Reusable Card ── */
+function CourseCard({ photo, alt, icon, title, subtitle, badge, para1, para2, tags, href }) {
+  return (
+    <div className={`crs-card${badge ? " crs-card--featured" : ""}`}>
+      {/* PHOTO */}
+      <div className="crs-card-photo">
+        <img src={photo} alt={alt} loading="lazy" />
+        <div className="crs-card-photo-overlay" />
+        {badge && <span className="crs-card-photo-badge">{badge}</span>}
+        <div className="crs-card-icon-float">{icon}</div>
+      </div>
+
+      {/* BODY */}
+      <div className="crs-card-body">
+        <div className="crs-card-title-row">
+          <h2 className="crs-card-abbr">{title}</h2>
+          <p className="crs-card-name">{subtitle}</p>
+        </div>
+
+        <p className="crs-card-para-1">{para1}</p>
+        {para2 && <p className="crs-card-para-2">{para2}</p>}
+
+        {tags && (
+          <div className="crs-card-tags">
+            {tags.map((t) => <span key={t} className="crs-tag">{t}</span>)}
+          </div>
+        )}
+
+        <div className="crs-card-footer">
+          <a href={href} className="crs-card-link">
+            Learn More
+            <span className="crs-card-link-arrow"><ArrowRight /></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── Page ── */
 export default function Courses() {
   return (
     <main className="course-page">
 
       {/* ── HERO ── */}
       <section className="course-hero">
-        <div className="course-hero-shape-1" />
-        <div className="course-hero-shape-2" />
+        <div className="course-hero-blob course-hero-blob-1" />
+        <div className="course-hero-blob course-hero-blob-2" />
+        <div className="course-hero-blob course-hero-blob-3" />
+        <div className="course-hero-grid" />
         <div className="course-hero-inner">
-          <span className="course-hero-badge">What We Offer</span>
+          <span className="course-hero-badge">Learn With Us</span>
           <h1 className="course-hero-title">
             Mindtree Nursing
-            <em className="course-hero-em"> Consultancy</em>
+            <em className="course-hero-em"> Courses</em>
           </h1>
           <div className="course-hero-divider">
             <span className="course-divider-line" />
@@ -21,8 +95,8 @@ export default function Courses() {
             <span className="course-divider-line" />
           </div>
           <p className="course-hero-sub">
-            From licensing exams to language certifications and travel logistics,
-            we guide nurses at every step of their international career journey.
+            Expert-led programmes designed to get you registered and working in
+            New Zealand as fast as possible — online, offline, and everywhere in between.
           </p>
         </div>
       </section>
@@ -32,213 +106,78 @@ export default function Courses() {
         <div className="course-cards-inner">
           <div className="course-grid">
 
-            {/* IQN */}
-            <div className="crs-card svc-card--featured">
-              <div className="crs-card-topbar" />
-              <div className="crs-card-top">
-                <div className="crs-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                    <polyline points="2 17 12 22 22 17" />
-                    <polyline points="2 12 12 17 22 12" />
-                  </svg>
-                </div>
-                <span className="crs-card-badge">Featured</span>
-              </div>
-              <h2 className="crs-card-abbr">IQN</h2>
-              <p className="crs-card-name">International Qualifications in Nursing</p>
-              <p className="crs-card-desc">
-                We help nurses verify and authenticate their qualifications for recognition abroad.
-                Our team provides end-to-end guidance on document preparation, submission to regulatory
-                bodies, and follow-up so your credentials are accepted in your target country without delays.
-              </p>
-              <div className="crs-card-tags">
-                <span className="crs-tag">Credential Verification</span>
-                <span className="crs-tag">Regulatory Body Submission</span>
-                <span className="crs-tag">Document Support</span>
-              </div>
-              <a href="/courses/best-iqn-coaching" className="crs-card-link">Learn more →</a>
-            </div>
+            <CourseCard
+              photo="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+              alt="IQN training class"
+              icon={<IconLayers />}
+              title="IQN Training Program"
+              subtitle="International Qualifications in Nursing"
+              badge="Featured"
+              para1="Top-tier preparation featuring mock tests, live & recorded classes,  dedicated mobile app support available on both iOS and Android. "
+              tags={["Mock Tests", "Live Classes", "Mobile App"]}
+              href="/courses/best-iqn-coaching"
+            />
 
-            {/* OSCE 1*/}
-            <div className="crs-card">
-              <div className="crs-card-topbar" />
-              <div className="crs-card-top">
-                <div className="crs-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="crs-card-abbr">OSCE Kerala</h2>
-              <p className="crs-card-name">Objective Structured Clinical Examination</p>
-              <p className="crs-card-desc">
-                Prepare confidently for your OSCE with our structured coaching programmes. We cover
-                clinical communication, station-by-station practice, patient assessment techniques,
-                and examiner expectations — ensuring you walk in prepared and walk out successful.
-              </p>
-              <div className="crs-card-tags">
-                <span className="crs-tag">Clinical Skills</span>
-                <span className="crs-tag">Station Practice</span>
-                <span className="crs-tag">Mock Exams</span>
-              </div>
-              <a href="#" className="crs-card-link">Learn more →</a>
-            </div>
-          {/* OSCE 2*/}
-            <div className="crs-card">
-              <div className="crs-card-topbar" />
-              <div className="crs-card-top">
-                <div className="crs-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="crs-card-abbr">OSCE Aukland</h2>
-              <p className="crs-card-name">Objective Structured Clinical Examination</p>
-              <p className="crs-card-desc">
-                Prepare confidently for your OSCE with our structured coaching programmes. We cover
-                clinical communication, station-by-station practice, patient assessment techniques,
-                and examiner expectations — ensuring you walk in prepared and walk out successful.
-              </p>
-              <div className="crs-card-tags">
-                <span className="crs-tag">Clinical Skills</span>
-                <span className="crs-tag">Station Practice</span>
-                <span className="crs-tag">Mock Exams</span>
-              </div>
-              <a href="#" className="crs-card-link">Learn more →</a>
-            </div>
+            <CourseCard
+              photo="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+              alt="OSCE clinical training Kerala"
+              icon={<IconCheck />}
+              title="OSCE Training — Kerala"
+              subtitle="Objective Structured Clinical Examination"
+              para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
+              tags={["Clinical Skills", "Station Practice", "Mock Exams"]}
+              href="#"
+            />
 
-                      {/* OSCE 3*/}
-            <div className="crs-card">
-              <div className="crs-card-topbar" />
-              <div className="crs-card-top">
-                <div className="crs-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="crs-card-abbr">OSCE Christchurch </h2>
-              <p className="crs-card-name">Objective Structured Clinical Examination</p>
-              <p className="crs-card-desc">
-                Prepare confidently for your OSCE with our structured coaching programmes. We cover
-                clinical communication, station-by-station practice, patient assessment techniques,
-                and examiner expectations — ensuring you walk in prepared and walk out successful.
-              </p>
-              <div className="crs-card-tags">
-                <span className="crs-tag">Clinical Skills</span>
-                <span className="crs-tag">Station Practice</span>
-                <span className="crs-tag">Mock Exams</span>
-              </div>
-              <a href="#" className="crs-card-link">Learn more →</a>
-            </div>
+            <CourseCard
+              photo="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&q=80"
+              alt="OSCE training Auckland"
+              icon={<IconCheck />}
+              title="OSCE Training — Auckland"
+              subtitle="Objective Structured Clinical Examination"
+              para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
+              tags={["NZ Standards", "Simulation Lab", "NCNZ Aligned"]}
+              href="#"
+            />
 
-            {/* OET */}
-            <div className="crs-card">
-              <div className="crs-card-topbar" />
-              <div className="crs-card-top">
-                <div className="crs-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="crs-card-abbr">OET</h2>
-              <p className="crs-card-name">Occupational English Test</p>
-              <p className="crs-card-desc">
-                OET is the healthcare-specific English test required by nursing councils across the UK,
-                Australia, and beyond. We provide targeted preparation covering listening, reading,
-                writing, and speaking sub-tests with healthcare scenarios relevant to nurses.
-              </p>
-              <div className="crs-card-tags">
-                <span className="crs-tag">Writing Letters</span>
-                <span className="crs-tag">Speaking Practice</span>
-                <span className="crs-tag">Healthcare English</span>
-              </div>
-              <a href="#" className="crs-card-link">Learn more →</a>
-            </div>
+            <CourseCard
+              photo="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80"
+              alt="OSCE training Christchurch"
+              icon={<IconCheck />}
+              title="OSCE Training — Christchurch"
+              subtitle="Objective Structured Clinical Examination"
+              para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
+              tags={["South Island", "Flexible Schedule", "Online + In-Person"]}
+              href="#"
+            />
 
-            {/* IELTS */}
-            <div className="crs-card">
-              <div className="crs-card-topbar" />
-              <div className="crs-card-top">
-                <div className="crs-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <polyline points="4 7 4 4 20 4 20 7" />
-                    <line x1="9" y1="20" x2="15" y2="20" />
-                    <line x1="12" y1="4" x2="12" y2="20" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="crs-card-abbr">IELTS</h2>
-              <p className="crs-card-name">International English Language Testing System</p>
-              <p className="crs-card-desc">
-                Achieve the band score your visa or registration requires. Our IELTS coaching is
-                tailored for nurses — practising academic and general writing tasks, improving
-                speaking fluency, and mastering reading and listening under timed conditions.
-              </p>
-              <div className="crs-card-tags">
-                <span className="crs-tag">Band Score Strategy</span>
-                <span className="crs-tag">Academic &amp; General</span>
-                <span className="crs-tag">Timed Practice</span>
-              </div>
-              <a href="#" className="crs-card-link">Learn more →</a>
-            </div>
+            <CourseCard
+              photo="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+              alt="OET English preparation"
+              icon={<IconChat />}
+              title="OET Preparation"
+              subtitle="Occupational English Test — Online & Offline"
+              para1="Tailored Occupational English Test coaching to clear your language proficiency requirements with confidence."
+              tags={["Writing", "Speaking", "Healthcare English"]}
+              href="#"
+            />
 
-            {/* Flight Tickets */}
-            <div className="crs-card">
-              <div className="crs-card-topbar" />
-              <div className="crs-card-top">
-                <div className="crs-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-                    <path d="M22 2L11 13" />
-                    <path d="M22 2L15 22 11 13 2 9l20-7z" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="crs-card-abbr svc-card-abbr--sm">Flight Tickets</h2>
-              <p className="crs-card-name">International Travel Booking</p>
-              <p className="crs-card-desc">
-                Relocating for work should not add to your stress. We assist in booking cost-effective
-                international flights aligned with your joining dates and visa requirements. We also
-                advise on baggage allowances, transit procedures, and airport formalities.
-              </p>
-              <div className="crs-card-tags">
-                <span className="crs-tag">Travel Planning</span>
-                <span className="crs-tag">Visa-Aligned Dates</span>
-                <span className="crs-tag">Departure Support</span>
-              </div>
-              <a href="#" className="crs-card-link">Learn more →</a>
-            </div>
+            <CourseCard
+              photo="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+              alt="Professional Communication Courses"
+              icon={<IconGlobe />}
+              title="Professional Communication"
+              subtitle="Confidence & Communication Modules"
+              para1="Specialized modules specifically designed to boost your confidence and maximize your OSCE performance. 
+"
+              tags={["Handover Skills", "Patient Communication", "Documentation"]}
+              href="/courses/ncnz-guidance"
+            />
 
           </div>
         </div>
       </section>
 
-      {/* ── VALUES STRIP ── */}
-      <section className="course-values">
-        <div className="course-values-inner">
-          <div className="crs-value-card">
-            <span className="crs-value-icon">◈</span>
-            <h3>Expert Guidance</h3>
-            <p>Advisors with deep knowledge of international nursing registration processes.</p>
-          </div>
-          <div className="crs-value-card">
-            <span className="crs-value-icon">◉</span>
-            <h3>End-to-End Support</h3>
-            <p>From your first query to landing your dream role — we are with you throughout.</p>
-          </div>
-          <div className="crs-value-card">
-            <span className="crs-value-icon">◆</span>
-            <h3>Proven Results</h3>
-            <p>Hundreds of nurses successfully placed in New Zealand, Australia, and beyond.</p>
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA ── */}
       <section className="course-cta">
@@ -249,7 +188,9 @@ export default function Courses() {
             Book a free consultation and our advisors will map out the exact steps
             you need to begin your international nursing career.
           </p>
-          <Link href="/contact" className="course-cta-btn">Book a Free Consultation</Link>
+          <Link href="/contact" className="course-cta-btn">
+            <span>Book a Free Consultation</span>
+          </Link>
         </div>
       </section>
 

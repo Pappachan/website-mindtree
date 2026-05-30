@@ -5,84 +5,126 @@ import "./testimonials.css";
 const TESTIMONIALS = [
   {
     id: "testimonial-1",
-    name: "Anitha Krishnan",
+    name: "sujisha surendran",
     role: "Patient's Daughter",
     location: "Kochi, Kerala",
     avatar: "/avatars/anitha.jpg",
     rating: 5,
     category: "Home Care",
     quote:
-      "The nurses from Mindtree were extraordinarily compassionate. They treated my mother not just as a patient, but as a person with dignity. I could finally breathe knowing she was in the best possible hands.",
+      "By the grace of God, I have passed my OSCE exam, and my heart is overflowing with gratitude. I would like to express my deepest appreciation to Jijo brother, Jeljo brother, Anju ma’am, Jishy, Neenu, Leema chechy, Anju, Limcy chechy, Anu chechy, Rincy, Aleesha, the entire Mindtree team, and all my friends who supported me throughout this journey. Your unwavering guidance, encouragement, and selfless dedication—even beyond your own time and schedules—made this achievement possible. Thank you so much for standing by me and believing in me every step of the way.",
     highlight: "Extraordinary compassion",
   },
   {
     id: "testimonial-2",
-    name: "Rajan Menon",
+    name: "Jyoti Ranabhat",
     role: "Post-Surgery Patient",
     location: "Thrissur, Kerala",
     avatar: "/avatars/rajan.jpg",
     rating: 5,
     category: "Post-Op Care",
     quote:
-      "Recovery after my bypass surgery was daunting. Mindtree's team arrived on time, every time, and their professionalism made my healing journey smoother than I ever imagined possible.",
-    highlight: "Professional & punctual",
-  },
+"Outstanding OSCE training program! The tutors were professional, caring, and always encouraged us to do our best. The practical sessions were realistic and well-organized. I’m very grateful for the support I received🫂❤️"  },
   {
     id: "testimonial-3",
-    name: "Dr. Priya Suresh",
+    name: "Akshara Suresh",
     role: "Referring Physician",
     location: "Thiruvananthapuram",
     avatar: "/avatars/priya.jpg",
     rating: 5,
     category: "Clinical Partner",
     quote:
-      "I regularly refer patients to Mindtree because I trust them completely. Their clinical standards are impeccable and the feedback from my patients has been consistently outstanding.",
-    highlight: "Clinically impeccable",
+"The best place to prepare for the OSCE exam. The tutors are very supportive, kind, and explain everything clearly. The mock sessions helped me gain confidence. I’m really thankful to the whole team for their guidance and support. Highly recommended! 🌟"
+  
   },
   {
     id: "testimonial-4",
-    name: "Thomas George",
+    name: "Sruthy Saina",
     role: "Caregiver & Son",
     location: "Ernakulam, Kerala",
     avatar: "/avatars/thomas.jpg",
     rating: 5,
     category: "Elderly Care",
     quote:
-      "My father has dementia and requires round-the-clock attention. Mindtree's caregivers have shown infinite patience and warmth — qualities that no training manual can teach.",
+"I truly recommend MindTree’s coaching for the future ice candidates and for the Newzealand processing Mindtree is the best.Jijo brothers coaching is the best if you listen him properly you will pass.The entire mind tree team is fantastic.once again thank you team for the support.",
     highlight: "Infinite patience",
   },
   {
     id: "testimonial-5",
-    name: "Fatima Noor",
+    name: "sonia mathew",
     role: "New Mother",
     location: "Kozhikode, Kerala",
     avatar: "/avatars/fatima.jpg",
     rating: 5,
     category: "Maternal Care",
     quote:
-      "After a difficult delivery I was overwhelmed and exhausted. The Mindtree nurse who visited us every day was a lifeline — calm, knowledgeable, and genuinely caring about both me and my baby.",
+      "I wanted to express my gratitude for the excellent support provided. Your team's expertise and responsiveness made a significant difference. Thank you for your help and guidance.",
     highlight: "A true lifeline",
   },
   {
     id: "testimonial-6",
-    name: "Suresh Pillai",
+    name: "Rachel philip",
     role: "Chronic Care Patient",
     location: "Kannur, Kerala",
     avatar: "/avatars/suresh.jpg",
     rating: 5,
     category: "Chronic Care",
     quote:
-      "Managing diabetes and hypertension from home felt impossible until Mindtree stepped in. Their nurses educate, monitor, and encourage — they've genuinely changed how I manage my health.",
+      "My heartfelt gratitude to Mindtree Nursing Solutions for their outstanding support and guidance throughout my journey. The classroom setup and educational environment at the Kottarakkara center were truly well organized, and the accommodation was comfortable and homely. A special thanks to Jijo brother, Anju Ma’am, and Melvin Sir for their continuous encouragement, personal attention, and motivation at every step. In Christchurch, the training sessions conducted by Limcy Chechi were so useful — their clear explanations, patience, and practical guidance helped me gain the confidence I needed. Because of the dedicated and caring team at Mindtree, I was able to successfully pass my OSCE. I’m deeply thankful to each one of them for being part of my success. I would highly recommend Mindtree Nursing Solutions to every aspiring nurse who wishes to achieve their dream with confidence and the right guidance. Thank you once again for the wonderful team effort, by Rachel Mathew ",
     highlight: "Changed my life",
   },
+    {
+    id: "testimonial-7",
+    name: "Kavitha Mohan",
+    role: "Chronic Care Patient",
+    location: "Kannur, Kerala",
+    avatar: "/avatars/suresh.jpg",
+    rating: 5,
+    category: "Chronic Care",
+    quote:
+"It was a wonderful time with mindtree team throughout the sessions. Thank you for your great support to achieve this result. Of course, need good hard work from our side. Above that, I am so happy to say that I have done it because of the God's grace and the wonderful efforts and guidance from Mindtree team for our success.Thank you so much 😊",
+    highlight: "Changed my life",
+  },
+     {
+    id: "testimonial-8",
+    name: "Nija shyju",
+    role: "Chronic Care Patient",
+    location: "Kannur, Kerala",
+    avatar: "/avatars/suresh.jpg",
+    rating: 5,
+    category: "Chronic Care",
+    quote:
+"I am really thankful to the Entire Mindtree family, especially Jijo brother, for the support, guidance and motivation throughtout my OSCE training. I don't think, without such a great training I could achieve this success.Thank you Mindtree Nursing Solutions for your effort and excellent Team work .",
+    highlight: "Changed my life",
+  },
+       {
+    id: "testimonial-9",
+    name: "Anoop P",
+    role: "Chronic Care Patient",
+    location: "Kannur, Kerala",
+    avatar: "/avatars/suresh.jpg",
+    rating: 5,
+    category: "Chronic Care",
+    quote:
+"I am delighted to share that I have successfully completed my OSCE exam. I want to express my deepest gratitude for the outstanding support and training provided by the Mindtree team. I am especially thankful to Jijo, Jeljo, Neenu, Radhika, and all of the Mindtree family for their invaluable guidance and encouragement. Your support was essential to my success. Thank you. I wholeheartedly recommend Mindtree's OSCE training to anyone seeking to excel in their OSCE exam.",
+    highlight: "Changed my life",
+  },
+       {
+    id: "testimonial-10",
+    name: "Alex P George",
+    role: "Chronic Care Patient",
+    location: "Kannur, Kerala",
+    avatar: "/avatars/suresh.jpg",
+    rating: 5,
+    category: "Chronic Care",
+    quote:
+"I am truly grateful to the Mindtree Nursing Solutions team for their outstanding support during my OSCE exam. Their expert guidance and unwavering assistance made a significant difference in my preparation. I wholeheartedly recommend Mindtree Nursing Solutions to anyone looking to achieve their goals in nursing registration in New Zealand. Thank you all for your prompt and helpful responses!",
+    highlight: "Changed my life",
+  },
+
 ];
 
-const STATS = [
-  { value: "2,400+", label: "Families Served" },
-  { value: "98%",    label: "Satisfaction Rate" },
-  { value: "12+",    label: "Years of Care" },
-  { value: "340+",   label: "Trained Professionals" },
-];
+
 
 // ─── Star Rating ──────────────────────────────────────────────────
 function Stars({ count = 5 }) {
@@ -113,19 +155,7 @@ export default function TestimonialsPage() {
         <div className="t-hero-scroll-hint"><span /></div>
       </section>
 
-      {/* ── Stats Strip ─────────────────────────────── */}
-      <section className="stats-strip">
-        <div className="container">
-          <ul className="stats-list">
-            {STATS.map((s) => (
-              <li key={s.label} className="stat-item">
-                <span className="stat-value">{s.value}</span>
-                <span className="stat-label">{s.label}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+  
 
       {/* ── Testimonials Grid ───────────────────────── */}
       <section className="section t-grid-section">
