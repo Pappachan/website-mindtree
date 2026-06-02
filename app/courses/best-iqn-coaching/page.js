@@ -54,6 +54,51 @@ export default function IQNPage() {
       </section>
 
 
+  <section className="iqn-trial">
+  <div className="iqn-trial__container">
+
+    {/* Left Content */}
+    <div className="iqn-trial__content">
+      <span className="iqn-trial__tag">FREE IQN TRIAL</span>
+
+      <h2 className="iqn-trial__title">
+        Experience Our IQN Preparation App
+      </h2>
+
+      <p className="iqn-trial__text">
+        Get a firsthand experience of our comprehensive IQN preparation
+        platform. Access mock tests, study materials, practice questions,
+        and progress tracking designed to help internationally qualified
+        nurses succeed in New Zealand.
+      </p>
+
+      <ul className="iqn-trial__features">
+        <li>✓ Full-Length IQN Mock Tests</li>
+        <li>✓ Instant Performance Analysis</li>
+        <li>✓ Comprehensive Study Resources</li>
+        <li>✓ Learn Anytime, Anywhere</li>
+      </ul>
+
+      <a
+        href="https://snipr.page.link/KdMEKNyGMghwr1JL6 "
+        className="iqn-trial__btn"
+      >
+        Start Free Trial
+      </a>
+    </div>
+
+    {/* Right Image */}
+    <div className="iqn-trial__image">
+      <img
+        src="/box-img/iqn-free.png"
+        alt="IQN App Preview"
+      />
+    </div>
+
+  </div>
+</section>
+
+
       {/* ── CTA ── */}
       <section className="iqn-cta">
         <div className="iqn-cta-shape" />

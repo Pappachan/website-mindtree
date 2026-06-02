@@ -1,6 +1,18 @@
 import Link from "next/link";
 import "./osce-kerala.css";
 
+export const metadata = {
+  title: "OSCE Training in Kerala | Mindtree Nursing",
+  description:
+    "Join Mindtree Nursing for expert IQN preparation, mock tests, study materials, and guidance for New Zealand nursing registration.",
+  keywords: [
+    "OSCE",
+    "OSCE Coaching",
+    " OSCE New Zealand Nursing",
+    
+  ],
+};
+
 export default function OSCEPage() {
   return (
     <main className="osce-page">
@@ -106,6 +118,58 @@ export default function OSCEPage() {
           </div>
         </div>
       </section>
+
+<section className="osce-banner">
+  <div className="osce-banner__container">
+
+    <div className="osce-banner__left">
+      <span className="osce-banner__label">
+        OSCE SUCCESS STARTS HERE
+      </span>
+
+      <h2 className="osce-banner__title">
+        Prepare for Your OSCE with Confidence
+      </h2>
+
+      <p className="osce-banner__desc">
+        Join our structured OSCE training program designed to help
+        internationally qualified nurses master clinical scenarios,
+        communication skills, and examination techniques required
+        for success.
+      </p>
+
+      <div className="osce-banner__stats">
+        <div>
+          <h3>500+</h3>
+          <span>Nurses Trained</span>
+        </div>
+
+        <div>
+          <h3>95%</h3>
+          <span>Success Rate</span>
+        </div>
+
+        <div>
+          <h3>1:1</h3>
+          <span>Mentor Support</span>
+        </div>
+      </div>
+
+      <a href="/courses/osce" className="osce-banner__btn">
+        Explore OSCE Training
+      </a>
+    </div>
+
+    <div className="osce-banner__right">
+      <img
+        src="/box-img/osce-free.png"
+        alt="OSCE Training"
+      />
+    </div>
+
+  </div>
+</section>
+
 
       {/* ── EXAM INFO SECTION ── */}
       <section className="osce-docs-section">

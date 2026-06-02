@@ -287,6 +287,123 @@
   margin: 0;
 }
 
+
+
+
+.iqn-trial {
+  padding: 100px 20px;
+  background: #f8fbff;
+    padding: 90px 48px;
+      background:  linear-gradient(150deg, var(--c-2) 0%, #163a6e 100%);
+}
+
+.iqn-trial__container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.iqn-trial__content {
+  flex: 1;
+}
+
+.iqn-trial__tag {
+display: inline-block;
+  padding: 8px 18px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.15);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.iqn-trial__title {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 20px;
+
+}
+
+.iqn-trial__text {
+  font-size: 1rem;
+  line-height: 1.8;
+   color: rgba(255,255,255,.8);
+  margin-bottom: 30px;
+  max-width: 550px;
+}
+
+.iqn-trial__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px;
+}
+
+.iqn-trial__features li {
+  margin-bottom: 14px;
+   color: #fff;
+  font-weight: 500;
+}
+
+.iqn-trial__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 30px;
+  border-radius: 12px;
+ background: #fff;
+  color: #1a4a80;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.iqn-trial__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(26, 74, 128, 0.25);
+}
+
+.iqn-trial__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.iqn-trial__image img {
+  width: 100%;
+  max-width: 500px;
+
+  object-fit: contain;
+
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile */
+
+@media (max-width: 992px) {
+  .iqn-trial__container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .iqn-trial__text {
+    max-width: 100%;
+  }
+
+  .iqn-trial__image img {
+    max-width: 400px;
+  }
+}
 /* ─────────────────────────────
    CTA
 ───────────────────────────── */

@@ -111,7 +111,7 @@ export default function Nav() {
         <div className="topbar-right">
           <a
             className="social-btn"
-            href="instagram.com/mindtreenursing"
+            href="https://www.instagram.com/mindtreenursingsolutions/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -264,7 +264,9 @@ export default function Nav() {
                         <polyline points="2 12 12 17 22 12" />
                       </svg>
                       OSCE Kerala
+  <span className="menu-tag">India</span>
                     </Link>
+                    
                   </li>
                   <li onClick={goToTop}>
                     <Link
@@ -350,6 +352,93 @@ export default function Nav() {
               {servicesOpen && <div className="dropdown-bridge" />}
               {servicesOpen && (
                 <ul className="dropdown-menu">
+
+                  <li onClick={goToTop}>
+                    <Link
+                      href="/services/nursing-registration-in-new-zealand"
+                      onClick={closeAll}
+                      className={isActive('/services/nursing-registration-in-new-zealand') ? 'active' : ''}
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                      </svg>
+                      Nursing Registration in New Zealand
+                    </Link>
+                  </li>
+
+                  <li onClick={goToTop}>
+                    <Link
+                      href="/services/nursing-registration-in-australia"
+                      onClick={closeAll}
+                      className={isActive('/services/nursing-registration-in-australia') ? 'active' : ''}
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                      </svg>
+                     Nursing Registration in Australia
+                    </Link>
+                  </li>
+                  <li onClick={goToTop}>
+                    <Link
+                      href="/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand"
+                      onClick={closeAll}
+                      className={isActive('/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand') ? 'active' : ''}
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                      </svg>
+                      Pathway for Registered Nurses from the UK and Ireland to New Zealand
+                    </Link>
+                  </li>
+                  <li onClick={goToTop}>
+                    <Link
+                      href="/services/pathway-for-uk-ireland-nurses-to-australia"
+                      onClick={closeAll}
+                      className={isActive('/services/pathway-for-uk-ireland-nurses-to-australia') ? 'active' : ''}
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                      </svg>
+                    
+Pathway for UK & Ireland Nurses to Australia
+                    </Link>
+                  </li>
                   <li onClick={goToTop}>
                     <Link
                       href="/services/cgfns"
@@ -413,7 +502,7 @@ export default function Nav() {
                         <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
                       </svg>
                       CV Preparation
-                      <span className="menu-tag">Exam</span>
+                  
                     </Link>
                   </li>
                   <li onClick={goToTop}>
@@ -461,7 +550,7 @@ export default function Nav() {
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                       Accommodation and Transportation
-                      <span className="menu-tag">India</span>
+                    
                     </Link>
                   </li>
                   <li onClick={goToTop}>
@@ -485,8 +574,7 @@ export default function Nav() {
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                         <circle cx="12" cy="10" r="3" />
                       </svg>
-                      AHPRA REGISTRATION SUPPORT
-                      <span className="menu-tag">NZ</span>
+                      Ahpra Registration Support
                     </Link>
                   </li>
                 </ul>
@@ -513,6 +601,12 @@ export default function Nav() {
             <li onClick={goToTop}>
               <Link href="/blog" className={isActive('/blog') ? 'active' : ''}>
                 Blog
+              </Link>
+            </li>
+
+             <li onClick={goToTop}>
+              <Link href="/contact" className={isActive('/contact') ? 'active' : ''}>
+                Contact Us 
               </Link>
             </li>
           </ul>

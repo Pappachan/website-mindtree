@@ -114,6 +114,52 @@ export default function ServicesPage() {
               photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
               alt="Aeroplane in sky"
               icon={<IconFlight />}
+              abbr="Nursing Registration in New Zealand"
+              name="International Travel Booking"
+              badge="Featured"
+              para1="Relocating for work should not add to your stress. We assist in booking cost-effective international flights aligned with your joining dates and visa requirements."
+              tags={["Travel Planning", "Visa-Aligned Dates", "Departure Support"]}
+              href="/services/nursing-registration-in-new-zealand"
+            />
+
+             <ServiceCard
+              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              alt="Aeroplane in sky"
+              icon={<IconFlight />}
+              abbr="Nursing Registration in Australia"
+              name="International Travel Booking"
+              badge="Featured"
+              para1="Relocating for work should not add to your stress. We assist in booking cost-effective international flights aligned with your joining dates and visa requirements."
+              tags={["Travel Planning", "Visa-Aligned Dates", "Departure Support"]}
+              href="/services/nursing-registration-in-australia"
+            />
+
+             <ServiceCard
+              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              alt="Aeroplane in sky"
+              icon={<IconFlight />}
+              abbr="Pathway for Registered Nurses from the UK and Ireland to New Zealand"
+              name="International Travel Booking"
+              badge="Featured"
+              para1="Relocating for work should not add to your stress. We assist in booking cost-effective international flights aligned with your joining dates and visa requirements."
+              tags={["Travel Planning", "Visa-Aligned Dates", "Departure Support"]}
+              href="/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand"
+            />
+             <ServiceCard
+              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              alt="Aeroplane in sky"
+              icon={<IconFlight />}
+              abbr="Pathway for UK & Ireland Nurses to Australia"
+              name="International Travel Booking"
+              badge="Featured"
+              para1="Relocating for work should not add to your stress. We assist in booking cost-effective international flights aligned with your joining dates and visa requirements."
+              tags={["Travel Planning", "Visa-Aligned Dates", "Departure Support"]}
+              href="/services/pathway-for-uk-ireland-nurses-to-australia"
+            />
+             <ServiceCard
+              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              alt="Aeroplane in sky"
+              icon={<IconFlight />}
               abbr="Flight Tickets"
               name="International Travel Booking"
               badge="Featured"
@@ -154,16 +200,7 @@ export default function ServicesPage() {
               href="/services/accommodation"
             />
 
-            <ServiceCard
-              photo="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80"
-              alt="Bus and transport in city"
-              icon={<IconTruck />}
-              abbr="Transportation"
-              name="Local &amp; Airport Transfer Support"
-              para1="From airport pick-up on arrival to daily commute guidance, we ensure you know exactly how to get around your new city from day one."
-              tags={["Airport Transfers", "Commute Planning", "Local Transport"]}
-              href="/services/transportation"
-            />
+    
 
           </div>
         </div>

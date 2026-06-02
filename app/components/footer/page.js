@@ -25,7 +25,7 @@ export default function Footer(){
             </span>
           </div>
           <p className="footer-tagline">
-            Empowering healthcare professionals with world-class nursing education and training.
+            Mindtree Nursing is your all-in-one premium consultant for OET, CGFNS, IQN & OSCE, plus visa, ticket, and accommodation in NZ.
           </p>
           <div className="footer-socials">
             <a href="#" aria-label="Instagram" className="footer-social-btn">
@@ -53,6 +53,7 @@ export default function Footer(){
               <li><Link href="/courses">Courses</Link></li>
               <li><Link href="/services">Service</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
+              <li><Link href="/testimonials">Testimonials</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
