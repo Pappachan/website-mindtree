@@ -17,6 +17,7 @@
   --radius: 16px;
   --shadow-sm: 0 2px 14px rgba(13,36,64,0.07);
   --shadow-md: 0 12px 40px rgba(13,36,64,0.14);
+  --shadow-lg: 0 24px 60px rgba(13,36,64,0.20);
 }
 
 /* ─────────────────────────────
@@ -28,6 +29,31 @@
   background: var(--white);
   overflow-x: hidden;
 }
+
+/* ─────────────────────────────
+   BREADCRUMB
+───────────────────────────── */
+.ft-breadcrumb {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 13px 48px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.ft-breadcrumb a {
+  color: var(--c3);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+.ft-breadcrumb a:hover { color: var(--c4); text-decoration: underline; }
+.ft-breadcrumb span { margin: 0 2px; color: var(--text-muted); user-select: none; flex-shrink: 0; }
+.ft-breadcrumb [aria-current="page"] { color: var(--text-muted); font-weight: 500; cursor: default; }
 
 /* ─────────────────────────────
    HERO
@@ -112,10 +138,8 @@
 .ausreg-intro-stats {
   display: flex; align-items: center;
   padding: 20px 24px; margin-top: 32px;
-  background: var(--c1);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  width: fit-content; gap: 0;
+  background: var(--c1); border: 1px solid var(--border);
+  border-radius: var(--radius); width: fit-content; gap: 0;
 }
 .ausreg-stat { display: flex; flex-direction: column; align-items: center; padding: 0 24px; }
 .ausreg-stat strong { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--c3); line-height: 1; }
@@ -134,10 +158,7 @@
   color: var(--c4); line-height: 1.25;
   margin: 0 0 14px; letter-spacing: -0.02em;
 }
-.ausreg-services-sub {
-  font-size: 15px; color: var(--text-muted);
-  line-height: 1.75; margin: 0; max-width: 680px;
-}
+.ausreg-services-sub { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin: 0; max-width: 680px; }
 .ausreg-service-list { display: flex; flex-direction: column; gap: 20px; }
 .ausreg-service-item {
   background: var(--white); border: 1px solid var(--border);
@@ -155,10 +176,7 @@
   transition: transform var(--ease);
 }
 .ausreg-service-item:hover::before { transform: scaleY(1); }
-.ausreg-service-item:hover {
-  transform: translateX(6px);
-  box-shadow: var(--shadow-md); border-color: var(--c2);
-}
+.ausreg-service-item:hover { transform: translateX(6px); box-shadow: var(--shadow-md); border-color: var(--c2); }
 .ausreg-service-num {
   width: 44px; height: 44px; border-radius: 12px;
   background: var(--c3); color: var(--white);
@@ -173,21 +191,22 @@
   font-size: 18px; font-weight: 700;
   color: var(--c4); margin: 0 0 4px; letter-spacing: -0.01em;
 }
-.ausreg-service-subtitle {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.09em;
-  text-transform: uppercase; color: var(--c3); margin: 0 0 12px;
-}
+.ausreg-service-subtitle { font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--c3); margin: 0 0 12px; }
 .ausreg-service-desc { font-size: 15px; line-height: 1.8; color: var(--text-body); margin: 0; }
 
 /* ─────────────────────────────
-   OBA SECTION  ← LIGHT
+   OBA SECTION  ← LIGHT (white bg)
 ───────────────────────────── */
 .ausreg-oba-section {
   background: var(--white);
   padding: 96px 48px;
+  position: relative;
 }
 .ausreg-oba-inner { max-width: 1160px; margin: 0 auto; }
-.ausreg-oba-header { max-width: 760px; margin: 0 auto 60px; text-align: center; }
+
+.ausreg-oba-header {
+  max-width: 760px; margin: 0 auto 60px; text-align: center;
+}
 .ausreg-oba-heading {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(24px,4vw,42px); font-weight: 700;
@@ -195,7 +214,7 @@
   margin: 0 0 10px; letter-spacing: -0.02em;
 }
 .ausreg-oba-tagline {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.13em;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--c3); margin: 0 0 22px;
 }
 .ausreg-oba-desc {
@@ -203,19 +222,22 @@
   color: var(--text-muted); margin: 0;
 }
 
-/* Stage cards — no photo, light style */
+/* ── Stage cards — light style, no photo ── */
 .ausreg-stages-grid {
   display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;
 }
+
 .ausreg-stage-card {
   background: var(--c1);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
   position: relative;
+  overflow: hidden;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
 }
+
+/* top accent bar slides in on hover */
 .ausreg-stage-card::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0; height: 3px;
@@ -224,26 +246,29 @@
   transition: transform var(--ease);
 }
 .ausreg-stage-card:hover::before { transform: scaleX(1); }
+
 .ausreg-stage-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
   border-color: var(--c2);
 }
 
-/* top row inside card */
+/* header row inside card */
 .ausreg-stage-top {
   display: flex; align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
 }
+
 .ausreg-stage-num-badge {
   font-size: 11px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   background: var(--c3); color: var(--white);
   padding: 4px 14px; border-radius: 100px;
 }
+
 .ausreg-stage-icon {
-  width: 42px; height: 42px; border-radius: 11px;
+  width: 44px; height: 44px; border-radius: 12px;
   background: var(--white); color: var(--c3);
   display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--border);
@@ -255,10 +280,11 @@
   transform: scale(1.1) rotate(-4deg);
 }
 
-.ausreg-stage-body { padding: 28px 26px; display: flex; flex-direction: column; gap: 10px; }
+.ausreg-stage-body { padding: 28px 26px; display: flex; flex-direction: column; gap: 12px; }
+
 .ausreg-stage-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 20px; font-weight: 700;
+  font-size: 21px; font-weight: 700;
   color: var(--c4); margin: 0; line-height: 1.2;
 }
 .ausreg-stage-sub {
@@ -266,12 +292,13 @@
   text-transform: uppercase; color: var(--c3); margin: 0;
 }
 .ausreg-stage-para { font-size: 14.5px; line-height: 1.8; color: var(--text-body); margin: 0; }
+
 .ausreg-stage-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
 .ausreg-tag {
   font-size: 11px; font-weight: 600;
   color: var(--c3); background: var(--white);
   padding: 4px 12px; border-radius: 100px;
-  border: 1px solid rgba(46,94,153,0.15);
+  border: 1px solid rgba(46,94,153,0.16);
   transition: background var(--ease);
 }
 .ausreg-stage-card:hover .ausreg-tag { background: rgba(46,94,153,0.07); }
@@ -306,10 +333,7 @@
   transition: transform var(--ease);
 }
 .ausreg-why-card:hover::after { transform: scaleX(1); }
-.ausreg-why-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md); border-color: var(--c2);
-}
+.ausreg-why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--c2); }
 .ausreg-why-num {
   width: 44px; height: 44px; border-radius: 12px;
   background: var(--c3); color: var(--white);
@@ -342,7 +366,11 @@
   position: absolute; width: 700px; height: 700px; border-radius: 50%;
   background: radial-gradient(circle, rgba(13,36,64,0.35) 0%, transparent 65%);
   top: 50%; left: 50%; transform: translate(-50%,-50%);
-  pointer-events: none;
+  pointer-events: none; animation: ctaPulse 6s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+  0%,100% { transform: translate(-50%,-50%) scale(1); }
+  50%      { transform: translate(-50%,-50%) scale(1.1); }
 }
 .ausreg-cta-inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
 .ausreg-cta-heading {
@@ -366,17 +394,12 @@
 }
 .ausreg-cta-btn::before {
   content: ''; position: absolute; inset: 0;
-  background: var(--c4);
-  transform: translateX(-105%);
-  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-  z-index: 0;
+  background: var(--c4); transform: translateX(-105%);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); z-index: 0;
 }
 .ausreg-cta-btn:hover::before { transform: translateX(0); }
 .ausreg-cta-btn span { position: relative; z-index: 1; }
-.ausreg-cta-btn:hover {
-  color: var(--white); transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(13,36,64,0.4);
-}
+.ausreg-cta-btn:hover { color: var(--white); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(13,36,64,0.4); }
 
 /* ─────────────────────────────
    RESPONSIVE
@@ -392,6 +415,7 @@
   .ausreg-intro-grid { grid-template-columns: 1fr; gap: 36px; }
   .ausreg-intro-stats { flex-wrap: wrap; justify-content: center; gap: 12px; }
   .ausreg-stat-sep { display: none; }
+  .ft-breadcrumb { padding: 13px 24px; }
 }
 @media (max-width: 520px) {
   .ausreg-hero { padding: 56px 20px; }
@@ -400,4 +424,5 @@
   .ausreg-cta { padding: 48px 20px; }
   .ausreg-service-item { flex-direction: column; gap: 14px; }
   .ausreg-why-card { flex-direction: column; gap: 14px; }
+  .ft-breadcrumb { padding: 13px 20px; }
 }

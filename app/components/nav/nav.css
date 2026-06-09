@@ -91,7 +91,7 @@ button { border: none; background: none; cursor: pointer; font-family: var(--fon
 }
 
 .logo-wrap { display: flex; align-items: center; flex-shrink: 0; }
-.logo-img  { height: 150px; width: auto; object-fit: contain; }
+.logo-img  { height: 120px; width: auto; object-fit: contain; }
 
 .nav-right {
   display: flex;

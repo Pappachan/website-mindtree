@@ -126,7 +126,7 @@
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sky);
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -163,7 +163,7 @@
   transform: translateY(-5px);
 }
 .cv-step:hover .cv-step-icon { animation: cvFloatIcon 1.4s ease-in-out infinite; }
-.cv-step:hover .cv-step-num  { background: var(--gold); }
+.cv-step:hover .cv-step-num  { background: var(--sky); }
 
 .cv-step-num {
   width: 40px; height: 40px;
@@ -242,7 +242,7 @@
   margin-top: 1px;
   transition: background 0.3s;
 }
-.cv-check-item:hover .cv-check-bullet { background: var(--gold); }
+.cv-check-item:hover .cv-check-bullet { background: var(--sky); }
 
 /* ── CTA CARD ──────────────────────────────────────────── */
 .cv-cta-card {

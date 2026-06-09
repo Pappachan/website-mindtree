@@ -1,6 +1,22 @@
 import Link from "next/link";
 import "./osce-newzealand.css";
 
+
+export const metadata = {
+  title: "OSCE Training in New Zealand | Mindtree Nursing Solutions",
+  description:
+    "Prepare for your New Zealand OSCE with expert training from Mindtree Nursing Solutions. Access clinical skills practice, mock OSCE exams, study materials, and personalized guidance to successfully complete your nursing registration journey.",
+  keywords: [
+    "OSCE New Zealand",
+    "OSCE Training New Zealand",
+    "New Zealand Nursing Registration",
+    "OSCE Preparation",
+    "Nursing OSCE NZ",
+    "OSCE Coaching",
+    "International Nursing Registration",
+    "Mindtree Nursing",
+  ],
+};
 export default function OSCENewZealandPage() {
   return (
     <main className="oscenz-page">

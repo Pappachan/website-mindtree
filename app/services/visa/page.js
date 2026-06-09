@@ -1,6 +1,21 @@
-"use client";
 
 import "./visa.css";
+
+export const metadata = {
+  title: "Visa Assistance Services | Mindtree Nursing Solutions",
+  description:
+    "Get expert visa assistance from Mindtree Nursing Solutions. We guide nurses and healthcare professionals through visa applications, documentation, immigration requirements, and travel preparation for New Zealand, Australia, and other international destinations.",
+  keywords: [
+    "Visa Assistance",
+    "Nursing Visa",
+    "Visa Application Support",
+    "New Zealand Visa",
+    "Australia Visa",
+    "Immigration Assistance",
+    "Healthcare Professional Visa",
+    "Mindtree Nursing"
+  ],
+};
 
 const steps = [
   {

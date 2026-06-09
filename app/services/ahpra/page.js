@@ -1,6 +1,21 @@
-"use client";
 
 import "./ahpra.css";
+
+export const metadata = {
+  title: "AHPRA Registration Support | Mindtree Nursing Solutions",
+  description:
+    "Get expert guidance for AHPRA registration with Mindtree Nursing Solutions. We assist internationally qualified nurses with document preparation, qualification assessment, registration pathways, and professional support for a successful nursing career in Australia.",
+  keywords: [
+    "AHPRA Registration",
+    "AHPRA Nursing Registration",
+    "Australia Nursing Registration",
+    "Internationally Qualified Nurses",
+    "AHPRA Support",
+    "Nursing Registration Australia",
+    "Australian Nursing Pathway",
+    "Mindtree Nursing"
+  ],
+};
 
 export default function AhpraPage() {
   return (

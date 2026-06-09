@@ -1,6 +1,23 @@
 // No "use client" — zero hooks, pure CSS :target where needed
 import "./therapeutic-communication.css";
 
+
+export const metadata = {
+  title: "Therapeutic Communication Training | Mindtree Nursing Solutions",
+  description:
+    "Develop effective therapeutic communication skills with expert training from Mindtree Nursing Solutions. Learn patient-centered communication, active listening, empathy, professional interactions, and clinical communication techniques essential for nursing practice.",
+  keywords: [
+    "Therapeutic Communication",
+    "Nursing Communication Skills",
+    "Patient Communication",
+    "Healthcare Communication",
+    "Clinical Communication",
+    "Nursing Training",
+    "Communication Skills for Nurses",
+    "Mindtree Nursing Solutions"
+  ],
+};
+
 // ─── Data ─────────────────────────────────────────────────────────
 const LEARN_ITEMS = [
   {
@@ -108,7 +125,7 @@ export default function TherapeuticCommunicationPage() {
           <div className="tc-about__grid">
             <div className="tc-about__visual">
               <div className="tc-about__img-wrap">
-                <img src="/the-success.jpg" alt="Therapeutic Communication Training" loading="lazy" />
+                <img src="/box-img/nurse.png" alt="Therapeutic Communication Training" loading="lazy" />
                 <div className="tc-about__img-badge">
                   <span className="badge-number">12+</span>
                   <span className="badge-text">Years of Excellence</span>

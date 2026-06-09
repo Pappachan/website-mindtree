@@ -27,14 +27,18 @@ export default function Footer(){
           <p className="footer-tagline">
             Mindtree Nursing is your all-in-one premium consultant for OET, CGFNS, IQN & OSCE, plus visa, ticket, and accommodation in NZ.
           </p>
+          <div className="footer-contact-item">
+            <MdEmail className="footer-contact-icon" />
+            <a href="mailto:wilonpedbin@gmail.com">info@mindtreenursing.com</a>
+          </div>
           <div className="footer-socials">
-            <a href="#" aria-label="Instagram" className="footer-social-btn">
+            <a href="https://www.instagram.com/mindtreenursingsolutions?igsh=MWtibTF5YXN5dGR6MQ%3D%3D" aria-label="Instagram" className="footer-social-btn">
               <FaInstagram />
             </a>
-            <a href="#" aria-label="Facebook" className="footer-social-btn">
+            <a href="https://www.facebook.com/MindtreeNursingSolutions" aria-label="Facebook" className="footer-social-btn">
               <FaFacebook />
             </a>
-            <a href="#" aria-label="YouTube" className="footer-social-btn">
+            <a href="https://youtube.com/@mindtreenursingsolutions5958?si=kopEIDqFHiT3jcW4" aria-label="YouTube" className="footer-social-btn">
               <FaYoutube />
             </a>
           </div>
@@ -61,12 +65,12 @@ export default function Footer(){
           <div className="footer-col">
             <h4 className="footer-col-title">Courses</h4>
             <ul className="footer-link-list">
-              <li><Link href="#">IQN</Link></li>
-              <li><Link href="#">OET</Link></li>
-              <li><Link href="#">CGFNS</Link></li>
-              <li><Link href="#">OSCE Kerala</Link></li>
-              <li><Link href="#">OSCE Auckland</Link></li>
-              <li><Link href="#">OSCE Christchurch</Link></li>
+              <li><Link href="/courses/best-iqn-coaching">IQN</Link></li>
+              <li><Link href="/courses/best-oet-coaching-centre-in-kerala">OET</Link></li>
+              <li><Link href="/courses/osce-training-kerala">OSCE Kerala</Link></li>
+              <li><Link href="/courses/osce-training-new-zealand">OSCE Auckland</Link></li>
+              <li><Link href="/courses/osce-training-new-zealand">OSCE Christchurch</Link></li>
+              <li><Link href="/courses/therapeutic-communication">Therapeutic Communication</Link></li>
             
             </ul>
           </div>
@@ -87,10 +91,7 @@ export default function Footer(){
             </div>
           </div>
 
-          <div className="footer-contact-item">
-            <MdEmail className="footer-contact-icon" />
-            <a href="mailto:wilonpedbin@gmail.com">info@mindtreenursing.com</a>
-          </div>
+          
 
           <div className="footer-contact-item">
             <FaLocationDot className="footer-contact-icon" />
@@ -99,9 +100,15 @@ export default function Footer(){
 
           <div className="footer-contact-item">
             <FaLocationDot className="footer-contact-icon" />
+            <p>110 Sir John McKenzie Avenue,<br />Christchurch</p>
+          </div>
+
+          <div className="footer-contact-item">
+            <FaLocationDot className="footer-contact-icon" />
             <p>30/167 Whitney Street,<br />Blockhouse Bay, Auckland, 0600</p>
           </div>
         </div>
+        
 
       </div>
 

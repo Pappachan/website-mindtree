@@ -2,6 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import './career.css';
 
+
+export const metadata = {
+  title: "Career | Mindtree Nursing Solutions",
+  description:"Explore exciting career opportunities at Mindtree Nursing Solutions. Join our growing team and build a rewarding career in healthcare consultancy, nursing education, visa assistance, and international recruitment services.",
+  keywords: [
+    "New Zealand Nursing",
+    "Mindtree Nursing Sloutions",
+  ],
+};
 // ─── Vacancy Data ─────────────────────────────────────────────────
 // Add poster: "/path/to/your-image.jpg" to each job to show a poster image.
 // Leave poster: null to show the default illustrated placeholder.

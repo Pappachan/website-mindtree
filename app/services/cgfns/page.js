@@ -1,9 +1,34 @@
 import Link from "next/link";
 import "./cgfns.css";
 
+export const metadata = {
+  title: "CGFNS Certification & Credential Evaluation | Mindtree Nursing Solutions",
+  description:
+    "Get expert assistance with CGFNS certification, credential evaluation, document verification, and nursing licensure requirements. Mindtree Nursing Solutions supports internationally educated nurses throughout the CGFNS application process.",
+  keywords: [
+    "CGFNS",
+    "CGFNS Certification",
+    "CGFNS Credential Evaluation",
+    "CGFNS Application",
+    "Nursing Credential Verification",
+    "International Nurse Registration",
+    "CGFNS Support",
+    "Mindtree Nursing"
+  ],
+};
+
 export default function CGFNSPage() {
   return (
     <main className="cgfns-page">
+
+   {/* ── BREADCRUMB ── */}
+      <nav className="ft-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services">Services</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">CGFNS</span>
+      </nav>
 
       {/* ── HERO ── */}
       <section className="cgfns-hero">

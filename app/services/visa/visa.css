@@ -124,7 +124,7 @@
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--sky);
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -182,7 +182,7 @@
   transform: translateY(-5px);
 }
 .vs-step:hover .vs-step-icon { animation: vsFloatIcon 1.4s ease-in-out infinite; }
-.vs-step:hover .vs-step-num  { background: var(--gold); }
+.vs-step:hover .vs-step-num  { background: var(--sky); }
 
 .vs-step-top {
   display: flex;
@@ -297,7 +297,7 @@
   flex-shrink: 0;
   transition: background 0.3s;
 }
-.vs-highlights-item:hover .vs-highlights-bullet { background: var(--gold); }
+.vs-highlights-item:hover .vs-highlights-bullet { background: var(--sky); }
 
 /* ── CTA CARD ──────────────────────────────────────────── */
 .vs-cta-card {

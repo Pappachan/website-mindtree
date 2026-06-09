@@ -1,5 +1,21 @@
 import "./cv.css";
 
+export const metadata = {
+  title: "CV Preparation Services for Nurses | Mindtree Nursing Solutions",
+  description:
+    "Create a professional nursing CV with expert guidance from Mindtree Nursing Solutions. We help nurses prepare ATS-friendly resumes, cover letters, and job application documents to improve their chances of securing healthcare opportunities abroad.",
+  keywords: [
+    "CV Preparation",
+    "Nursing CV",
+    "Resume Writing for Nurses",
+    "Professional CV Services",
+    "Nurse Resume",
+    "Healthcare CV",
+    "Cover Letter Preparation",
+    "Mindtree Nursing"
+  ],
+};
+
 const steps = [
   {
     num: "1",

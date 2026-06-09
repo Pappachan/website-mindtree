@@ -1,5 +1,20 @@
 import "./flight.css";
 
+export const metadata = {
+  title: "Flight Ticketing Services | Mindtree Nursing Solutions",
+  description:
+    "Book domestic and international flight tickets with ease through Mindtree Nursing Solutions. We provide reliable ticketing services, competitive fares, travel assistance, and support for nurses and professionals traveling abroad.",
+  keywords: [
+    "Flight Ticketing",
+    "Air Ticket Booking",
+    "International Flight Tickets",
+    "Travel Assistance",
+    "Flight Booking Services",
+    "Nurse Travel Support",
+    "Airfare Booking",
+    "Mindtree Nursing"
+  ],
+};
 const steps = [
   {
     num: "1",
@@ -119,7 +134,7 @@ export default function FlightTicketing() {
                   <span className="ft-btn-value">9747694573</span>
                 </span>
               </a>
-              <a href="https://wa.me/919747694573" className="ft-cta-btn ft-cta-btn--whatsapp" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/919778286707" className="ft-cta-btn ft-cta-btn--whatsapp" target="_blank" rel="noreferrer">
                 <span className="ft-btn-icon">💬</span>
                 <span className="ft-btn-text">
                   <span className="ft-btn-label">WhatsApp Us</span>

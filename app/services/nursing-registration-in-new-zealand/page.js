@@ -1,9 +1,35 @@
 import Link from "next/link";
 import "./nursing-registration-in-new-zealand.css";
 
+
+export const metadata = {
+  title: "Nursing Registration in New Zealand | Mindtree Nursing Solutions",
+  description:
+    "Begin your nursing career in New Zealand with expert registration support from Mindtree Nursing Solutions. We assist internationally qualified nurses with NZNC registration, IQN pathways, document preparation, competency requirements, and professional guidance throughout the registration process.",
+  keywords: [
+    "Nursing Registration New Zealand",
+    "NZNC Registration",
+    "New Zealand Nursing Registration",
+    "IQN Pathway",
+    "Internationally Qualified Nurse",
+    "New Zealand Nurse Registration",
+    "Nursing Career New Zealand",
+    "Mindtree Nursing"
+  ],
+};
+
 export default function NZRegistrationPage() {
   return (
     <main className="nzreg-page">
+      
+      {/* ── BREADCRUMB ── */}
+      <nav className="ft-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services">Services</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Nursing Registration in New-zealand</span>
+      </nav>
 
       {/* ── HERO ── */}
       <section className="nzreg-hero">

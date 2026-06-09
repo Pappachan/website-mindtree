@@ -19,11 +19,13 @@ const IMAGES = [
 
 const VIDEOS = [
   { id: "video-1", youtubeId: "qxlnO0sc18M", title: "Introduction to Mindtree", description: "Learn what Mindtree is all about and how we serve communities.", duration: "3:45" },
-  { id: "video-2", youtubeId: "y2UWqq8CSqo", title: "Nursing Solutions Explained", description: "A complete guide to our nursing care offerings.", duration: "5:12" },
+  { id: "video-2", youtubeId: "sedbxmvvRio", title: "Nursing Solutions Explained", description: "A complete guide to our nursing care offerings.", duration: "5:12" },
   { id: "video-3", youtubeId:"4T4KSbaXZTo", title: "Patient Success Stories", description: "Real stories from families we have helped.", duration: "4:30" },
   { id: "video-4", youtubeId: "26ixXF60H94", title: "Meet Our Care Team", description: "Get to know the professionals behind our service.", duration: "2:58" },
   { id: "video-5", youtubeId: "7npWMm9akiE", title: "Home Care Best Practices", description: "Tips and insights from our expert caregivers.", duration: "6:20" },
-  { id: "video-6", youtubeId: "_vB9PLim9Dc", title: "Community Wellness Events", description: "Highlights from our recent community outreach programs.", duration: "3:15" },
+  { id: "video-6", youtubeId: "OXf-9Z68jyQ", title: "Community Wellness Events", description: "Highlights from our recent community outreach programs.", duration: "3:15" },
+  { id: "video-7", youtubeId: "y2UWqq8CSqo", title: "Community Wellness Events", description: "Highlights from our recent community outreach programs.", duration: "3:15" },
+  { id: "video-8", youtubeId: "_vB9PLim9Dc", title: "Community Wellness Events", description: "Highlights from our recent community outreach programs.", duration: "3:15" },
 ];
 
 function getYoutubeThumbnail(videoId) {

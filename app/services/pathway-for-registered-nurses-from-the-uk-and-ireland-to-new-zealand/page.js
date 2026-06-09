@@ -1,9 +1,34 @@
 import Link from "next/link";
 import "./pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand.css";
 
+export const metadata = {
+  title: "UK & Ireland Nurses Pathway to New Zealand | Mindtree Nursing Solutions",
+  description:
+    "Explore the registration pathway for registered nurses from the UK and Ireland to New Zealand. Mindtree Nursing Solutions provides expert guidance on NZNC requirements, documentation, competency standards, employment opportunities, and the complete transition process.",
+  keywords: [
+    "UK Nurses to New Zealand",
+    "Ireland Nurses to New Zealand",
+    "NZNC Registration",
+    "New Zealand Nursing Pathway",
+    "Registered Nurses New Zealand",
+    "Nursing Registration New Zealand",
+    "UK Nurse Migration NZ",
+    "Mindtree Nursing"
+  ],
+};
+
 export default function UKIrelandPathwayPage() {
   return (
     <main className="ukire-page">
+
+      {/* ── BREADCRUMB ── */}
+      <nav className="ft-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services">Services</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Pathway for Registered Nurses from the UK and Ireland to New-zealand</span>
+      </nav>
 
       {/* ── HERO ── */}
       <section className="ukire-hero">

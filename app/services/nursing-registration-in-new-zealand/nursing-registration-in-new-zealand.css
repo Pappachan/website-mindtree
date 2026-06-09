@@ -30,6 +30,28 @@
   overflow-x: hidden;
 }
 
+.ft-breadcrumb {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 13px 48px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.ft-breadcrumb a {
+  color: var(--c3);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+.ft-breadcrumb a:hover { color: var(--c4); text-decoration: underline; }
+.ft-breadcrumb span { margin: 0 2px; color: var(--text-muted); user-select: none; flex-shrink: 0; }
+.ft-breadcrumb [aria-current="page"] { color: var(--text-muted); font-weight: 500; cursor: default; }
+
 /* ─────────────────────────────
    HERO
 ───────────────────────────── */

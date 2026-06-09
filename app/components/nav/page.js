@@ -111,7 +111,7 @@ export default function Nav() {
         <div className="topbar-right">
           <a
             className="social-btn"
-            href="https://www.instagram.com/mindtreenursingsolutions/"
+            href="https://www.instagram.com/mindtreenursingsolutions?igsh=MWtibTF5YXN5dGR6MQ%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -122,7 +122,7 @@ export default function Nav() {
           </a>
           <a
             className="social-btn"
-            href="https://www.facebook.com/MindtreeNursingSolutions?mibextid=ZbWKwL"
+            href="https://www.facebook.com/MindtreeNursingSolutions"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -133,7 +133,7 @@ export default function Nav() {
           </a>
           <a
             className="social-btn"
-            href="www.youtube.com/@mindtreenursingsolutions5958"
+            href="https://youtube.com/@mindtreenursingsolutions5958?si=kopEIDqFHiT3jcW4"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
@@ -299,7 +299,7 @@ export default function Nav() {
                       href="/courses/therapeutic-communication"
                       onClick={closeAll}
                       className={
-                        isActive('/courses/best-oet-coaching-centre-in-kerala')
+                        isActive('/courses/therapeutic-communication')
                           ? 'active'
                           : ''
                       }
@@ -359,18 +359,20 @@ export default function Nav() {
                       onClick={closeAll}
                       className={isActive('/services/nursing-registration-in-new-zealand') ? 'active' : ''}
                     >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                        <polyline points="2 17 12 22 22 17" />
-                        <polyline points="2 12 12 17 22 12" />
-                      </svg>
+                     <svg
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+  <path d="M14 2v6h6" />
+  <path d="M9 14l2 2 4-4" />
+</svg>
                       Nursing Registration in New Zealand
                     </Link>
                   </li>
@@ -381,18 +383,20 @@ export default function Nav() {
                       onClick={closeAll}
                       className={isActive('/services/nursing-registration-in-australia') ? 'active' : ''}
                     >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                        <polyline points="2 17 12 22 22 17" />
-                        <polyline points="2 12 12 17 22 12" />
-                      </svg>
+                    <svg
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M12 8v8" />
+  <path d="M8 12h8" />
+</svg>
                      Nursing Registration in Australia
                     </Link>
                   </li>
@@ -402,18 +406,20 @@ export default function Nav() {
                       onClick={closeAll}
                       className={isActive('/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand') ? 'active' : ''}
                     >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                        <polyline points="2 17 12 22 22 17" />
-                        <polyline points="2 12 12 17 22 12" />
-                      </svg>
+                   <svg
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+  <path d="M14 2v6h6" />
+  <path d="M9 14l2 2 4-4" />
+</svg>
                       Pathway for Registered Nurses from the UK and Ireland to New Zealand
                     </Link>
                   </li>
@@ -423,21 +429,28 @@ export default function Nav() {
                       onClick={closeAll}
                       className={isActive('/services/pathway-for-uk-ireland-nurses-to-australia') ? 'active' : ''}
                     >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                        <polyline points="2 17 12 22 22 17" />
-                        <polyline points="2 12 12 17 22 12" />
-                      </svg>
+                     <svg
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M3 12h18" />
+  <path d="M12 3a15 15 0 0 1 0 18" />
+  <path d="M12 3a15 15 0 0 0 0 18" />
+  <path d="M16 8l4 4-4 4" />
+</svg>
                     
 Pathway for UK & Ireland Nurses to Australia
                     </Link>
+                  </li>
+                  <li className="dropdown-sep-li">
+                    <div className="dropdown-sep" />
                   </li>
                   <li onClick={goToTop}>
                     <Link
@@ -445,21 +458,25 @@ Pathway for UK & Ireland Nurses to Australia
                       onClick={closeAll}
                       className={isActive('/services/cgfns') ? 'active' : ''}
                     >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                        <polyline points="2 17 12 22 22 17" />
-                        <polyline points="2 12 12 17 22 12" />
-                      </svg>
+                     <svg
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+  <path d="M14 2v6h6" />
+  <path d="M9 14l2 2 4-4" />
+</svg>
+
+
                       CGFNS
-                    </Link>
-                  </li>
+                    </Link>                    
+                  </li>                 
                   <li onClick={goToTop}>
                     <Link
                       href="/services/flight-ticketing"
@@ -468,17 +485,19 @@ Pathway for UK & Ireland Nurses to Australia
                         isActive('/services/flight-ticketing') ? 'active' : ''
                       }
                     >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 8v4l3 3" />
-                      </svg>
+                    <svg
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M22 2L11 13" />
+  <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+</svg>
                       Flight Ticketing
                     </Link>
                   </li>
@@ -491,16 +510,21 @@ Pathway for UK & Ireland Nurses to Australia
                       }
                     >
                       <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path d="M12 20h9" />
-                        <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
-                      </svg>
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+  <path d="M14 2v6h6" />
+  <path d="M8 13h8" />
+  <path d="M8 17h6" />
+  <path d="M8 9h3" />
+</svg>
                       CV Preparation
                   
                     </Link>
@@ -512,16 +536,20 @@ Pathway for UK & Ireland Nurses to Australia
                       className={isActive('/services/visa') ? 'active' : ''}
                     >
                       <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 8v4l3 3" />
-                      </svg>
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <rect x="6" y="2" width="12" height="20" rx="2" />
+  <path d="M12 6v12" />
+  <path d="M9 9h6" />
+  <path d="M9 15h6" />
+</svg>
                       VISA
                     </Link>
                   </li>
@@ -538,17 +566,20 @@ Pathway for UK & Ireland Nurses to Australia
                           : ''
                       }
                     >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
+                    <svg
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M3 10L12 3l9 7" />
+  <path d="M5 10v10h14V10" />
+  <path d="M9 20v-6h6v6" />
+</svg>
                       Accommodation and Transportation
                     
                     </Link>
@@ -563,17 +594,20 @@ Pathway for UK & Ireland Nurses to Australia
                           : ''
                       }
                     >
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
+                    <svg
+  width="15"
+  height="15"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+  <path d="M14 2v6h6" />
+  <path d="M9 14l2 2 4-4" />
+</svg>
                       Ahpra Registration Support
                     </Link>
                   </li>
@@ -612,7 +646,7 @@ Pathway for UK & Ireland Nurses to Australia
           </ul>
 
           <a
-            href="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc"
+            href="https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ"
             target="_blank"
             rel="noopener noreferrer"
             className="cta-btn"
@@ -786,7 +820,7 @@ Pathway for UK & Ireland Nurses to Australia
         </ul>
 
         <a
-          href="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc"
+          href="https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ"
           target="_blank"
           rel="noopener noreferrer"
           className="cta-btn drawer-cta-btn"

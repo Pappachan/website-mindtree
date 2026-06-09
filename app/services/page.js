@@ -1,6 +1,25 @@
 import Link from "next/link";
 import "./service.css";
 
+export const metadata = {
+  title: "Services | Mindtree Nursing Solutions",
+  description:
+    "From visa assistance to flight bookings and career pathways, we provide end-to-end support for your international journey.",
+  keywords: [
+  "Flight Tickets",
+  "CGFNS",
+  "Nursing Registration in New Zealand",
+  "Nursing Registration in Australia",
+  "Pathway for Registered Nurses from the UK and Ireland to New Zealand",
+   "Pathway for Registered Nurses from the UK and Ireland to New Zealand",
+"CV Preparation",
+"Visa",
+"Accommodation and Transportation",
+"AHPRA Registration",
+  "Mindtree Nursing"
+  ],
+};
+
 /* ── Inline SVG icons ── */
 const IconFlight = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
@@ -41,6 +60,74 @@ const ArrowRight = () => (
   </svg>
 );
 
+
+const IconNursingRegistrationNZ = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="22"
+    height="22"
+  >
+    <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
+    <path d="M14 2v5h5" />
+    <path d="M9 13l2 2 4-4" />
+  </svg>
+);
+
+const IconUKIrelandToAustralia = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="22"
+    height="22"
+  >
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18" />
+    <path d="M14 8l4 4-4 4" />
+  </svg>
+);
+const IconNursingAustralia = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="22"
+    height="22"
+  >
+    <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
+    <path d="M14 2v5h5" />
+    <path d="M9 13l2 2 4-4" />
+  </svg>
+);
+const IconUKIrelandToNZ = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="22"
+    height="22"
+  >
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18" />
+    <path d="M12 3a15 15 0 0 1 0 18" />
+    <path d="M12 3a15 15 0 0 0 0 18" />
+    <path d="M14 8l4 4-4 4" />
+  </svg>
+);
 /* ── Reusable Card ── */
 function ServiceCard({ photo, alt, icon, abbr, name, badge, para1, para2, tags, href }) {
   return (
@@ -111,9 +198,9 @@ export default function ServicesPage() {
           <div className="service-grid">
 
             <ServiceCard
-              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              photo="/box-img/img2.jpeg"
               alt="Aeroplane in sky"
-              icon={<IconFlight />}
+            icon={<IconNursingRegistrationNZ />}
               abbr="Nursing Registration in New Zealand"
               name="International Travel Booking"
               badge="Featured"
@@ -123,9 +210,9 @@ export default function ServicesPage() {
             />
 
              <ServiceCard
-              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              photo="/box-img/img3.jpeg"
               alt="Aeroplane in sky"
-              icon={<IconFlight />}
+              icon={<IconNursingAustralia />}
               abbr="Nursing Registration in Australia"
               name="International Travel Booking"
               badge="Featured"
@@ -135,9 +222,9 @@ export default function ServicesPage() {
             />
 
              <ServiceCard
-              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              photo="/box-img/img5.jpeg"
               alt="Aeroplane in sky"
-              icon={<IconFlight />}
+              icon={<IconUKIrelandToNZ />}
               abbr="Pathway for Registered Nurses from the UK and Ireland to New Zealand"
               name="International Travel Booking"
               badge="Featured"
@@ -146,9 +233,9 @@ export default function ServicesPage() {
               href="/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand"
             />
              <ServiceCard
-              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              photo="/box-img/img8.jpeg"
               alt="Aeroplane in sky"
-              icon={<IconFlight />}
+             icon={<IconUKIrelandToAustralia />}
               abbr="Pathway for UK & Ireland Nurses to Australia"
               name="International Travel Booking"
               badge="Featured"
@@ -157,7 +244,7 @@ export default function ServicesPage() {
               href="/services/pathway-for-uk-ireland-nurses-to-australia"
             />
              <ServiceCard
-              photo="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+              photo="/box-img/flight-img.jpeg"
               alt="Aeroplane in sky"
               icon={<IconFlight />}
               abbr="Flight Tickets"
@@ -169,7 +256,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80"
+              photo="box-img/cvimg.jpg"
               alt="Professional CV on desk"
               icon={<IconCV />}
               abbr="CV & Cover Letter Preparation"
@@ -180,7 +267,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="https://images.unsplash.com/photo-1569437061241-a848be43cc82?w=800&q=80"
+              photo="/box-img/visa1.png"
               alt="Passport and visa documents"
               icon={<IconVisa />}
               abbr="Visa"
@@ -191,7 +278,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80"
+              photo="/mindtree-img/mindtree-img7.webp"
               alt="Cozy apartment interior"
               icon={<IconHome />}
               abbr="Accommodation"

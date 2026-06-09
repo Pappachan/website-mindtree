@@ -133,7 +133,10 @@ function Carousel({ images, city }) {
   }
 
   return (
+    
     <div className="ac-carousel">
+
+
       {/* main frame */}
       <div className="ac-frame">
         {/* corner brackets */}
@@ -277,6 +280,14 @@ function LocationRow({ loc }) {
 export default function AccommodationPage() {
   return (
     <>
+                       {/* ── BREADCRUMB ── */}
+      <nav className="ft-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services">Services</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Pathway for UK Ireland Nurses to Australia</span>
+      </nav>
       {/* ══════════════════════════════════════
           HERO — matches Blog / About / Services
           (fully inline to bypass any global CSS)
@@ -289,6 +300,9 @@ export default function AccommodationPage() {
         textAlign: "center",
         fontFamily: "'Outfit', sans-serif",
       }}>
+
+
+      
         {/* radial glow */}
         <div style={{
           position: "absolute", inset: 0, pointerEvents: "none",

@@ -1,9 +1,34 @@
 import Link from "next/link";
 import "./nursing-registration-in-australia.css";
 
+export const metadata = {
+  title: "Nursing Registration in Australia | Mindtree Nursing Solutions",
+  description:
+    "Start your nursing career in Australia with expert registration support from Mindtree Nursing Solutions. We guide internationally qualified nurses through AHPRA requirements, document preparation, credential assessment, and registration pathways.",
+  keywords: [
+    "Nursing Registration Australia",
+    "AHPRA Registration",
+    "Australian Nursing Registration",
+    "International Nurses Australia",
+    "Nursing Career Australia",
+    "AHPRA Pathway",
+    "Nurse Registration Support",
+    "Mindtree Nursing"
+  ],
+};
+
 export default function AustraliaRegistrationPage() {
   return (
     <main className="ausreg-page">
+
+      {/* ── BREADCRUMB ── */}
+      <nav className="ft-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services">Services</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Nursing Registration in Australia</span>
+      </nav>
 
       {/* ── HERO ── */}
       <section className="ausreg-hero">
@@ -71,7 +96,6 @@ export default function AustraliaRegistrationPage() {
               registration — handled end-to-end by our expert team.
             </p>
           </div>
-
           <div className="ausreg-service-list">
             <div className="ausreg-service-item">
               <div className="ausreg-service-num">01</div>
@@ -86,7 +110,6 @@ export default function AustraliaRegistrationPage() {
                 </p>
               </div>
             </div>
-
             <div className="ausreg-service-item">
               <div className="ausreg-service-num">02</div>
               <div className="ausreg-service-content">
@@ -104,7 +127,7 @@ export default function AustraliaRegistrationPage() {
         </div>
       </section>
 
-      {/* ── OBA PROGRAM ── */}
+      {/* ── OBA PROGRAM — LIGHT ── */}
       <section className="ausreg-oba-section">
         <div className="ausreg-oba-inner">
           <div className="ausreg-oba-header">
@@ -201,7 +224,6 @@ export default function AustraliaRegistrationPage() {
               you at every stage of the OBA process, from exam preparation to settling in Australia.
             </p>
           </div>
-
           <div className="ausreg-why-grid">
             {[
               { num: "01", title: "Personalised Consultation & Support", desc: "Every nurse's journey is unique, and we tailor our guidance to meet your individual needs. Our expert consultants walk you through the entire process, ensuring you understand each step clearly." },

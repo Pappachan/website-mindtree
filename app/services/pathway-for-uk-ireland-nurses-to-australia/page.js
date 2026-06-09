@@ -1,9 +1,35 @@
 import Link from "next/link";
 import "./pathway-for-uk-ireland-nurses-to-australia.css";
 
+export const metadata = {
+  title: "UK & Ireland Nurses Pathway to Australia | Mindtree Nursing Solutions",
+  description:
+    "Discover the pathway for registered nurses from the UK and Ireland to Australia. Mindtree Nursing Solutions provides expert guidance on AHPRA registration, eligibility requirements, documentation, employment opportunities, and relocation support for a successful nursing career in Australia.",
+  keywords: [
+    "UK Nurses to Australia",
+    "Ireland Nurses to Australia",
+    "AHPRA Registration",
+    "Australia Nursing Pathway",
+    "Registered Nurses Australia",
+    "Nursing Registration Australia",
+    "UK Nurse Migration Australia",
+    "Mindtree Nursing"
+  ],
+};
+
 export default function UKIrelandAustraliaPage() {
   return (
     <main className="ukaus-page">
+
+      
+      {/* ── BREADCRUMB ── */}
+      <nav className="ft-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/services">Services</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Pathway for UK Ireland Nurses to Australia</span>
+      </nav>
 
       {/* ── HERO ── */}
       <section className="ukaus-hero">

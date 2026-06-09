@@ -3,6 +3,18 @@ import { DM_Sans } from 'next/font/google'
 import Link from "next/link";
 
 
+
+
+export const metadata = {
+  title: "Blogs | Mindtree Nursing Solutions",
+  description:
+    "Mindtree Nursing is your all-in-one premium consultant for OET, CGFNS, IQN & OSCE, plus visa, ticket, and accommodation in NZ.",
+  keywords: [
+    "New Zealand Nursing",
+    "Mindtree Nursing Sloutions",
+  ],
+};
+
 export default function BlogPage() {
   return (
   

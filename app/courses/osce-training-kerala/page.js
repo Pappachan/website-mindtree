@@ -2,14 +2,18 @@ import Link from "next/link";
 import "./osce-kerala.css";
 
 export const metadata = {
-  title: "OSCE Training in Kerala | Mindtree Nursing",
+  title: "OSCE Training in Kerala | Mindtree Nursing Solutions",
   description:
-    "Join Mindtree Nursing for expert IQN preparation, mock tests, study materials, and guidance for New Zealand nursing registration.",
+    "Join the leading OSCE training program in Kerala at Mindtree Nursing Solutions. Get expert coaching, hands-on clinical practice, mock OSCE exams, and personalized guidance to successfully achieve your nursing registration goals abroad.",
   keywords: [
-    "OSCE",
-    "OSCE Coaching",
-    " OSCE New Zealand Nursing",
-    
+    "OSCE Training Kerala",
+    "OSCE Coaching Kerala",
+    "OSCE Course",
+    "OSCE Preparation",
+    "Nursing OSCE",
+    "OSCE Mock Test",
+    "International Nursing Registration",
+    "Mindtree Nursing",
   ],
 };
 
@@ -119,57 +123,105 @@ export default function OSCEPage() {
         </div>
       </section>
 
-<section className="osce-banner">
-  <div className="osce-banner__container">
+        {/* ── OSCE TRIAL BANNER ── */}
+      <section className="osce-trial">
+        <div className="osce-trial__inner">
 
-    <div className="osce-banner__left">
-      <span className="osce-banner__label">
-        OSCE SUCCESS STARTS HERE
-      </span>
+          {/* Left — content */}
+          <div className="osce-trial__content">
+            <span className="osce-trial__badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              OSCE Success Starts Here
+            </span>
 
-      <h2 className="osce-banner__title">
-        Prepare for Your OSCE with Confidence
-      </h2>
+            <h2 className="osce-trial__title">
+              Prepare for Your OSCE<br />
+              <em className="osce-trial__em">with Confidence</em>
+            </h2>
 
-      <p className="osce-banner__desc">
-        Join our structured OSCE training program designed to help
-        internationally qualified nurses master clinical scenarios,
-        communication skills, and examination techniques required
-        for success.
-      </p>
+            <div className="osce-trial__accent-bar" />
 
-      <div className="osce-banner__stats">
-        <div>
-          <h3>500+</h3>
-          <span>Nurses Trained</span>
+            <p className="osce-trial__text">
+              Join our structured OSCE training program designed to help internationally
+              qualified nurses master clinical scenarios, communication skills, and
+              examination techniques required for success.
+            </p>
+
+            <ul className="osce-trial__features">
+              <li>
+                <span className="osce-trial__check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="13" height="13"><polyline points="20 6 9 17 4 12" /></svg>
+                </span>
+                500+ Nurses Trained
+              </li>
+              <li>
+                <span className="osce-trial__check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="13" height="13"><polyline points="20 6 9 17 4 12" /></svg>
+                </span>
+                95% Exam Success Rate
+              </li>
+              <li>
+                <span className="osce-trial__check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="13" height="13"><polyline points="20 6 9 17 4 12" /></svg>
+                </span>
+                1:1 Personalised Mentor Support
+              </li>
+              <li>
+                <span className="osce-trial__check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="13" height="13"><polyline points="20 6 9 17 4 12" /></svg>
+                </span>
+                Online &amp; Offline Training Available
+              </li>
+            </ul>
+
+            <div className="osce-trial__actions">
+              <a href="/courses/osce" className="osce-trial__btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 8 16 12 12 16"/>
+                  <line x1="8" y1="12" x2="16" y2="12"/>
+                </svg>
+                <span>Explore OSCE Training</span>
+              </a>
+              <div className="osce-trial__meta">
+                <span>Expert-led sessions</span>
+                <span className="osce-trial__dot" />
+                <span>Hands-on practice</span>
+                <span className="osce-trial__dot" />
+                <span>Exam booking support</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right — image */}
+          <div className="osce-trial__visual">
+            <div className="osce-trial__img-glow" />
+            <div className="osce-trial__img-wrap">
+              <img
+                src="/box-img/osce-free.png"
+                alt="OSCE Training Preview"
+                className="osce-trial__img"
+              />
+              <div className="osce-trial__pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+                Clinical Scenarios
+              </div>
+              <div className="osce-trial__pill osce-trial__pill--2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                95% Pass Rate
+              </div>
+            </div>
+          </div>
+
         </div>
-
-        <div>
-          <h3>95%</h3>
-          <span>Success Rate</span>
-        </div>
-
-        <div>
-          <h3>1:1</h3>
-          <span>Mentor Support</span>
-        </div>
-      </div>
-
-      <a href="/courses/osce" className="osce-banner__btn">
-        Explore OSCE Training
-      </a>
-    </div>
-
-    <div className="osce-banner__right">
-      <img
-        src="/box-img/osce-free.png"
-        alt="OSCE Training"
-      />
-    </div>
-
-  </div>
-</section>
-
+      </section>
 
       {/* ── EXAM INFO SECTION ── */}
       <section className="osce-docs-section">

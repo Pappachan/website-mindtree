@@ -1,6 +1,21 @@
 import Link from "next/link";
 import "./courses.css";
 
+export const metadata = {
+  title: "Courses | Mindtree Nursing Solutions",
+  description:
+    "Explore professional courses in nursing, OET preparation, OSCE training, and international healthcare career pathways.",
+  keywords: [
+    "Therapeutic Communication",
+    "OET",
+    "iqn",
+    "OSCE",
+    "Nursing Training",
+    "Communication Skills for Nurses",
+    "Mindtree Nursing Solutions"
+  ],
+};
+
 /* ── Inline SVG icons ── */
 const IconLayers = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
@@ -32,7 +47,68 @@ const ArrowRight = () => (
     <path d="M3 8h10M9 4l4 4-4 4" />
   </svg>
 );
+const IconProfessionalCommunication = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="22"
+    height="22"
+  >
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+  </svg>
+);
+const IconOETPreparation = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="22"
+    height="22"
+  >
+    <path d="M22 10L12 5 2 10l10 5 10-5z" />
+    <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+  </svg>
+);
+const IconOSCEChristchurch = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="22"
+    height="22"
+  >
+    <path d="M12 5v14" />
+    <path d="M5 12h14" />
+    <circle cx="12" cy="12" r="9" />
+  </svg>
+);
 
+const IconOSCEKerala = () => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    width="22"
+    height="22"
+  >
+    <path d="M6 3v5a4 4 0 0 0 8 0V3" />
+    <path d="M10 17a4 4 0 0 0 8 0v-2" />
+    <circle cx="18" cy="13" r="2" />
+  </svg>
+);
 /* ── Reusable Card ── */
 function CourseCard({ photo, alt, icon, title, subtitle, badge, para1, para2, tags, href }) {
   return (
@@ -107,7 +183,7 @@ export default function Courses() {
           <div className="course-grid">
 
             <CourseCard
-              photo="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+              photo="/box-img/img12.jpg"
               alt="IQN training class"
               icon={<IconLayers />}
               title="IQN Training Program"
@@ -119,59 +195,58 @@ export default function Courses() {
             />
 
             <CourseCard
-              photo="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+              photo="box-img/img4.jpeg"
               alt="OSCE clinical training Kerala"
-              icon={<IconCheck />}
+              icon={<IconOSCEKerala />}
               title="OSCE Training — Kerala"
               subtitle="Objective Structured Clinical Examination"
               para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
               tags={["Clinical Skills", "Station Practice", "Mock Exams"]}
-              href="#"
-            />
+              href="/courses/osce-training-kerala"/>
 
             <CourseCard
-              photo="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&q=80"
+              photo="/box-img/img11.jpg"
               alt="OSCE training Auckland"
-              icon={<IconCheck />}
+               icon={<IconOSCEChristchurch />}
               title="OSCE Training — Auckland"
               subtitle="Objective Structured Clinical Examination"
               para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
               tags={["NZ Standards", "Simulation Lab", "NCNZ Aligned"]}
-              href="#"
+              href="/courses/osce-training-new-zealand"
             />
 
             <CourseCard
-              photo="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80"
+              photo="/box-img/img1.jpeg"
               alt="OSCE training Christchurch"
-              icon={<IconCheck />}
+              icon={<IconOSCEChristchurch />}
               title="OSCE Training — Christchurch"
               subtitle="Objective Structured Clinical Examination"
               para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
               tags={["South Island", "Flexible Schedule", "Online + In-Person"]}
-              href="#"
+              href="/courses/osce-training-new-zealand"
             />
 
             <CourseCard
-              photo="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
+              photo="/box-img/img10.jpg"
               alt="OET English preparation"
-              icon={<IconChat />}
+              icon={<IconOETPreparation />}
               title="OET Preparation"
               subtitle="Occupational English Test — Online & Offline"
               para1="Tailored Occupational English Test coaching to clear your language proficiency requirements with confidence."
               tags={["Writing", "Speaking", "Healthcare English"]}
-              href="#"
+              href="/courses/best-oet-coaching-centre-in-kerala"
             />
 
             <CourseCard
-              photo="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+              photo="/box-img/img6.jpeg"
               alt="Professional Communication Courses"
-              icon={<IconGlobe />}
+            icon={<IconProfessionalCommunication />}
               title="Professional Communication"
               subtitle="Confidence & Communication Modules"
               para1="Specialized modules specifically designed to boost your confidence and maximize your OSCE performance. 
 "
               tags={["Handover Skills", "Patient Communication", "Documentation"]}
-              href="/courses/ncnz-guidance"
+              href="/courses/therapeutic-communication"
             />
 
           </div>

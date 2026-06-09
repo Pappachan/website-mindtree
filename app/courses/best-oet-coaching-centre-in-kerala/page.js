@@ -1,6 +1,22 @@
 import Link from "next/link";
 import "./oet.css";
 
+export const metadata = {
+  title: "Best OET coaching centre in kerala | Mindtree Nursing Solutions",
+  description:
+    "Prepare for OET success with Mindtree Nursing Solutions. Get expert coaching, live classes, mock tests, personalized feedback, and comprehensive study materials designed for healthcare professionals aiming to work abroad.",
+  keywords: [
+    "OET Training",
+    "OET Coaching",
+    "OET Course",
+    "Occupational English Test",
+    "OET Preparation",
+    "Nursing English Test",
+    "OET Mock Test",
+    "Mindtree Nursing",
+  ],
+};
+
 const includes = [
   { icon: "📖", title: "English Language Instruction",       desc: "Focused language training covering all four OET sub-tests with healthcare-specific vocabulary and communication skills." },
   { icon: "🏥", title: "Healthcare Context",                  desc: "All training materials and scenarios are grounded in real healthcare settings relevant to nurses and medical professionals." },
