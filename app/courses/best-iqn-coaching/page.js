@@ -46,12 +46,12 @@ export default function IQNPage() {
       <section className="iqn-intro-section">
         <div className="iqn-intro-inner">
           <div className="iqn-intro-grid">
-            <div className="iqn-intro-left">
+            <div className="iqn-intro-left" data-anim="from-left">
               <span className="iqn-section-label">Who We Help</span>
               <h2 className="iqn-intro-heading">International Qualified Nurses Support</h2>
               <div className="iqn-accent-bar" />
             </div>
-            <div className="iqn-intro-right">
+            <div className="iqn-intro-right" data-anim="from-right" data-anim-delay="120">
               <p className="iqn-intro-para">
                 Discover unwavering support on your journey as an internationally qualified nurse. We help you with the proceedings of NZNC registration and its approvals as well. Our tailored assistance ensures a smooth transition into the healthcare landscape, guiding you through accreditation processes and offering resources for exam preparation.
               </p>
@@ -71,7 +71,7 @@ export default function IQNPage() {
         <div className="iqn-trial__inner">
 
           {/* Left — content */}
-          <div className="iqn-trial__content">
+          <div className="iqn-trial__content" data-anim="from-left">
             <span className="iqn-trial__badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -143,7 +143,7 @@ export default function IQNPage() {
           </div>
 
           {/* Right — image */}
-          <div className="iqn-trial__visual">
+          <div className="iqn-trial__visual" data-anim="from-right" data-anim-delay="100">
             <div className="iqn-trial__img-glow" />
             <div className="iqn-trial__img-wrap">
               <img
@@ -174,11 +174,11 @@ export default function IQNPage() {
       <section className="iqn-cta">
         <div className="iqn-cta-shape" />
         <div className="iqn-cta-inner">
-          <h2 className="iqn-cta-heading">Your Aspirations Are Our Priority</h2>
-          <p className="iqn-cta-sub">
+          <h2 className="iqn-cta-heading" data-anim="up">Your Aspirations Are Our Priority</h2>
+          <p className="iqn-cta-sub" data-anim="up" data-anim-delay="130">
             Join us and embark on a fulfilling nursing career in New Zealand with the support and resources you deserve.
           </p>
-          <Link href="/contact" className="iqn-cta-btn">Get in Touch</Link>
+          <Link href="/contact" className="iqn-cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
         </div>
       </section>
 

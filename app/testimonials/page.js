@@ -160,7 +160,7 @@ export default function TestimonialsPage() {
       {/* ── Testimonials Grid ───────────────────────── */}
       <section className="section t-grid-section">
         <div className="container">
-          <header className="section-header">
+          <header className="section-header" data-anim="up">
             <div className="section-label">
               <span className="label-dot label-dot--accent" />
               What People Say
@@ -176,6 +176,8 @@ export default function TestimonialsPage() {
               <article
                 key={t.id}
                 className={`t-card ${index % 5 === 0 ? "t-card--featured" : ""}`}
+                data-anim="scale-up"
+                data-anim-delay={index * 50}
               >
                 {/* Quote mark */}
                 <div className="t-quote-mark">"</div>
@@ -226,7 +228,7 @@ export default function TestimonialsPage() {
       {/* ── CTA Banner ──────────────────────────────── */}
       <section className="t-cta-section">
         <div className="container">
-          <div className="t-cta-inner">
+          <div className="t-cta-inner" data-anim="up">
             <div className="t-cta-text">
               <span className="t-cta-eyebrow">Join Our Family</span>
               <h2 className="t-cta-title">Experience care that goes beyond the clinical.</h2>

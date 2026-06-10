@@ -58,13 +58,13 @@ export default function NZRegistrationPage() {
         <div className="nzreg-intro-inner">
           <div className="nzreg-intro-grid">
 
-            <div className="nzreg-intro-left">
+            <div className="nzreg-intro-left" data-anim="from-left">
               <span className="nzreg-section-label">What We Do</span>
               <h2 className="nzreg-intro-heading">Nursing Registration in New Zealand</h2>
               <div className="nzreg-accent-bar" />
             </div>
 
-            <div className="nzreg-intro-right">
+            <div className="nzreg-intro-right" data-anim="from-right" data-anim-delay="120">
               <p className="nzreg-intro-para">
                 Navigating the Nursing Registration in New Zealand process can be challenging, but
                 Axon Careers is here to simplify it for you. We provide end-to-end support —
@@ -87,7 +87,7 @@ export default function NZRegistrationPage() {
       <section className="nzreg-services-section">
         <div className="nzreg-services-inner">
 
-          <div className="nzreg-services-header">
+          <div className="nzreg-services-header" data-anim="up">
             <span className="nzreg-section-label">Our Services</span>
             <h2 className="nzreg-services-heading">Here's How We Help</h2>
             <p className="nzreg-services-sub">
@@ -98,7 +98,7 @@ export default function NZRegistrationPage() {
 
           <div className="nzreg-service-list">
 
-            <div className="nzreg-service-item">
+            <div className="nzreg-service-item" data-anim="up">
               <div className="nzreg-service-num">01</div>
               <div className="nzreg-service-content">
                 <h3 className="nzreg-service-title">CGFNS Verification</h3>
@@ -112,7 +112,7 @@ export default function NZRegistrationPage() {
               </div>
             </div>
 
-            <div className="nzreg-service-item">
+            <div className="nzreg-service-item" data-anim="up" data-anim-delay="80">
               <div className="nzreg-service-num">02</div>
               <div className="nzreg-service-content">
                 <h3 className="nzreg-service-title">NCNZ Application Assistance</h3>
@@ -126,7 +126,7 @@ export default function NZRegistrationPage() {
               </div>
             </div>
 
-            <div className="nzreg-service-item">
+            <div className="nzreg-service-item" data-anim="up" data-anim-delay="160">
               <div className="nzreg-service-num">03</div>
               <div className="nzreg-service-content">
                 <h3 className="nzreg-service-title">IQN Theoretical Exam Online Training</h3>
@@ -140,7 +140,7 @@ export default function NZRegistrationPage() {
               </div>
             </div>
 
-            <div className="nzreg-service-item">
+            <div className="nzreg-service-item" data-anim="up" data-anim-delay="240">
               <div className="nzreg-service-num">04</div>
               <div className="nzreg-service-content">
                 <h3 className="nzreg-service-title">OSCE Exam Training</h3>
@@ -156,7 +156,7 @@ export default function NZRegistrationPage() {
               </div>
             </div>
 
-            <div className="nzreg-service-item">
+            <div className="nzreg-service-item" data-anim="up" data-anim-delay="320">
               <div className="nzreg-service-num">05</div>
               <div className="nzreg-service-content">
                 <h3 className="nzreg-service-title">Accommodation &amp; Transportation for OSCE</h3>
@@ -178,12 +178,12 @@ export default function NZRegistrationPage() {
       <section className="nzreg-cta">
         <div className="nzreg-cta-shape" />
         <div className="nzreg-cta-inner">
-          <h2 className="nzreg-cta-heading">Ready to Begin Your Journey?</h2>
-          <p className="nzreg-cta-sub">
+          <h2 className="nzreg-cta-heading" data-anim="up">Ready to Begin Your Journey?</h2>
+          <p className="nzreg-cta-sub" data-anim="up" data-anim-delay="130">
             Contact our team today and let us guide you through every step of your New Zealand
             nursing registration — from credentials to your first day on the ward.
           </p>
-          <Link href="/contact" className="nzreg-cta-btn">Get in Touch</Link>
+          <Link href="/contact" className="nzreg-cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
         </div>
       </section>
 

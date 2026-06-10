@@ -43,8 +43,8 @@ export default function AhpraPage() {
 
       {/* ABOUT THE SERVICE */}
       <section className="ah-section">
-        <p className="ah-label">About the Service</p>
-        <h2 className="ah-title">AHPRA Registration Support</h2>
+        <p className="ah-label" data-anim="up">About the Service</p>
+        <h2 className="ah-title" data-anim="up" data-anim-delay="80">AHPRA Registration Support</h2>
         <div className="ah-about-card ah-fadein">
           <p>
             Start on your AHPRA registration journey with tailored support. Our experts provide personalized assistance, demystifying the process for nurses and healthcare professionals. From document preparation to navigating AHPRA's stringent requirements, we ensure a meticulous and efficient registration experience.
@@ -60,8 +60,8 @@ export default function AhpraPage() {
 
       {/* DOCUMENTS REQUIRED */}
       <section className="ah-section ah-section--docs">
-        <p className="ah-label">Documentation</p>
-        <h2 className="ah-title">Documents Required</h2>
+        <p className="ah-label" data-anim="up">Documentation</p>
+        <h2 className="ah-title" data-anim="up" data-anim-delay="80">Documents Required</h2>
         <p className="ah-sub">Ensure you have the following documents ready before beginning your application.</p>
         <div className="ah-doc-grid">
 
@@ -94,8 +94,8 @@ export default function AhpraPage() {
 
       {/* APPLICATION STAGES */}
       <section className="ah-section ah-section--stages">
-        <p className="ah-label">Process</p>
-        <h2 className="ah-title">AHPRA Registration Application Stages</h2>
+        <p className="ah-label" data-anim="up">Process</p>
+        <h2 className="ah-title" data-anim="up" data-anim-delay="80">AHPRA Registration Application Stages</h2>
         <p className="ah-sub">A clear step-by-step overview of what happens from submission to outcome.</p>
         <div className="ah-steps">
 
@@ -224,8 +224,8 @@ export default function AhpraPage() {
 
       {/* TRUST CARDS */}
       <section className="ah-section ah-section--trust">
-        <p className="ah-label">Why Choose Us</p>
-        <h2 className="ah-title">Our Commitment to You</h2>
+        <p className="ah-label" data-anim="up">Why Choose Us</p>
+        <h2 className="ah-title" data-anim="up" data-anim-delay="80">Our Commitment to You</h2>
         <div className="ah-trust-grid">
 
           <div className="ah-trust-card ah-fadein" style={{ animationDelay: "0s" }}>

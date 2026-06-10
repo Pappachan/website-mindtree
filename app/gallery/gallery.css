@@ -4,7 +4,7 @@
    Modals: React state — class-based open/close
    ───────────────────────────────────────────────────────────── */
 
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
 
 :root {
   --c1: #E7F0FA;
@@ -23,7 +23,7 @@
   --shadow-hover: 0 16px 48px rgba(13,36,64,.20), 0 4px 12px rgba(13,36,64,.10);
   --shadow-modal: 0 32px 80px rgba(13,36,64,.50);
   --t:            0.38s cubic-bezier(0.4,0,0.2,1);
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
   --font-body:    "DM Sans", system-ui, sans-serif;
 }
 
@@ -71,9 +71,9 @@ img { display: block; max-width: 100%; }
 }
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem,8vw,6rem);
-  font-weight: 300; color: #fff;
-  line-height: 1; letter-spacing: -.01em;
+  font-size: clamp(36px, 6vw, 62px);
+  font-weight: 700; color: #fff;
+  line-height: 1.15; letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
 .hero-sub {
@@ -430,3 +430,12 @@ img { display: block; max-width: 100%; }
   .hero-inner { padding: 60px 20px 48px; }
   .photo-grid { grid-auto-rows: 220px; }
 }
+
+/* ── Hero entrance ── */
+@keyframes galleryHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow { animation: galleryHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.hero-title   { animation: galleryHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.hero-sub     { animation: galleryHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.50s; }

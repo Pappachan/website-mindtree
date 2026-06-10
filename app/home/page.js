@@ -4,13 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import "./home.css";
 
-const courses = [
-  { icon: "🎓", title: "OET preparation (Online & Offline)", desc: "Tailored Occupational English Test coaching to clear your language proficiency requirements with confidence.", href: "/courses/oet-training", tag: null, img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" },
-  { icon: "📘", title: "IQN Training Program", desc: "Top-tier preparation featuring mock tests, live & recorded classes, dedicated mobile app support available on both iOS and Android.", href: "/courses/ielts-preparation", tag: null, img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80" },
-  { icon: "🏥", title: "OSCE Training (Online & Offline)", desc: "Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand.", href: "/courses/clinical-skills", tag: "Most Popular", img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" },
-  { icon: "📋", title: "Professional Communication Courses", desc: "Specialized modules specifically designed to boost your confidence and maximize your OSCE performance.", href: "/courses/ncnz-guidance", tag: null, img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" },
-];
-
 const GALLERY_ITEMS = [
   { id: "g1", type: "image", src: "/mindtree-img/mindtree-img1.webp", alt: "Celebrating Success", caption: "Celebrating Success", category: "Highlights" },
   { id: "g2", type: "video", youtubeId: "qxlnO0sc18M", alt: "Introduction to Mindtree", caption: "Introduction to Mindtree", category: "Videos" },
@@ -71,7 +64,7 @@ export default function Home() {
         <div className="hm-hero__text">
           <span className="hm-eyebrow">Trusted Nursing Consultancy</span>
           <h1 className="hm-hero__h1"><em>Mindtree Nursing</em><br />Solutions</h1>
-          <h4 className="hm-eyebrow">No.1 OET, IQN, OSCE Training Center in kerala and newzealand</h4>
+          <p className="hm-hero__tagline"><strong>No.1</strong> OET · IQN · OSCE Training Center in Kerala &amp; New Zealand</p>
           <p className="hm-hero__sub">Mindtree Nursing is your all-in-one premium consultant for OET, CGFNS, IQN & OSCE, plus visa, ticket, and accommodation in NZ.</p>
           <div className="hm-hero__actions">
             <a href="/contact" className="hm-btn hm-btn--primary">Get Free Consultation</a>
@@ -86,6 +79,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hm-hero__img-wrap">
+          <div className="hm-hero__img-decoration" aria-hidden="true" />
           <div className="hm-hero__img-frame">
             <img loading="eager" src="/mindtre.webp" alt="Nursing professional" className="hm-hero__img" />
           </div>
@@ -98,13 +92,17 @@ export default function Home() {
             NCNZ Registered
           </div>
         </div>
+        <div className="hm-scroll-cue" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="22" height="22"><path d="M19 9l-7 7-7-7" /></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="22" height="22"><path d="M19 9l-7 7-7-7" /></svg>
+        </div>
       </section>
 
       {/* ══════ SECTION 2 — PATHWAYS ══════ */}
       <section className="hm-pathways">
         <div className="hm-section-head">
-          <span className="hm-eyebrow hm-eyebrow--gold">What We Offer</span>
-          <h2 className="hm-section-h2 hm-section-h2--light">Expert Solutions For Every Step Of Your Nursing Path</h2>
+          <span className="hm-eyebrow hm-eyebrow--gold" data-anim="up" data-anim-delay="0">What We Offer</span>
+          <h2 className="hm-section-h2 hm-section-h2--light" data-anim="up" data-anim-delay="110">Expert Solutions For Every Step Of Your Nursing Path</h2>
         </div>
         <div className="hm-pathways__grid">
           {[
@@ -112,13 +110,13 @@ export default function Home() {
             { title: "Nursing Registration in Australia", img: "/box-img/img13.jpg", href: "/services/nursing-registration-in-australia" },
             { title: "Pathway for Registered Nurses from the UK and Ireland to New Zealand", img: "/box-img/img14.jpg", href: "/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand" },
             { title: "Pathway for UK & Ireland Nurses to Australia", img: "/box-img/img15.jpg", href: "/services/pathway-for-uk-ireland-nurses-to-australia" },
-          ].map((item) => (
-            <a key={item.title} href={item.href} className="hm-pathway-card">
+          ].map((item, i) => (
+            <a key={item.title} href={item.href} className="hm-pathway-card" data-anim="scale-up" data-anim-delay={i * 75}>
               <img src={item.img} alt={item.title} className="hm-pathway-card__img" />
               <div className="hm-pathway-card__overlay" />
               <div className="hm-pathway-card__content">
                 <h3 className="hm-pathway-card__title">{item.title}</h3>
-                <span className="hm-pathway-card__btn">Learn More</span>
+                <span className="hm-pathway-card__btn">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7" /></svg></span>
               </div>
             </a>
           ))}
@@ -133,7 +131,7 @@ export default function Home() {
         <div className="hm-app__blob hm-app__blob--1" />
         <div className="hm-app__blob hm-app__blob--2" />
         <div className="hm-app__inner">
-          <div className="hm-app__text">
+          <div className="hm-app__text" data-anim="from-left">
             <span className="hm-eyebrow">Available Now</span>
             <h2 className="hm-app__heading">Explore Our App</h2>
             <p className="hm-app__sub">Access mock tests, live classes, study materials, and track your exam progress — all from your phone. Available on iOS and Android.</p>
@@ -160,7 +158,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="hm-app__visual">
+          <div className="hm-app__visual" data-anim="from-right" data-anim-delay="120">
             <div className="hm-app__glow" />
             <div className="hm-app__phone-video">
               <div className="hm-app__notch" />
@@ -172,6 +170,11 @@ export default function Home() {
               />
               <div className="hm-app__phone-sheen" />
             </div>
+            <div className="hm-app__rating-badge">
+              <span className="hm-app__rating-badge__stars">★★★★★</span>
+              <span className="hm-app__rating-badge__score">4.9</span>
+              <span className="hm-app__rating-badge__label">App Rating</span>
+            </div>
           </div>
         </div>
       </section>
@@ -179,9 +182,9 @@ export default function Home() {
       {/* ══════ SECTION 4 — COURSES ══════ */}
       <section className="hm-courses">
         <div className="hm-section-head">
-          <span className="hm-eyebrow hm-eyebrow--gold">Learn With Us</span>
-          <h2 className="hm-section-h2 hm-section-h2--light">Our Courses</h2>
-          <p className="hm-section-sub hm-section-sub--light">Expert-led programmes designed to get you registered and working in New Zealand as fast as possible.</p>
+          <span className="hm-eyebrow hm-eyebrow--gold" data-anim="up" data-anim-delay="0">Learn With Us</span>
+          <h2 className="hm-section-h2 hm-section-h2--light" data-anim="up" data-anim-delay="110">Our Courses</h2>
+          <p className="hm-section-sub hm-section-sub--light" data-anim="up" data-anim-delay="220">Expert-led programmes designed to get you registered and working in New Zealand as fast as possible.</p>
         </div>
         <div className="hm-pathways__grid">
           {[
@@ -189,13 +192,13 @@ export default function Home() {
             { title: "OSCE Training (Online & Offline)", img: "/box-img/nurse.png", href: "/courses/osce-training-kerala" },
             { title: "Professional Communication Courses", img: "/box-img/OSCE_Training.png", href: "/courses/therapeutic-communication" },
             { title: "IQN Training Program", img: "/box-img/img16.jpg", href: "/courses/best-iqn-coaching" },
-          ].map((item) => (
-            <a key={item.title} href={item.href} className="hm-pathway-card">
+          ].map((item, i) => (
+            <a key={item.title} href={item.href} className="hm-pathway-card" data-anim="scale-up" data-anim-delay={i * 75}>
               <img src={item.img} alt={item.title} className="hm-pathway-card__img" />
               <div className="hm-pathway-card__overlay" />
               <div className="hm-pathway-card__content">
                 <h3 className="hm-pathway-card__title">{item.title}</h3>
-                <span className="hm-pathway-card__btn">Learn More</span>
+                <span className="hm-pathway-card__btn">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7" /></svg></span>
               </div>
             </a>
           ))}
@@ -210,9 +213,9 @@ export default function Home() {
         <div className="hm-gp-blob" />
         <div className="hm-gp-inner">
           <div className="hm-section-head">
-            <span className="hm-eyebrow">Our Moments</span>
-            <h2 className="hm-section-h2">Gallery</h2>
-            <p className="hm-section-sub">A glimpse into our work, our team, and the lives we touch every day.</p>
+            <span className="hm-eyebrow" data-anim="up" data-anim-delay="0">Our Moments</span>
+            <h2 className="hm-section-h2" data-anim="up" data-anim-delay="110">Gallery</h2>
+            <p className="hm-section-sub" data-anim="up" data-anim-delay="220">A glimpse into our work, our team, and the lives we touch every day.</p>
           </div>
           <div className="hp-slider-wrap">
             <button className={`hp-arrow hp-arrow--left${galleryIdx === 0 ? " hp-arrow--disabled" : ""}`} onClick={() => setGalleryIdx((i) => Math.max(0, i - 1))} disabled={galleryIdx === 0} aria-label="Previous">
@@ -280,9 +283,13 @@ export default function Home() {
         <div className="hm-tp-blob" />
         <div className="hm-tp-inner">
           <div className="hm-section-head">
-            <span className="hm-eyebrow hm-eyebrow--light">Voices of Trust</span>
-            <h2 className="hm-section-h2 hm-section-h2--light">What Our Clients Say</h2>
-            <p className="hm-section-sub hm-section-sub--light">Real words from the families and patients who trusted us with what matters most.</p>
+            <span className="hm-eyebrow hm-eyebrow--light" data-anim="up" data-anim-delay="0">Voices of Trust</span>
+            <h2 className="hm-section-h2 hm-section-h2--light" data-anim="up" data-anim-delay="110">What Our Clients Say</h2>
+            <p className="hm-section-sub hm-section-sub--light" data-anim="up" data-anim-delay="220">Real words from the families and patients who trusted us with what matters most.</p>
+          </div>
+          <div className="hm-testi-summary">
+            <span className="hm-testi-summary__stars">★★★★★</span>
+            <span>Rated <strong>4.9 / 5</strong> by 500+ nurses placed</span>
           </div>
           <div className="hp-slider-wrap">
             <button className={`hp-arrow hp-arrow--light hp-arrow--left${testiIdx === 0 ? " hp-arrow--disabled" : ""}`} onClick={() => setTestiIdx((i) => Math.max(0, i - 1))} disabled={testiIdx === 0} aria-label="Previous">
@@ -318,12 +325,12 @@ export default function Home() {
       {/* ══════ SECTION 7 — BOTTOM CTA ══════ */}
       <section className="hm-bottom-cta">
         <div className="hm-bottom-cta__inner">
-          <div className="hm-bottom-cta__text">
+          <div className="hm-bottom-cta__text" data-anim="from-left">
             <span className="hm-eyebrow">Get In Touch</span>
             <h2 className="hm-bottom-cta__title">Ready to Start Your Journey?</h2>
             <p className="hm-bottom-cta__sub">Our team is here to answer your questions and guide you through every step of the process.</p>
           </div>
-          <div className="hm-bottom-cta__actions">
+          <div className="hm-bottom-cta__actions" data-anim="from-right" data-anim-delay="120">
             <a href="tel:919778286707" className="hm-cta-contact-btn hm-cta-contact-btn--call">
               <span className="hm-cta-contact-btn__icon">📞</span>
               <span className="hm-cta-contact-btn__text">

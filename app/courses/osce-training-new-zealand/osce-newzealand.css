@@ -570,3 +570,30 @@
   .oscenz-includes-section,
   .oscenz-cta { padding: 48px 20px; }
 }
+
+/* ── Hero entrance ── */
+@keyframes oscenzHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.oscenz-hero-badge   { animation: oscenzHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.oscenz-hero-title   { animation: oscenzHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.oscenz-hero-divider { animation: oscenzHeroIn 0.60s cubic-bezier(0.4,0,0.2,1) both 0.44s; }
+.oscenz-hero-sub     { animation: oscenzHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.56s; }
+
+@keyframes oscenzFloat1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes oscenzFloat2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(14px) scale(0.97); }
+}
+.oscenz-hero-shape-1 { animation: oscenzFloat1 10s ease-in-out infinite; }
+.oscenz-hero-shape-2 { animation: oscenzFloat2 13s ease-in-out infinite; }
+
+@keyframes oscenzCtaPulse {
+  0%, 100% { transform: translate(-50%,-50%) scale(1);    opacity: 1; }
+  50%      { transform: translate(-50%,-50%) scale(1.22); opacity: 0.65; }
+}
+.oscenz-cta-shape { animation: oscenzCtaPulse 9s ease-in-out infinite; }

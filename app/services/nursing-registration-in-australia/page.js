@@ -56,12 +56,12 @@ export default function AustraliaRegistrationPage() {
       <section className="ausreg-intro-section">
         <div className="ausreg-intro-inner">
           <div className="ausreg-intro-grid">
-            <div className="ausreg-intro-left">
+            <div className="ausreg-intro-left" data-anim="from-left">
               <span className="ausreg-section-label">What We Do</span>
               <h2 className="ausreg-intro-heading">Nursing Registration in Australia</h2>
               <div className="ausreg-accent-bar" />
             </div>
-            <div className="ausreg-intro-right">
+            <div className="ausreg-intro-right" data-anim="from-right" data-anim-delay="120">
               <p className="ausreg-intro-para">
                 If you're aiming for Nursing Registration in Australia, Mindtree Nursing offers
                 complete support to help you navigate the ANMAC and AHPRA processes with ease.
@@ -88,7 +88,7 @@ export default function AustraliaRegistrationPage() {
       {/* ── CORE SERVICES ── */}
       <section className="ausreg-services-section">
         <div className="ausreg-services-inner">
-          <div className="ausreg-services-header">
+          <div className="ausreg-services-header" data-anim="up">
             <span className="ausreg-section-label">Our Services</span>
             <h2 className="ausreg-services-heading">Here's How We Help</h2>
             <p className="ausreg-services-sub">
@@ -97,7 +97,7 @@ export default function AustraliaRegistrationPage() {
             </p>
           </div>
           <div className="ausreg-service-list">
-            <div className="ausreg-service-item">
+            <div className="ausreg-service-item" data-anim="up">
               <div className="ausreg-service-num">01</div>
               <div className="ausreg-service-content">
                 <h3 className="ausreg-service-title">ANMAC Modified Assessment</h3>
@@ -110,7 +110,7 @@ export default function AustraliaRegistrationPage() {
                 </p>
               </div>
             </div>
-            <div className="ausreg-service-item">
+            <div className="ausreg-service-item" data-anim="up" data-anim-delay="100">
               <div className="ausreg-service-num">02</div>
               <div className="ausreg-service-content">
                 <h3 className="ausreg-service-title">AHPRA Registration Assistance</h3>
@@ -130,7 +130,7 @@ export default function AustraliaRegistrationPage() {
       {/* ── OBA PROGRAM — LIGHT ── */}
       <section className="ausreg-oba-section">
         <div className="ausreg-oba-inner">
-          <div className="ausreg-oba-header">
+          <div className="ausreg-oba-header" data-anim="up">
             <span className="ausreg-section-label">OBA Programme</span>
             <h2 className="ausreg-oba-heading">Mindtree OBA Program for Registered Nurses</h2>
             <p className="ausreg-oba-tagline">Your Gateway to Nursing in Australia</p>
@@ -145,7 +145,7 @@ export default function AustraliaRegistrationPage() {
 
           <div className="ausreg-stages-grid">
 
-            <div className="ausreg-stage-card">
+            <div className="ausreg-stage-card" data-anim="scale-up">
               <div className="ausreg-stage-body">
                 <div className="ausreg-stage-top">
                   <div className="ausreg-stage-num-badge">Stage 1</div>
@@ -177,7 +177,7 @@ export default function AustraliaRegistrationPage() {
               </div>
             </div>
 
-            <div className="ausreg-stage-card">
+            <div className="ausreg-stage-card" data-anim="scale-up" data-anim-delay="100">
               <div className="ausreg-stage-body">
                 <div className="ausreg-stage-top">
                   <div className="ausreg-stage-num-badge">Stage 2</div>
@@ -216,7 +216,7 @@ export default function AustraliaRegistrationPage() {
       {/* ── WHY CHOOSE US ── */}
       <section className="ausreg-why-section">
         <div className="ausreg-why-inner">
-          <div className="ausreg-why-header">
+          <div className="ausreg-why-header" data-anim="up">
             <span className="ausreg-section-label">Why Mindtree</span>
             <h2 className="ausreg-why-heading">Why Choose Mindtree for Your OBA Journey?</h2>
             <p className="ausreg-why-sub">
@@ -231,8 +231,8 @@ export default function AustraliaRegistrationPage() {
               { num: "03", title: "Comprehensive Exam Preparation", desc: "Our preparation programmes for both the MCQ and OSCE exams are designed by experienced educators. We provide study materials, mock exams, and personalised coaching for confident success." },
               { num: "04", title: "Visa & Relocation Assistance", desc: "We help you with the visa process, guiding you through all requirements and assisting with travel and accommodation arrangements when you travel to Australia for your OSCE." },
               { num: "05", title: "AHPRA Registration & Career Assistance", desc: "After passing the OBA, we support your AHPRA registration and connect you with leading Australian healthcare providers, ensuring a smooth transition to your nursing career." },
-            ].map((item) => (
-              <div key={item.num} className="ausreg-why-card">
+            ].map((item, i) => (
+              <div key={item.num} className="ausreg-why-card" data-anim="scale-up" data-anim-delay={i * 80}>
                 <div className="ausreg-why-num">{item.num}</div>
                 <div className="ausreg-why-content">
                   <h3 className="ausreg-why-title">{item.title}</h3>
@@ -248,12 +248,12 @@ export default function AustraliaRegistrationPage() {
       <section className="ausreg-cta">
         <div className="ausreg-cta-shape" />
         <div className="ausreg-cta-inner">
-          <h2 className="ausreg-cta-heading">Ready to Begin Your Australian Journey?</h2>
-          <p className="ausreg-cta-sub">
+          <h2 className="ausreg-cta-heading" data-anim="up">Ready to Begin Your Australian Journey?</h2>
+          <p className="ausreg-cta-sub" data-anim="up" data-anim-delay="130">
             Contact our team today and let us guide you through every step — from ANMAC
             assessment to AHPRA registration and your first day on the ward.
           </p>
-          <Link href="/contact" className="ausreg-cta-btn">
+          <Link href="/contact" className="ausreg-cta-btn" data-anim="up" data-anim-delay="260">
             <span>Get in Touch</span>
           </Link>
         </div>

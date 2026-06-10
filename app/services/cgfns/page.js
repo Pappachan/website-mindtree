@@ -55,13 +55,13 @@ export default function CGFNSPage() {
         <div className="cgfns-intro-inner">
           <div className="cgfns-intro-grid">
 
-            <div className="cgfns-intro-left">
+            <div className="cgfns-intro-left" data-anim="from-left">
               <span className="cgfns-section-label">What We Do</span>
               <h2 className="cgfns-intro-heading">CGFNS Credentials Verification Support</h2>
               <div className="cgfns-accent-bar" />
             </div>
 
-            <div className="cgfns-intro-right">
+            <div className="cgfns-intro-right" data-anim="from-right" data-anim-delay="120">
               <p className="cgfns-intro-para">
                 Our CGFNS Credentials Verification Support streamlines the verification process for a hassle-free experience. Rely on our expertise to guide you through each step, ensuring a smooth and efficient credential evaluation. We understand the importance of accuracy and timeliness in this process, and our dedicated support team is here to assist you.
               </p>
@@ -79,7 +79,7 @@ export default function CGFNSPage() {
         <div className="cgfns-docs-inner">
           <div className="cgfns-docs-grid">
 
-            <div className="cgfns-docs-left">
+            <div className="cgfns-docs-left" data-anim="from-left">
               <span className="cgfns-section-label light">Documents</span>
               <h2 className="cgfns-docs-heading">What Documents You Will Need</h2>
               <p className="cgfns-docs-sub">
@@ -114,7 +114,7 @@ export default function CGFNSPage() {
               </div>
             </div>
 
-            <div className="cgfns-docs-right">
+            <div className="cgfns-docs-right" data-anim="from-right" data-anim-delay="120">
               <div className="cgfns-links-card">
                 <h3 className="cgfns-links-title">Official CGFNS Resources</h3>
 
@@ -165,7 +165,7 @@ export default function CGFNSPage() {
       <section className="cgfns-includes-section">
         <div className="cgfns-includes-inner">
 
-          <div className="cgfns-includes-header">
+          <div className="cgfns-includes-header" data-anim="up">
             <span className="cgfns-section-label">Overview</span>
             <h2 className="cgfns-includes-heading">What This Includes</h2>
             <p className="cgfns-includes-sub">
@@ -175,42 +175,42 @@ export default function CGFNSPage() {
 
           <div className="cgfns-includes-grid">
 
-            <div className="cgfns-include-card">
+            <div className="cgfns-include-card" data-anim="scale-up">
               <div className="cgfns-include-num">1</div>
               <p>CGFNS is the initial step in NZNC processing.</p>
             </div>
 
-            <div className="cgfns-include-card">
+            <div className="cgfns-include-card" data-anim="scale-up" data-anim-delay="60">
               <div className="cgfns-include-num">2</div>
               <p>CGFNS International verifies your identity, credentials, employment, and language proficiency.</p>
             </div>
 
-            <div className="cgfns-include-card">
+            <div className="cgfns-include-card" data-anim="scale-up" data-anim-delay="120">
               <div className="cgfns-include-num">3</div>
               <p>Personal, identity, education, employment, licence, and language details are added on the CGFNS Portal.</p>
             </div>
 
-            <div className="cgfns-include-card">
+            <div className="cgfns-include-card" data-anim="scale-up" data-anim-delay="180">
               <div className="cgfns-include-num">4</div>
               <p>Completion requires a $380 payment, accepted via international transaction-enabled Visa or Mastercard.</p>
             </div>
 
-            <div className="cgfns-include-card">
+            <div className="cgfns-include-card" data-anim="scale-up" data-anim-delay="240">
               <div className="cgfns-include-num">5</div>
               <p>CGFNS validity is 1 year, renewable at $155 if necessary.</p>
             </div>
 
-            <div className="cgfns-include-card">
+            <div className="cgfns-include-card" data-anim="scale-up" data-anim-delay="300">
               <div className="cgfns-include-num">6</div>
               <p>Verification forms are generated within 3-4 business days post-payment.</p>
             </div>
 
-            <div className="cgfns-include-card">
+            <div className="cgfns-include-card" data-anim="scale-up" data-anim-delay="360">
               <div className="cgfns-include-num">7</div>
               <p>We guide you through the forms via Google Meet or Zoom, typically between 9 AM and 5:30 PM during your available hours.</p>
             </div>
 
-            <div className="cgfns-include-card">
+            <div className="cgfns-include-card" data-anim="scale-up" data-anim-delay="420">
               <div className="cgfns-include-num">8</div>
               <p>Commence the paperwork process.</p>
             </div>
@@ -223,11 +223,11 @@ export default function CGFNSPage() {
       <section className="cgfns-cta">
         <div className="cgfns-cta-shape" />
         <div className="cgfns-cta-inner">
-          <h2 className="cgfns-cta-heading">Ready to Get Started?</h2>
-          <p className="cgfns-cta-sub">
+          <h2 className="cgfns-cta-heading" data-anim="up">Ready to Get Started?</h2>
+          <p className="cgfns-cta-sub" data-anim="up" data-anim-delay="130">
             Contact our team today and let us guide you through every step of your CGFNS verification journey.
           </p>
-          <Link href="/contact" className="cgfns-cta-btn">Get in Touch</Link>
+          <Link href="/contact" className="cgfns-cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
         </div>
       </section>
 

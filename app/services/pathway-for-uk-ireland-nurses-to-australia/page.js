@@ -58,13 +58,13 @@ export default function UKIrelandAustraliaPage() {
         <div className="ukaus-intro-inner">
           <div className="ukaus-intro-grid">
 
-            <div className="ukaus-intro-left">
+            <div className="ukaus-intro-left" data-anim="from-left">
               <span className="ukaus-section-label">What We Do</span>
               <h2 className="ukaus-intro-heading">Pathway for UK &amp; Ireland Nurses to Australia</h2>
               <div className="ukaus-accent-bar" />
             </div>
 
-            <div className="ukaus-intro-right">
+            <div className="ukaus-intro-right" data-anim="from-right" data-anim-delay="120">
               <p className="ukaus-intro-para">
                 Axon Careers also supports nurses from the UK and Ireland in their journey to
                 practise in Australia. We understand the specific registration pathway that applies
@@ -87,7 +87,7 @@ export default function UKIrelandAustraliaPage() {
       <section className="ukaus-services-section">
         <div className="ukaus-services-inner">
 
-          <div className="ukaus-services-header">
+          <div className="ukaus-services-header" data-anim="up">
             <span className="ukaus-section-label">Our Services</span>
             <h2 className="ukaus-services-heading">Here's How We Help</h2>
             <p className="ukaus-services-sub">
@@ -98,7 +98,7 @@ export default function UKIrelandAustraliaPage() {
 
           <div className="ukaus-service-list">
 
-            <div className="ukaus-service-item">
+            <div className="ukaus-service-item" data-anim="up">
               <div className="ukaus-service-num">01</div>
               <div className="ukaus-service-content">
                 <h3 className="ukaus-service-title">ANMAC Assessment</h3>
@@ -112,7 +112,7 @@ export default function UKIrelandAustraliaPage() {
               </div>
             </div>
 
-            <div className="ukaus-service-item">
+            <div className="ukaus-service-item" data-anim="up" data-anim-delay="100">
               <div className="ukaus-service-num">02</div>
               <div className="ukaus-service-content">
                 <h3 className="ukaus-service-title">AHPRA Registration</h3>
@@ -134,12 +134,12 @@ export default function UKIrelandAustraliaPage() {
       <section className="ukaus-cta">
         <div className="ukaus-cta-shape" />
         <div className="ukaus-cta-inner">
-          <h2 className="ukaus-cta-heading">Ready to Start Your Australian Journey?</h2>
-          <p className="ukaus-cta-sub">
+          <h2 className="ukaus-cta-heading" data-anim="up">Ready to Start Your Australian Journey?</h2>
+          <p className="ukaus-cta-sub" data-anim="up" data-anim-delay="130">
             Contact our team today and let us guide you through every step of your Australian
             nursing registration — from ANMAC assessment to your first day on the ward.
           </p>
-          <Link href="/contact" className="ukaus-cta-btn">Get in Touch</Link>
+          <Link href="/contact" className="ukaus-cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
         </div>
       </section>
 

@@ -197,7 +197,7 @@
    CARDS SECTION
 ───────────────────────────── */
 .service-cards-section {
-  background: var(--color-white);
+  background: var(--white);
   padding: 96px 48px;
   position: relative;
 }
@@ -219,6 +219,55 @@
   z-index: 1;
 }
 
+/* ── SECTION INTRO ── */
+.service-section-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.service-section-intro-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--c3);
+  margin-bottom: 14px;
+}
+.service-section-intro-label::before,
+.service-section-intro-label::after {
+  content: ''; display: block; width: 28px; height: 1.5px;
+  background: var(--c3); opacity: 0.5;
+}
+.service-section-intro-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(26px, 4vw, 40px); font-weight: 700;
+  color: var(--c4); line-height: 1.2;
+  letter-spacing: -0.02em; margin: 0 0 16px;
+}
+.service-section-intro-sub {
+  font-size: 16px; font-weight: 300; font-style: italic;
+  color: var(--text-muted); line-height: 1.8;
+  max-width: 520px; margin: 0 auto 36px;
+}
+.service-stats-bar {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; flex-wrap: wrap;
+}
+.service-stat {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 0 32px;
+}
+.service-stat + .service-stat {
+  border-left: 1px solid var(--border);
+}
+.service-stat-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px; font-weight: 700; color: var(--c3);
+  line-height: 1;
+}
+.service-stat-label {
+  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-top: 4px;
+}
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -235,24 +284,10 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
   transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
-
-  /* Scroll-reveal starting state */
-  opacity: 0;
-  transform: translateY(40px);
-  animation: cardReveal 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
 }
-
-@keyframes cardReveal {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Stagger each card */
-.svc-card:nth-child(1) { animation-delay: 0.08s; }
-.svc-card:nth-child(2) { animation-delay: 0.18s; }
-.svc-card:nth-child(3) { animation-delay: 0.28s; }
-.svc-card:nth-child(4) { animation-delay: 0.38s; }
-.svc-card:nth-child(5) { animation-delay: 0.48s; }
 
 .svc-card:hover {
   transform: translateY(-10px) scale(1.01);

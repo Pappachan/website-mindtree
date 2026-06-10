@@ -380,7 +380,7 @@ export default function AccommodationPage() {
       <section className="ac-section">
         <div className="ac-container">
           {locations.map((loc, i) => (
-            <div key={loc.id}>
+            <div key={loc.id} data-anim="up" data-anim-delay={i * 120}>
               <LocationRow loc={loc} />
               {i < locations.length - 1 && <div className="ac-sep" />}
             </div>
@@ -394,8 +394,8 @@ export default function AccommodationPage() {
       <section className="ac-cta">
         <div className="ac-container ac-cta-inner">
           <div>
-            <h3 className="ac-cta-title">Need help choosing the right package?</h3>
-            <p className="ac-cta-sub">Our team is happy to guide you through the options based on your training schedule.</p>
+            <h3 className="ac-cta-title" data-anim="up">Need help choosing the right package?</h3>
+            <p className="ac-cta-sub" data-anim="up" data-anim-delay="130">Our team is happy to guide you through the options based on your training schedule.</p>
           </div>
           <a
             href="https://forms.zohopublic.in/mindtreenursingsolutions/form/webforms/formperma/-Xqwd4gPC88eqPnKkpxcKEK3U0hVl7nWH0Mq1lblxkc"

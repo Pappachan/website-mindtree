@@ -438,3 +438,30 @@
 
   .nzreg-service-item { flex-direction: column; gap: 14px; }
 }
+
+/* ── Hero entrance ── */
+@keyframes nzregHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.nzreg-hero-badge   { animation: nzregHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.nzreg-hero-title   { animation: nzregHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.nzreg-hero-divider { animation: nzregHeroIn 0.60s cubic-bezier(0.4,0,0.2,1) both 0.44s; }
+.nzreg-hero-sub     { animation: nzregHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.56s; }
+
+@keyframes nzregFloat1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes nzregFloat2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(14px) scale(0.97); }
+}
+.nzreg-hero-shape-1 { animation: nzregFloat1 10s ease-in-out infinite; }
+.nzreg-hero-shape-2 { animation: nzregFloat2 13s ease-in-out infinite; }
+
+@keyframes nzregCtaPulse {
+  0%, 100% { transform: translate(-50%,-50%) scale(1);    opacity: 1; }
+  50%      { transform: translate(-50%,-50%) scale(1.22); opacity: 0.65; }
+}
+.nzreg-cta-shape { animation: nzregCtaPulse 9s ease-in-out infinite; }

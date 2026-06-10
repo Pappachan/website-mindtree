@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
 /* ─────────────────────────────
    BRAND TOKENS
@@ -593,3 +594,30 @@
     height: 1px;
   }
 }
+
+/* ── Hero entrance ── */
+@keyframes aboutHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge   { animation: aboutHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.hero-title   { animation: aboutHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.hero-divider { animation: aboutHeroIn 0.60s cubic-bezier(0.4,0,0.2,1) both 0.44s; }
+.hero-intro   { animation: aboutHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.56s; }
+
+@keyframes aboutFloat1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes aboutFloat2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(14px) scale(0.97); }
+}
+.hero-shape-1 { animation: aboutFloat1 10s ease-in-out infinite; }
+.hero-shape-2 { animation: aboutFloat2 13s ease-in-out infinite; }
+
+@keyframes aboutCtaPulse {
+  0%, 100% { transform: translate(-50%,-50%) scale(1);    opacity: 1; }
+  50%      { transform: translate(-50%,-50%) scale(1.22); opacity: 0.65; }
+}
+.cta-shape { animation: aboutCtaPulse 9s ease-in-out infinite; }

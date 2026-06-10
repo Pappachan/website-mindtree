@@ -58,13 +58,13 @@ export default function UKIrelandPathwayPage() {
         <div className="ukire-intro-inner">
           <div className="ukire-intro-grid">
 
-            <div className="ukire-intro-left">
+            <div className="ukire-intro-left" data-anim="from-left">
               <span className="ukire-section-label">What We Do</span>
               <h2 className="ukire-intro-heading">Pathway for Registered Nurses from the UK and Ireland to New Zealand</h2>
               <div className="ukire-accent-bar" />
             </div>
 
-            <div className="ukire-intro-right">
+            <div className="ukire-intro-right" data-anim="from-right" data-anim-delay="120">
               <p className="ukire-intro-para">
                 For nurses from the UK and Ireland seeking registration in New Zealand, Axon Careers
                 offers tailored assistance to help you start your journey in Nursing in New Zealand,
@@ -86,7 +86,7 @@ export default function UKIrelandPathwayPage() {
       <section className="ukire-services-section">
         <div className="ukire-services-inner">
 
-          <div className="ukire-services-header">
+          <div className="ukire-services-header" data-anim="up">
             <span className="ukire-section-label">Our Services</span>
             <h2 className="ukire-services-heading">Here's How We Help</h2>
             <p className="ukire-services-sub">
@@ -97,7 +97,7 @@ export default function UKIrelandPathwayPage() {
 
           <div className="ukire-service-list">
 
-            <div className="ukire-service-item">
+            <div className="ukire-service-item" data-anim="up">
               <div className="ukire-service-num">01</div>
               <div className="ukire-service-content">
                 <h3 className="ukire-service-title">IQN Theoretical Exam and OSCE Training</h3>
@@ -111,7 +111,7 @@ export default function UKIrelandPathwayPage() {
               </div>
             </div>
 
-            <div className="ukire-service-item">
+            <div className="ukire-service-item" data-anim="up" data-anim-delay="100">
               <div className="ukire-service-num">02</div>
               <div className="ukire-service-content">
                 <h3 className="ukire-service-title">NCNZ Registration Assistance</h3>
@@ -133,12 +133,12 @@ export default function UKIrelandPathwayPage() {
       <section className="ukire-cta">
         <div className="ukire-cta-shape" />
         <div className="ukire-cta-inner">
-          <h2 className="ukire-cta-heading">Ready to Make the Move?</h2>
-          <p className="ukire-cta-sub">
+          <h2 className="ukire-cta-heading" data-anim="up">Ready to Make the Move?</h2>
+          <p className="ukire-cta-sub" data-anim="up" data-anim-delay="130">
             Contact our team today and let us guide you through every step of your New Zealand
             nursing registration — from your first question to your first day on the ward.
           </p>
-          <Link href="/contact" className="ukire-cta-btn">Get in Touch</Link>
+          <Link href="/contact" className="ukire-cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
         </div>
       </section>
 

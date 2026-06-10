@@ -140,7 +140,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── QUICK CONTACT STRIP ── */}
-      <div className="ct-strip">
+      <div className="ct-strip" data-anim="up">
         <div className="ct-strip__inner">
           <a href="tel:+919778286707" className="ct-strip__item">
             <div className="ct-strip__icon">
@@ -197,7 +197,7 @@ export default function ContactPage() {
       {/* ── LOCATIONS ── */}
       <section className="ct-locations">
         <div className="ct-locations__inner">
-          <div className="ct-section-head">
+          <div className="ct-section-head" data-anim="up">
             <span className="ct-eyebrow">Our Offices</span>
             <h2 className="ct-section-h2">Find Us Near You</h2>
           </div>
@@ -205,7 +205,7 @@ export default function ContactPage() {
           <div className="ct-locations__grid">
 
             {/* Auckland */}
-            <div className="ct-loc-card">
+            <div className="ct-loc-card" data-anim="scale-up">
               <div className="ct-loc-card__flag">🇳🇿</div>
               <div className="ct-loc-card__top">
                 <div className="ct-loc-card__icon">
@@ -235,7 +235,7 @@ export default function ContactPage() {
             </div>
 
             {/* Christchurch */}
-            <div className="ct-loc-card">
+            <div className="ct-loc-card" data-anim="scale-up" data-anim-delay="75">
               <div className="ct-loc-card__flag">🇳🇿</div>
               <div className="ct-loc-card__top">
                 <div className="ct-loc-card__icon">
@@ -265,7 +265,7 @@ export default function ContactPage() {
             </div>
 
             {/* India */}
-            <div className="ct-loc-card">
+            <div className="ct-loc-card" data-anim="scale-up" data-anim-delay="150">
               <div className="ct-loc-card__flag">🇮🇳</div>
               <div className="ct-loc-card__top">
                 <div className="ct-loc-card__icon">
@@ -301,15 +301,15 @@ export default function ContactPage() {
       {/* ── DEPARTMENTS ── */}
       <section className="ct-dept">
         <div className="ct-dept__inner">
-          <div className="ct-section-head ct-section-head--center">
+          <div className="ct-section-head ct-section-head--center" data-anim="up">
             <span className="ct-eyebrow">Direct Lines</span>
             <h2 className="ct-section-h2">Contact by Department</h2>
             <p className="ct-section-sub">Reach the right team directly for faster support.</p>
           </div>
 
           <div className="ct-dept__grid">
-            {DEPARTMENTS.map((dept) => (
-              <a key={dept.name} href={dept.href} className="ct-dept__card">
+            {DEPARTMENTS.map((dept, i) => (
+              <a key={dept.name} href={dept.href} className="ct-dept__card" data-anim="scale-up" data-anim-delay={i * 60}>
                 <div className="ct-dept__card-top">
                   <div className="ct-dept__icon">{dept.icon}</div>
                   <span className="ct-dept__num">{dept.phone}</span>

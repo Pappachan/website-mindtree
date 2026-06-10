@@ -8,7 +8,7 @@ export const metadata = {
   keywords: [
     "Therapeutic Communication",
     "OET",
-    "iqn",
+    "IQN",
     "OSCE",
     "Nursing Training",
     "Communication Skills for Nurses",
@@ -24,22 +24,29 @@ const IconLayers = () => (
     <polyline points="2 12 12 17 22 12" />
   </svg>
 );
-const IconCheck = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-    <polyline points="22 4 12 14.01 9 11.01" />
-  </svg>
-);
-const IconChat = () => (
+const IconProfessionalCommunication = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
   </svg>
 );
-const IconGlobe = () => (
+const IconOETPreparation = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
-    <circle cx="12" cy="12" r="10" />
-    <line x1="2" y1="12" x2="22" y2="12" />
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    <path d="M22 10L12 5 2 10l10 5 10-5z" />
+    <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+  </svg>
+);
+const IconOSCEChristchurch = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+    <path d="M12 5v14" />
+    <path d="M5 12h14" />
+    <circle cx="12" cy="12" r="9" />
+  </svg>
+);
+const IconOSCEKerala = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+    <path d="M6 3v5a4 4 0 0 0 8 0V3" />
+    <path d="M10 17a4 4 0 0 0 8 0v-2" />
+    <circle cx="18" cy="13" r="2" />
   </svg>
 );
 const ArrowRight = () => (
@@ -47,72 +54,16 @@ const ArrowRight = () => (
     <path d="M3 8h10M9 4l4 4-4 4" />
   </svg>
 );
-const IconProfessionalCommunication = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    width="22"
-    height="22"
-  >
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-  </svg>
-);
-const IconOETPreparation = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    width="22"
-    height="22"
-  >
-    <path d="M22 10L12 5 2 10l10 5 10-5z" />
-    <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
-  </svg>
-);
-const IconOSCEChristchurch = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    width="22"
-    height="22"
-  >
-    <path d="M12 5v14" />
-    <path d="M5 12h14" />
-    <circle cx="12" cy="12" r="9" />
-  </svg>
-);
 
-const IconOSCEKerala = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    width="22"
-    height="22"
-  >
-    <path d="M6 3v5a4 4 0 0 0 8 0V3" />
-    <path d="M10 17a4 4 0 0 0 8 0v-2" />
-    <circle cx="18" cy="13" r="2" />
-  </svg>
-);
 /* ── Reusable Card ── */
-function CourseCard({ photo, alt, icon, title, subtitle, badge, para1, para2, tags, href }) {
+function CourseCard({ photo, alt, icon, title, subtitle, badge, para1, tags, href, animDelay }) {
   return (
-    <div className={`crs-card${badge ? " crs-card--featured" : ""}`}>
+    <Link
+      href={href}
+      className={`crs-card${badge ? " crs-card--featured" : ""}`}
+      data-anim="up"
+      data-anim-delay={animDelay}
+    >
       {/* PHOTO */}
       <div className="crs-card-photo">
         <img src={photo} alt={alt} loading="lazy" />
@@ -129,7 +80,6 @@ function CourseCard({ photo, alt, icon, title, subtitle, badge, para1, para2, ta
         </div>
 
         <p className="crs-card-para-1">{para1}</p>
-        {para2 && <p className="crs-card-para-2">{para2}</p>}
 
         {tags && (
           <div className="crs-card-tags">
@@ -138,13 +88,13 @@ function CourseCard({ photo, alt, icon, title, subtitle, badge, para1, para2, ta
         )}
 
         <div className="crs-card-footer">
-          <a href={href} className="crs-card-link">
+          <span className="crs-card-link">
             Learn More
             <span className="crs-card-link-arrow"><ArrowRight /></span>
-          </a>
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -180,6 +130,37 @@ export default function Courses() {
       {/* ── CARDS GRID ── */}
       <section className="course-cards-section">
         <div className="course-cards-inner">
+
+          {/* Section intro */}
+          <div className="course-section-intro">
+            <p className="course-section-intro-label" data-anim="up">Our Programmes</p>
+            <h2 className="course-section-intro-title" data-anim="up" data-anim-delay="80">
+              Everything You Need to Succeed Abroad
+            </h2>
+            <p className="course-section-intro-sub" data-anim="up" data-anim-delay="160">
+              From clinical exam prep to language proficiency and professional communication
+              — we have a course for every step of your journey.
+            </p>
+            <div className="course-stats-bar" data-anim="up" data-anim-delay="240">
+              <div className="course-stat">
+                <span className="course-stat-num">6</span>
+                <span className="course-stat-label">Programmes</span>
+              </div>
+              <div className="course-stat">
+                <span className="course-stat-num">500+</span>
+                <span className="course-stat-label">Nurses Trained</span>
+              </div>
+              <div className="course-stat">
+                <span className="course-stat-num">3</span>
+                <span className="course-stat-label">Countries</span>
+              </div>
+              <div className="course-stat">
+                <span className="course-stat-num">98%</span>
+                <span className="course-stat-label">Pass Rate</span>
+              </div>
+            </div>
+          </div>
+
           <div className="course-grid">
 
             <CourseCard
@@ -189,30 +170,34 @@ export default function Courses() {
               title="IQN Training Program"
               subtitle="International Qualifications in Nursing"
               badge="Featured"
-              para1="Top-tier preparation featuring mock tests, live & recorded classes,  dedicated mobile app support available on both iOS and Android. "
+              para1="Top-tier preparation featuring mock tests, live and recorded classes, and a dedicated mobile app available on both iOS and Android."
               tags={["Mock Tests", "Live Classes", "Mobile App"]}
               href="/courses/best-iqn-coaching"
+              animDelay={0}
             />
 
             <CourseCard
-              photo="box-img/img4.jpeg"
+              photo="/box-img/img4.jpeg"
               alt="OSCE clinical training Kerala"
               icon={<IconOSCEKerala />}
               title="OSCE Training — Kerala"
               subtitle="Objective Structured Clinical Examination"
-              para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
+              para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala, fully aligned with NCNZ standards."
               tags={["Clinical Skills", "Station Practice", "Mock Exams"]}
-              href="/courses/osce-training-kerala"/>
+              href="/courses/osce-training-kerala"
+              animDelay={100}
+            />
 
             <CourseCard
               photo="/box-img/img11.jpg"
               alt="OSCE training Auckland"
-               icon={<IconOSCEChristchurch />}
+              icon={<IconOSCEChristchurch />}
               title="OSCE Training — Auckland"
               subtitle="Objective Structured Clinical Examination"
-              para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
+              para1="Hands-on OSCE preparation in Auckland using real hospital simulation scenarios, perfecting your clinical communication and procedural skills."
               tags={["NZ Standards", "Simulation Lab", "NCNZ Aligned"]}
               href="/courses/osce-training-new-zealand"
+              animDelay={200}
             />
 
             <CourseCard
@@ -221,9 +206,10 @@ export default function Courses() {
               icon={<IconOSCEChristchurch />}
               title="OSCE Training — Christchurch"
               subtitle="Objective Structured Clinical Examination"
-              para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala and New Zealand. "
+              para1="Flexible OSCE coaching for South Island nurses — combining in-person simulation with online support to fit your schedule."
               tags={["South Island", "Flexible Schedule", "Online + In-Person"]}
               href="/courses/osce-training-new-zealand"
+              animDelay={300}
             />
 
             <CourseCard
@@ -232,38 +218,38 @@ export default function Courses() {
               icon={<IconOETPreparation />}
               title="OET Preparation"
               subtitle="Occupational English Test — Online & Offline"
-              para1="Tailored Occupational English Test coaching to clear your language proficiency requirements with confidence."
+              para1="Tailored Occupational English Test coaching to meet your language proficiency requirements with confidence — across reading, writing, listening, and speaking."
               tags={["Writing", "Speaking", "Healthcare English"]}
               href="/courses/best-oet-coaching-centre-in-kerala"
+              animDelay={400}
             />
 
             <CourseCard
               photo="/box-img/img6.jpeg"
               alt="Professional Communication Courses"
-            icon={<IconProfessionalCommunication />}
+              icon={<IconProfessionalCommunication />}
               title="Professional Communication"
               subtitle="Confidence & Communication Modules"
-              para1="Specialized modules specifically designed to boost your confidence and maximize your OSCE performance. 
-"
+              para1="Specialised modules designed to boost your confidence and maximise your OSCE performance — covering patient handover, clinical documentation, and bedside manner."
               tags={["Handover Skills", "Patient Communication", "Documentation"]}
               href="/courses/therapeutic-communication"
+              animDelay={500}
             />
 
           </div>
         </div>
       </section>
 
-
       {/* ── CTA ── */}
       <section className="course-cta">
         <div className="course-cta-shape" />
         <div className="course-cta-inner">
-          <h2 className="course-cta-heading">Not sure where to start?</h2>
-          <p className="course-cta-sub">
+          <h2 className="course-cta-heading" data-anim="up">Not sure where to start?</h2>
+          <p className="course-cta-sub" data-anim="up" data-anim-delay="130">
             Book a free consultation and our advisors will map out the exact steps
             you need to begin your international nursing career.
           </p>
-          <Link href="/contact" className="course-cta-btn">
+          <Link href="/contact" className="course-cta-btn" data-anim="up" data-anim-delay="260">
             <span>Book a Free Consultation</span>
           </Link>
         </div>

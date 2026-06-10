@@ -257,7 +257,7 @@ export default function CareerPage() {
         {/* ── WHY JOIN US ── */}
         <section className="career-about">
           <div className="career-content-grid">
-            <div className="career-content-left">
+            <div className="career-content-left" data-anim="from-left">
               <span className="career-section-label">Why Mindtree?</span>
               <h2 className="career-content-heading">
                 A Place to Grow,
@@ -266,7 +266,7 @@ export default function CareerPage() {
               </h2>
               <div className="career-accent-bar" />
             </div>
-            <div className="career-content-right">
+            <div className="career-content-right" data-anim="from-right" data-anim-delay="120">
               <p className="career-para">
                 If you are someone who enjoys solving problems, learning new
                 technologies, and working in a collaborative environment, we
@@ -305,7 +305,7 @@ export default function CareerPage() {
         {/* ── OPEN POSITIONS ── */}
         <section className="career-vacancies">
           <div className="career-vacancies-inner">
-            <div className="career-vacancies-header">
+            <div className="career-vacancies-header" data-anim="up">
               <span className="career-section-label blue">Now Hiring</span>
               <h2 className="career-vacancies-heading">Open Positions</h2>
               <p className="career-vacancies-sub">
@@ -327,8 +327,8 @@ export default function CareerPage() {
               </div>
             ) : (
               <div className="career-jobs-list">
-                {vacancies.map(job => (
-                  <div key={job.id} className="career-job-card">
+                {vacancies.map((job, i) => (
+                  <div key={job.id} className="career-job-card" data-anim="up" data-anim-delay={i * 100}>
                     {/* ── POSTER COLUMN ── */}
                     <div className="career-job-poster">
                       {job.poster ? (
@@ -411,7 +411,7 @@ export default function CareerPage() {
         {/* ── DON'T SEE YOUR ROLE — now white/light bg ── */}
         <section className="career-open-apply">
           <div className="career-open-inner">
-            <div className="career-open-text">
+            <div className="career-open-text" data-anim="from-left">
               <span className="career-open-label">Always Open</span>
               <h2 className="career-open-heading">Don&apos;t See Your Role?</h2>
               <p className="career-open-sub">
@@ -420,7 +420,7 @@ export default function CareerPage() {
                 may be just around the corner.
               </p>
             </div>
-            <Link href="/contact" className="career-open-btn">
+            <Link href="/contact" className="career-open-btn" data-anim="from-right" data-anim-delay="150">
               Send Your CV
             </Link>
           </div>

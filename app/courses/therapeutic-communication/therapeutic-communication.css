@@ -3,7 +3,7 @@
    Palette: --c1 #E7F0FA  --c2 #7BA4D0  --c3 #2E5E99  --c4 #0D2440
    ───────────────────────────────────────────────────────────── */
 
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
 
 /* ── Tokens ──────────────────────────────────────────────────── */
 :root {
@@ -28,7 +28,7 @@
   --shadow-hover: 0 16px 48px rgba(13,36,64,.18), 0 4px 12px rgba(13,36,64,.10);
   --shadow-float: 0 24px 64px rgba(13,36,64,.28);
   --t:            0.38s cubic-bezier(0.4,0,0.2,1);
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
   --font-body:    "DM Sans", system-ui, sans-serif;
 }
 
@@ -213,12 +213,12 @@ a   { text-decoration: none; color: inherit; }
 
 /* Bold serif + italic blue — "Insights & Stories" style */
 .tc-hero__title {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 6.5vw, 5.2rem);
-  font-weight: 600;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 700;
   color: #ffffff;
-  line-height: 1.08;
-  letter-spacing: -.02em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   margin-bottom: 26px;
 }
 
@@ -661,7 +661,16 @@ a   { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 480px) {
-  .tc-hero__title    { font-size: 2.6rem; }
+  .tc-hero__title    { font-size: clamp(24px, 6vw, 32px); }
   .tc-advantage-list { grid-template-columns: 1fr; }
   .tc-about__img-wrap { aspect-ratio: 3/2; }
 }
+
+/* ── Hero entrance ── */
+@keyframes tcHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.tc-hero__pill  { animation: tcHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.tc-hero__title { animation: tcHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.tc-hero__sub   { animation: tcHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.50s; }

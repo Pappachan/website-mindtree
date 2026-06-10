@@ -123,7 +123,7 @@ export default function TherapeuticCommunicationPage() {
       <section id="about" className="tc-section tc-about">
         <div className="tc-container">
           <div className="tc-about__grid">
-            <div className="tc-about__visual">
+            <div className="tc-about__visual" data-anim="from-left">
               <div className="tc-about__img-wrap">
                 <img src="/box-img/nurse.png" alt="Therapeutic Communication Training" loading="lazy" />
                 <div className="tc-about__img-badge">
@@ -132,7 +132,7 @@ export default function TherapeuticCommunicationPage() {
                 </div>
               </div>
             </div>
-            <div className="tc-about__content">
+            <div className="tc-about__content" data-anim="from-right" data-anim-delay="120">
               <div className="tc-section-label">
                 <span className="tc-label-dot tc-label-dot--accent" />
                 About This Course
@@ -167,7 +167,7 @@ export default function TherapeuticCommunicationPage() {
       {/* ── What You'll Learn ──────────────────────────────────────── */}
       <section className="tc-section tc-learn">
         <div className="tc-container">
-          <header className="tc-section-header tc-section-header--center">
+          <header className="tc-section-header tc-section-header--center" data-anim="up">
             <div className="tc-section-label">
               <span className="tc-label-dot" />
               Curriculum
@@ -180,7 +180,7 @@ export default function TherapeuticCommunicationPage() {
 
           <div className="tc-learn-grid">
             {LEARN_ITEMS.map((item, i) => (
-              <div key={i} className="tc-learn-card">
+              <div key={i} className="tc-learn-card" data-anim="scale-up" data-anim-delay={i * 60}>
                 <div className="tc-learn-card__number">0{i + 1}</div>
                 <div className="tc-learn-card__icon">{item.icon}</div>
                 <h3 className="tc-learn-card__title">{item.title}</h3>
@@ -195,7 +195,7 @@ export default function TherapeuticCommunicationPage() {
       <section className="tc-section tc-for">
         <div className="tc-container">
           <div className="tc-for__grid">
-            <div className="tc-for__left">
+            <div className="tc-for__left" data-anim="from-left">
               <div className="tc-section-label">
                 <span className="tc-label-dot tc-label-dot--accent" />
                 Who This Is For
@@ -208,7 +208,7 @@ export default function TherapeuticCommunicationPage() {
             </div>
             <div className="tc-for__cards">
               {FOR_ITEMS.map((item, i) => (
-                <div key={i} className="tc-for-card">
+                <div key={i} className="tc-for-card" data-anim="scale-up" data-anim-delay={i * 80}>
                   <span className="tc-for-card__icon">{item.icon}</span>
                   <div>
                     <h3 className="tc-for-card__title">{item.title}</h3>
@@ -225,7 +225,7 @@ export default function TherapeuticCommunicationPage() {
       <section className="tc-section tc-advantage">
         <div className="tc-advantage__bg" />
         <div className="tc-container tc-advantage__inner">
-          <header className="tc-section-header tc-section-header--center">
+          <header className="tc-section-header tc-section-header--center" data-anim="up">
             <div className="tc-section-label">
               <span className="tc-label-dot tc-label-dot--c2" />
               Why Mindtree
@@ -238,7 +238,7 @@ export default function TherapeuticCommunicationPage() {
 
           <div className="tc-advantage-list">
             {ADVANTAGES.map((item, i) => (
-              <div key={i} className="tc-advantage-item">
+              <div key={i} className="tc-advantage-item" data-anim="up" data-anim-delay={i * 80}>
                 <div className="tc-advantage-item__num">{String(i + 1).padStart(2, "0")}</div>
                 <div className="tc-advantage-item__icon">{item.icon}</div>
                 <p className="tc-advantage-item__text">{item.text}</p>
@@ -252,12 +252,12 @@ export default function TherapeuticCommunicationPage() {
       <section className="tc-cta">
         <div className="tc-cta__glow" />
         <div className="tc-container tc-cta__inner">
-          <div className="tc-cta__text">
+          <div className="tc-cta__text" data-anim="up">
             <span className="tc-cta__eyebrow">Limited Seats Available</span>
             <h2>Ready to Communicate at the Highest Level?</h2>
             <p>Join hundreds of nurses who have transformed their professional presence with Mindtree.</p>
           </div>
-          <div className="tc-cta__actions">
+          <div className="tc-cta__actions" data-anim="up" data-anim-delay="150">
             <a href="#" className="tc-btn tc-btn--primary">Enrol Now</a>
             <a href="#" className="tc-btn tc-btn--outline-light">Download Brochure</a>
           </div>

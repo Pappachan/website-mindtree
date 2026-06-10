@@ -83,9 +83,9 @@ export default function CvPreparation() {
 
       {/* HOW IT WORKS */}
       <section className="cv-section">
-        <p className="cv-label">How It Works</p>
-        <h2 className="cv-title">Get Your Professional CV in 4 Easy Steps</h2>
-        <p className="cv-sub">Simple and hassle-free — just share your details and we'll handle the rest.</p>
+        <p className="cv-label" data-anim="up">How It Works</p>
+        <h2 className="cv-title" data-anim="up" data-anim-delay="80">Get Your Professional CV in 4 Easy Steps</h2>
+        <p className="cv-sub" data-anim="up" data-anim-delay="160">Simple and hassle-free — just share your details and we'll handle the rest.</p>
         <div className="cv-steps">
           {steps.map((s, i) => (
             <div className="cv-step cv-fadein" key={s.num} style={{ animationDelay: `${i * 0.12}s` }}>
@@ -150,8 +150,8 @@ export default function CvPreparation() {
 
       {/* TRUST CARDS */}
       <section className="cv-section cv-section--trust">
-        <p className="cv-label">Why Choose Us</p>
-        <h2 className="cv-title">Our Commitment to You</h2>
+        <p className="cv-label" data-anim="up">Why Choose Us</p>
+        <h2 className="cv-title" data-anim="up" data-anim-delay="80">Our Commitment to You</h2>
         <div className="cv-trust-grid">
           {trustCards.map((c, i) => (
             <div className="cv-trust-card cv-fadein" key={c.title} style={{ animationDelay: `${i * 0.1}s` }}>

@@ -30,7 +30,7 @@ export default function BlogPostThree() {
       </section>
 
       {/* ── POST CONTENT ── */}
-      <section className="post-content-section">
+      <section className="post-content-section" data-anim="up">
         <div className="post-content-inner">
 
           {/* Featured image */}

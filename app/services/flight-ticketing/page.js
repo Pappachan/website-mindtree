@@ -81,9 +81,9 @@ export default function FlightTicketing() {
 
       {/* HOW IT WORKS */}
       <section className="ft-section">
-        <p className="ft-label">How It Works</p>
-        <h2 className="ft-title">Book Your Ticket in 4 Easy Steps</h2>
-        <p className="ft-sub">Simple, fast, and handled entirely by our team — you don't need to visit any office.</p>
+        <p className="ft-label" data-anim="up">How It Works</p>
+        <h2 className="ft-title" data-anim="up" data-anim-delay="80">Book Your Ticket in 4 Easy Steps</h2>
+        <p className="ft-sub" data-anim="up" data-anim-delay="160">Simple, fast, and handled entirely by our team — you don't need to visit any office.</p>
         <div className="ft-steps">
           {steps.map((s, i) => (
             <div className="ft-step ft-fadein" key={s.num} style={{ animationDelay: `${i * 0.12}s` }}>
@@ -148,8 +148,8 @@ export default function FlightTicketing() {
 
       {/* TRUST CARDS */}
       <section className="ft-section ft-section--trust">
-        <p className="ft-label">Why Choose Us</p>
-        <h2 className="ft-title">Our Commitment to You</h2>
+        <p className="ft-label" data-anim="up">Why Choose Us</p>
+        <h2 className="ft-title" data-anim="up" data-anim-delay="80">Our Commitment to You</h2>
         <div className="ft-trust-grid">
           {trustCards.map((c, i) => (
             <div className="ft-trust-card ft-fadein" key={c.title} style={{ animationDelay: `${i * 0.1}s` }}>

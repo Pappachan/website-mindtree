@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
 /* ─────────────────────────────
    BRAND TOKENS
@@ -86,7 +87,7 @@
 
 .blog-hero-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(36px, 6vw, 58px);
+  font-size: clamp(36px, 6vw, 62px);
   font-weight: 700;
   color: var(--white);
   line-height: 1.15;
@@ -467,3 +468,28 @@
   }
 }
 
+/* ── Hero entrance ── */
+@keyframes blogHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.blog-hero-badge { animation: blogHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.blog-hero-title { animation: blogHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.blog-hero-sub   { animation: blogHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.50s; }
+
+@keyframes blogFloat1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes blogFloat2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(14px) scale(0.97); }
+}
+.blog-hero-shape-1 { animation: blogFloat1 10s ease-in-out infinite; }
+.blog-hero-shape-2 { animation: blogFloat2 13s ease-in-out infinite; }
+
+/* ── Blog article hero entrance ── */
+.post-hero .blog-hero-badge { animation: blogHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.post-title                 { animation: blogHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.post-hero-shape-1          { animation: blogFloat1 10s ease-in-out infinite; }
+.post-hero-shape-2          { animation: blogFloat2 13s ease-in-out infinite; }

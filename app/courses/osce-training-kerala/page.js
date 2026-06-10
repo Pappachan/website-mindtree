@@ -46,13 +46,13 @@ export default function OSCEPage() {
         <div className="osce-intro-inner">
           <div className="osce-intro-grid">
 
-            <div className="osce-intro-left">
+            <div className="osce-intro-left" data-anim="from-left">
               <span className="osce-section-label">What We Do</span>
               <h2 className="osce-intro-heading">OSCE Training and Assistance for Exam Booking</h2>
               <div className="osce-accent-bar" />
             </div>
 
-            <div className="osce-intro-right">
+            <div className="osce-intro-right" data-anim="from-right" data-anim-delay="120">
               <p className="osce-intro-para">
                 Introducing our latest addition: OSCE Training and Assistance. Mindtree is here to guide nurses through the revamped structure, offering insights and preparation for success. Stay ahead with our expert assistance, ensuring you're well-prepared for the updated format of the Objective Structured Clinical Examination (OSCE).
               </p>
@@ -69,7 +69,7 @@ export default function OSCEPage() {
       <section className="osce-includes-section">
         <div className="osce-includes-inner">
 
-          <div className="osce-includes-header">
+          <div className="osce-includes-header" data-anim="up">
             <span className="osce-section-label">Overview</span>
             <h2 className="osce-includes-heading">What This Includes</h2>
             <p className="osce-includes-sub">
@@ -79,42 +79,42 @@ export default function OSCEPage() {
 
           <div className="osce-includes-grid">
 
-            <div className="osce-include-card">
+            <div className="osce-include-card" data-anim="scale-up">
               <div className="osce-include-num">1</div>
               <p>Comprehensive introduction to the revamped OSCE structure and updated exam format.</p>
             </div>
 
-            <div className="osce-include-card">
+            <div className="osce-include-card" data-anim="scale-up" data-anim-delay="60">
               <div className="osce-include-num">2</div>
               <p>Targeted skill-building sessions focused on the clinical competencies assessed in OSCE.</p>
             </div>
 
-            <div className="osce-include-card">
+            <div className="osce-include-card" data-anim="scale-up" data-anim-delay="120">
               <div className="osce-include-num">3</div>
               <p>Mock OSCE practice with real-time feedback to identify and address weak areas.</p>
             </div>
 
-            <div className="osce-include-card">
+            <div className="osce-include-card" data-anim="scale-up" data-anim-delay="180">
               <div className="osce-include-num">4</div>
               <p>Guidance through the exam booking process from registration to confirmation.</p>
             </div>
 
-            <div className="osce-include-card">
+            <div className="osce-include-card" data-anim="scale-up" data-anim-delay="240">
               <div className="osce-include-num">5</div>
               <p>Up-to-date insights into OSCE syllabi, station formats, and marking criteria.</p>
             </div>
 
-            <div className="osce-include-card">
+            <div className="osce-include-card" data-anim="scale-up" data-anim-delay="300">
               <div className="osce-include-num">6</div>
               <p>One-on-one mentoring sessions via Google Meet or Zoom at your convenience.</p>
             </div>
 
-            <div className="osce-include-card">
+            <div className="osce-include-card" data-anim="scale-up" data-anim-delay="360">
               <div className="osce-include-num">7</div>
               <p>Support with documentation and prerequisites required for OSCE registration.</p>
             </div>
 
-            <div className="osce-include-card">
+            <div className="osce-include-card" data-anim="scale-up" data-anim-delay="420">
               <div className="osce-include-num">8</div>
               <p>Post-exam guidance and next steps for your nursing registration journey in New Zealand.</p>
             </div>
@@ -128,7 +128,7 @@ export default function OSCEPage() {
         <div className="osce-trial__inner">
 
           {/* Left — content */}
-          <div className="osce-trial__content">
+          <div className="osce-trial__content" data-anim="from-left">
             <span className="osce-trial__badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
@@ -197,7 +197,7 @@ export default function OSCEPage() {
           </div>
 
           {/* Right — image */}
-          <div className="osce-trial__visual">
+          <div className="osce-trial__visual" data-anim="from-right" data-anim-delay="100">
             <div className="osce-trial__img-glow" />
             <div className="osce-trial__img-wrap">
               <img
@@ -228,7 +228,7 @@ export default function OSCEPage() {
         <div className="osce-docs-inner">
           <div className="osce-docs-grid">
 
-            <div className="osce-docs-left">
+            <div className="osce-docs-left" data-anim="from-left">
               <span className="osce-section-label light">Key Details</span>
               <h2 className="osce-docs-heading">What to Expect in the OSCE</h2>
               <p className="osce-docs-sub">
@@ -263,7 +263,7 @@ export default function OSCEPage() {
               </div>
             </div>
 
-            <div className="osce-docs-right">
+            <div className="osce-docs-right" data-anim="from-right" data-anim-delay="120">
               <div className="osce-links-card">
                 <h3 className="osce-links-title">Official OSCE Resources</h3>
 
@@ -321,11 +321,11 @@ export default function OSCEPage() {
       <section className="osce-cta">
         <div className="osce-cta-shape" />
         <div className="osce-cta-inner">
-          <h2 className="osce-cta-heading">Ready to Ace Your OSCE?</h2>
-          <p className="osce-cta-sub">
+          <h2 className="osce-cta-heading" data-anim="up">Ready to Ace Your OSCE?</h2>
+          <p className="osce-cta-sub" data-anim="up" data-anim-delay="130">
             Let our expert team guide you through every stage — from preparation to booking — with confidence.
           </p>
-          <Link href="/contact" className="osce-cta-btn">Get in Touch</Link>
+          <Link href="/contact" className="osce-cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
         </div>
       </section>
 

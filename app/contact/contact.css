@@ -67,9 +67,9 @@
 }
 .ct-hero__title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(38px, 7vw, 68px); font-weight: 700;
-  color: var(--white); line-height: 1.1;
-  letter-spacing: -0.03em; margin: 0 0 20px;
+  font-size: clamp(36px, 6vw, 62px); font-weight: 700;
+  color: var(--white); line-height: 1.15;
+  letter-spacing: -0.02em; margin: 0 0 20px;
 }
 .ct-hero__em { color: var(--c2); font-style: italic; }
 .ct-hero__sub {
@@ -375,3 +375,23 @@
   .ct-dept__grid { grid-template-columns: 1fr; }
   .ct-dept__num { font-size: 11px; }
 }
+
+/* ── Hero entrance ── */
+@keyframes ctHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ct-hero__badge { animation: ctHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.ct-hero__title { animation: ctHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.ct-hero__sub   { animation: ctHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.50s; }
+
+@keyframes ctFloat1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes ctFloat2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(14px) scale(0.97); }
+}
+.ct-hero__shape-1 { animation: ctFloat1 10s ease-in-out infinite; }
+.ct-hero__shape-2 { animation: ctFloat2 13s ease-in-out infinite; }

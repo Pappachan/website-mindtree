@@ -426,3 +426,24 @@
   .ausreg-why-card { flex-direction: column; gap: 14px; }
   .ft-breadcrumb { padding: 13px 20px; }
 }
+
+/* ── Hero entrance ── */
+@keyframes ausregHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ausreg-hero-badge   { animation: ausregHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.ausreg-hero-title   { animation: ausregHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.ausreg-hero-divider { animation: ausregHeroIn 0.60s cubic-bezier(0.4,0,0.2,1) both 0.44s; }
+.ausreg-hero-sub     { animation: ausregHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.56s; }
+
+@keyframes ausregFloat1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes ausregFloat2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(14px) scale(0.97); }
+}
+.ausreg-hero-shape-1 { animation: ausregFloat1 10s ease-in-out infinite; }
+.ausreg-hero-shape-2 { animation: ausregFloat2 13s ease-in-out infinite; }

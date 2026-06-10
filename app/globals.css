@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 @import "tailwindcss";
 
+/* ── Global brand typography tokens ── */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --font-display-global: 'Playfair Display', Georgia, serif;
+  --font-body-global:    'DM Sans', system-ui, sans-serif;
+
+  /* Shared heading scale */
+  --text-hero:    clamp(36px, 6vw, 62px);    /* page hero h1  */
+  --text-section: clamp(26px, 4vw, 42px);    /* section h2    */
+  --text-sub-hero: clamp(28px, 5vw, 52px);   /* article/sub-page h1 */
+
+  /* Shared heading style */
+  --heading-weight:   700;
+  --heading-tracking: -0.02em;
+  --heading-leading:  1.15;
 }
 
 @theme inline {
@@ -12,18 +27,28 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html { scroll-behavior: smooth; }
+
+/* ── Scroll-triggered animations (global) ── */
+[data-anim] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-anim="from-left"]  { transform: translateX(-40px); }
+[data-anim="from-right"] { transform: translateX(40px); }
+[data-anim="scale-up"]   { transform: translateY(24px) scale(0.95); }
+[data-anim].in-view      { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-anim] { opacity: 1; transform: none; transition: none; }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    width: 100%;
-  
+  font-family: var(--font-body-global);
+  margin: 0;
+  width: 100%;
 }

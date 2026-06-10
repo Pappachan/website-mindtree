@@ -94,8 +94,8 @@ export default function VisaPage() {
 
       {/* ABOUT */}
       <section className="vs-section">
-        <p className="vs-label">About the Service</p>
-        <h2 className="vs-title">Welcome to Our Visa Department</h2>
+        <p className="vs-label" data-anim="up">About the Service</p>
+        <h2 className="vs-title" data-anim="up" data-anim-delay="80">Welcome to Our Visa Department</h2>
         <div className="vs-about-card vs-fadein">
           <p>
             At our Visa Department, we believe that every international journey begins with the right guidance and trusted support. Our dedicated team is committed to making your visa process simple, transparent, and stress-free from start to finish.
@@ -111,9 +111,9 @@ export default function VisaPage() {
 
       {/* PROCESS STEPS */}
       <section className="vs-section vs-section--steps">
-        <p className="vs-label">Our Process</p>
-        <h2 className="vs-title">How We Handle Your Visa Application</h2>
-        <p className="vs-sub">A transparent, guided journey from your first enquiry to visa approval.</p>
+        <p className="vs-label" data-anim="up">Our Process</p>
+        <h2 className="vs-title" data-anim="up" data-anim-delay="80">How We Handle Your Visa Application</h2>
+        <p className="vs-sub" data-anim="up" data-anim-delay="160">A transparent, guided journey from your first enquiry to visa approval.</p>
 
         <div className="vs-steps">
           {steps.map((s) => (
@@ -214,8 +214,8 @@ export default function VisaPage() {
 
       {/* TRUST CARDS */}
       <section className="vs-section vs-section--trust">
-        <p className="vs-label">Why Choose Us</p>
-        <h2 className="vs-title">Our Commitment to You</h2>
+        <p className="vs-label" data-anim="up">Why Choose Us</p>
+        <h2 className="vs-title" data-anim="up" data-anim-delay="80">Our Commitment to You</h2>
         <div className="vs-trust-grid">
           {trustCards.map((c, i) => (
             <div className="vs-trust-card vs-fadein" key={c.title} style={{ animationDelay: `${i * 0.1}s` }}>

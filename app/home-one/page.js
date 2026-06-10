@@ -119,7 +119,7 @@ export default function HomeOne() {
 
       {/* ══════ SECTION 2 — PATHWAYS (blue) ══════ */}
       <section className="hm-pathways">
-        <div className="hm-section-head">
+        <div className="hm-section-head" data-anim="up">
           <span className="hm-eyebrow hm-eyebrow--gold">What We Offer</span>
           <h2 className="hm-section-h2 hm-section-h2--light">Expert Solutions For Every Step Of Your Nursing Path</h2>
         </div>
@@ -151,7 +151,7 @@ export default function HomeOne() {
         <div className="hm-app__blob hm-app__blob--1" />
         <div className="hm-app__blob hm-app__blob--2" />
         <div className="hm-app__inner">
-          <div className="hm-app__text">
+          <div className="hm-app__text" data-anim="from-left">
             <span className="hm-eyebrow">Available Now</span>
             <h2 className="hm-app__heading">Explore Our App</h2>
             <p className="hm-app__sub">Access mock tests, live classes, study materials, and track your exam progress — all from your phone. Available on iOS and Android.</p>
@@ -178,7 +178,7 @@ export default function HomeOne() {
               </a>
             </div>
           </div>
-          <div className="hm-app__visual">
+          <div className="hm-app__visual" data-anim="from-right" data-anim-delay="100">
             <div className="hm-app__glow" />
             <div className="hm-app__phone-video">
               <div className="hm-app__notch" />
@@ -196,7 +196,7 @@ export default function HomeOne() {
 
       {/* ══════ SECTION 4 — COURSES (blue) — same layout as pathways ══════ */}
       <section className="hm-courses">
-        <div className="hm-section-head">
+        <div className="hm-section-head" data-anim="up">
           <span className="hm-eyebrow hm-eyebrow--gold">Learn With Us</span>
           <h2 className="hm-section-h2 hm-section-h2--light">Our Courses</h2>
           <p className="hm-section-sub hm-section-sub--light">Expert-led programmes designed to get you registered and working in New Zealand as fast as possible.</p>
@@ -227,7 +227,7 @@ export default function HomeOne() {
       <section className="hm-gallery-preview">
         <div className="hm-gp-blob" />
         <div className="hm-gp-inner">
-          <div className="hm-section-head">
+          <div className="hm-section-head" data-anim="up">
             <span className="hm-eyebrow">Our Moments</span>
             <h2 className="hm-section-h2">Gallery</h2>
             <p className="hm-section-sub">A glimpse into our work, our team, and the lives we touch every day.</p>
@@ -289,7 +289,7 @@ export default function HomeOne() {
       <section className="hm-testi-preview">
         <div className="hm-tp-blob" />
         <div className="hm-tp-inner">
-          <div className="hm-section-head">
+          <div className="hm-section-head" data-anim="up">
             <span className="hm-eyebrow hm-eyebrow--light">Voices of Trust</span>
             <h2 className="hm-section-h2 hm-section-h2--light">What Our Clients Say</h2>
             <p className="hm-section-sub hm-section-sub--light">Real words from the families and patients who trusted us with what matters most.</p>
@@ -328,12 +328,12 @@ export default function HomeOne() {
       {/* ══════ SECTION 7 — BOTTOM CTA (white) ══════ */}
       <section className="hm-bottom-cta">
         <div className="hm-bottom-cta__inner">
-          <div className="hm-bottom-cta__text">
+          <div className="hm-bottom-cta__text" data-anim="up">
             <span className="hm-eyebrow">Get In Touch</span>
             <h2 className="hm-bottom-cta__title">Ready to Start Your Journey?</h2>
             <p className="hm-bottom-cta__sub">Our team is here to answer your questions and guide you through every step of the process.</p>
           </div>
-          <div className="hm-bottom-cta__actions">
+          <div className="hm-bottom-cta__actions" data-anim="up" data-anim-delay="130">
             <a href="tel:919778286707" className="hm-cta-contact-btn hm-cta-contact-btn--call">
               <span className="hm-cta-contact-btn__icon">📞</span>
               <span className="hm-cta-contact-btn__text">

@@ -230,19 +230,11 @@
   gap: 16px;
 }
 
-/* fade-up animation on scroll */
-@keyframes oetFadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
 .oet-include-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 24px;
-  opacity: 0;
-  animation: oetFadeUp 0.5s ease forwards;
   transition: background var(--ease), border-color var(--ease), transform var(--ease), box-shadow var(--ease);
 }
 
@@ -341,6 +333,41 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(13,36,64,0.35);
 }
+
+/* ─────────────────────────────
+   ANIMATIONS
+───────────────────────────── */
+
+/* Hero entrance — fires immediately on load */
+@keyframes oetHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.oet-hero-badge   { animation: oetHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both; animation-delay: 0.10s; }
+.oet-hero-title   { animation: oetHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both; animation-delay: 0.28s; }
+.oet-hero-divider { animation: oetHeroIn 0.60s cubic-bezier(0.4,0,0.2,1) both; animation-delay: 0.44s; }
+.oet-hero-sub     { animation: oetHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both; animation-delay: 0.56s; }
+
+/* Hero shapes — ambient float */
+@keyframes oetFloat1 {
+  0%, 100% { transform: translateY(0)   scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes oetFloat2 {
+  0%, 100% { transform: translateY(0)  scale(1); }
+  50%      { transform: translateY(15px) scale(0.96); }
+}
+.oet-hero-shape-1 { animation: oetFloat1 10s ease-in-out infinite; }
+.oet-hero-shape-2 { animation: oetFloat2 13s ease-in-out infinite; }
+
+/* CTA background shape — slow pulse */
+@keyframes oetCtaPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+  50%      { transform: translate(-50%, -50%) scale(1.22); opacity: 0.65; }
+}
+.oet-cta-shape { animation: oetCtaPulse 9s ease-in-out infinite; }
+
 
 /* ─────────────────────────────
    RESPONSIVE

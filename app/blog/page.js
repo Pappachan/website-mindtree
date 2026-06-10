@@ -42,7 +42,7 @@ export default function BlogPage() {
           <div className="blog-grid">
  
             {/* Card 1 */}
-            <Link href="/blog/the-success-stories-of-nurses-who-have-chosen-mindtree-nursing-solution-for-their-careers" className="blog-card">
+            <Link href="/blog/the-success-stories-of-nurses-who-have-chosen-mindtree-nursing-solution-for-their-careers" className="blog-card" data-anim="scale-up">
               <div className="blog-card-img-wrap">
                 <img src="/blogimg/the-success.jpg" alt="Success Stories" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">
@@ -64,7 +64,7 @@ export default function BlogPage() {
             </Link>
  
             {/* Card 2 — duplicate, change later */}
-            <Link href="/blog/why-is-mindtree-nursing-solution-the-best-choice-for-your-career" className="blog-card">
+            <Link href="/blog/why-is-mindtree-nursing-solution-the-best-choice-for-your-career" className="blog-card" data-anim="scale-up" data-anim-delay="75">
               <div className="blog-card-img-wrap">
                 <img src="/blogimg/why-is-mindtree-nursing-solution.jpg" alt="Blog Post" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">
@@ -86,7 +86,7 @@ export default function BlogPage() {
             </Link>
  
             {/* Card 3 — duplicate, change later */}
-            <Link href="/blog/what-is-mindtree-nursing-solution-and-what-it-offers " className="blog-card">
+            <Link href="/blog/what-is-mindtree-nursing-solution-and-what-it-offers " className="blog-card" data-anim="scale-up" data-anim-delay="150">
               <div className="blog-card-img-wrap">
                 <img src="/blogimg/what-is-mindtree-nursing-solution-and-what-it-offers.jpg" alt="Blog Post" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">

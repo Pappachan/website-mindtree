@@ -74,7 +74,7 @@
 }
 .ah-hero h1 {
   font-family: var(--serif);
-  font-size: clamp(30px, 5vw, 52px);
+  font-size: clamp(28px, 5vw, 52px);
   font-weight: 700;
   color: var(--white);
   line-height: 1.15;
@@ -431,3 +431,13 @@
   .ah-cta-btn           { width: 100%; }
   .ah-steps             { grid-template-columns: 1fr; }
 }
+
+/* ── Hero entrance ── */
+@keyframes ahHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ah-hero-tag    { animation: ahHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.ah-hero h1     { animation: ahHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.ah-hero > p    { animation: ahHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.44s; }
+.ah-hero-badges { animation: ahHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.58s; }

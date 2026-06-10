@@ -46,13 +46,13 @@ export default function OSCENewZealandPage() {
         <div className="oscenz-intro-inner">
           <div className="oscenz-intro-grid">
 
-            <div className="oscenz-intro-left">
+            <div className="oscenz-intro-left" data-anim="from-left">
               <span className="oscenz-section-label">What We Do</span>
               <h2 className="oscenz-intro-heading">Superior OSCE Preparation in New Zealand</h2>
               <div className="oscenz-accent-bar" />
             </div>
 
-            <div className="oscenz-intro-right">
+            <div className="oscenz-intro-right" data-anim="from-right" data-anim-delay="120">
               <p className="oscenz-intro-para">
                 At Mindtree Nursing Solutions, we bridge the global gap for nurses in India and New Zealand. As the NCNZ standards evolve, our training remains the gold standard for Internationally Qualified Nurses (IQNs). We offer specialized Auckland and Christchurch based programs designed to guarantee clinical competence and exam confidence.
               </p>
@@ -106,7 +106,7 @@ export default function OSCENewZealandPage() {
       <section className="oscenz-includes-section">
         <div className="oscenz-includes-inner">
 
-          <div className="oscenz-includes-header">
+          <div className="oscenz-includes-header" data-anim="up">
             <span className="oscenz-section-label">Overview</span>
             <h2 className="oscenz-includes-heading">What This Includes</h2>
             <p className="oscenz-includes-sub">
@@ -116,42 +116,42 @@ export default function OSCENewZealandPage() {
 
           <div className="oscenz-includes-grid">
 
-            <div className="oscenz-include-card">
+            <div className="oscenz-include-card" data-anim="scale-up">
               <div className="oscenz-include-num">1</div>
               <p>Hands-on simulation training in fully equipped NZ clinical labs in Auckland and Christchurch.</p>
             </div>
 
-            <div className="oscenz-include-card">
+            <div className="oscenz-include-card" data-anim="scale-up" data-anim-delay="60">
               <div className="oscenz-include-num">2</div>
               <p>Small batch sizes ensuring personalised attention and targeted feedback from NZ-registered mentors.</p>
             </div>
 
-            <div className="oscenz-include-card">
+            <div className="oscenz-include-card" data-anim="scale-up" data-anim-delay="120">
               <div className="oscenz-include-num">3</div>
               <p>Flexible 1-week intensive or 2-week comprehensive module options to suit your schedule.</p>
             </div>
 
-            <div className="oscenz-include-card">
+            <div className="oscenz-include-card" data-anim="scale-up" data-anim-delay="180">
               <div className="oscenz-include-num">4</div>
               <p>Dedicated accommodation facilities so you can focus entirely on training without travel stress.</p>
             </div>
 
-            <div className="oscenz-include-card">
+            <div className="oscenz-include-card" data-anim="scale-up" data-anim-delay="240">
               <div className="oscenz-include-num">5</div>
               <p>Mock OSCE sessions aligned to current NCNZ station formats and marking criteria.</p>
             </div>
 
-            <div className="oscenz-include-card">
+            <div className="oscenz-include-card" data-anim="scale-up" data-anim-delay="300">
               <div className="oscenz-include-num">6</div>
               <p>Communication skills coaching for clinical handovers, patient interactions, and documentation.</p>
             </div>
 
-            <div className="oscenz-include-card">
+            <div className="oscenz-include-card" data-anim="scale-up" data-anim-delay="360">
               <div className="oscenz-include-num">7</div>
               <p>Exam booking assistance and guidance through the NCNZ registration portal step by step.</p>
             </div>
 
-            <div className="oscenz-include-card">
+            <div className="oscenz-include-card" data-anim="scale-up" data-anim-delay="420">
               <div className="oscenz-include-num">8</div>
               <p>Post-training support and pathway guidance for your nursing career in New Zealand.</p>
             </div>
@@ -165,7 +165,7 @@ export default function OSCENewZealandPage() {
         <div className="oscenz-docs-inner">
           <div className="oscenz-docs-grid">
 
-            <div className="oscenz-docs-left">
+            <div className="oscenz-docs-left" data-anim="from-left">
               <span className="oscenz-section-label light">Training Locations</span>
               <h2 className="oscenz-docs-heading">Where We Train</h2>
               <p className="oscenz-docs-sub">
@@ -232,7 +232,7 @@ export default function OSCENewZealandPage() {
               </div>
             </div>
 
-            <div className="oscenz-docs-right">
+            <div className="oscenz-docs-right" data-anim="from-right" data-anim-delay="120">
               <div className="oscenz-links-card">
                 <h3 className="oscenz-links-title">Contact &amp; Resources</h3>
 
@@ -290,11 +290,11 @@ export default function OSCENewZealandPage() {
       <section className="oscenz-cta">
         <div className="oscenz-cta-shape" />
         <div className="oscenz-cta-inner">
-          <h2 className="oscenz-cta-heading">Ready to Train in New Zealand?</h2>
-          <p className="oscenz-cta-sub">
+          <h2 className="oscenz-cta-heading" data-anim="up">Ready to Train in New Zealand?</h2>
+          <p className="oscenz-cta-sub" data-anim="up" data-anim-delay="130">
             Join 3000+ nurses who have successfully cleared their OSCE with Mindtree's expert guidance. Enrol today and take the first step toward your New Zealand nursing career.
           </p>
-          <Link href="/contact" className="oscenz-cta-btn">Get in Touch</Link>
+          <Link href="/contact" className="oscenz-cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
         </div>
       </section>
 

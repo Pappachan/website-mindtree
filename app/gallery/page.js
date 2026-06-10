@@ -115,7 +115,7 @@ export default function GalleryPage() {
       {/* ── Photo Gallery ── */}
       <section className="section photos-section">
         <div className="container">
-          <header className="section-header">
+          <header className="section-header" data-anim="up">
             <div className="section-label">
               <span className="label-dot" />
               Photos
@@ -131,6 +131,8 @@ export default function GalleryPage() {
                 className={`photo-card${index % 3 === 0 ? " photo-card--wide" : ""}`}
                 onClick={() => setActivePhoto(img)}
                 aria-label={`View ${img.alt}`}
+                data-anim="scale-up"
+                data-anim-delay={index * 60}
               >
                 <div className="photo-card-inner">
                   <img src={img.src} alt={img.alt} className="photo-card-img" loading="lazy" />
@@ -158,7 +160,7 @@ export default function GalleryPage() {
       {/* ── Video Gallery ── */}
       <section className="section videos-section">
         <div className="container">
-          <header className="section-header">
+          <header className="section-header" data-anim="up">
             <div className="section-label">
               <span className="label-dot label-dot--accent" />
               Videos
@@ -168,8 +170,8 @@ export default function GalleryPage() {
           </header>
 
           <div className="video-grid">
-            {VIDEOS.map((video) => (
-              <div key={video.id} className="video-card">
+            {VIDEOS.map((video, idx) => (
+              <div key={video.id} className="video-card" data-anim="scale-up" data-anim-delay={idx * 60}>
                 <div className="video-thumb-wrap">
                   {video.youtubeId ? (
                     /* ── Autoplay muted loop directly in the card ── */

@@ -47,7 +47,7 @@ export default function AboutPage(){
       <section className="about-content">
         <div className="content-grid">
  
-          <div className="content-left">
+          <div className="content-left" data-anim="from-left">
             <span className="section-label">Who We Are</span>
             <h2 className="content-heading">
               Excellence &amp; Compassion,<br />Converging for Your Career
@@ -55,7 +55,7 @@ export default function AboutPage(){
             <div className="accent-bar" />
           </div>
  
-          <div className="content-right">
+          <div className="content-right" data-anim="from-right" data-anim-delay="120">
             <p className="content-para">
               Our unparalleled quality is evident in our commitment to providing top-notch
               nursing consultancy services. At Mindtree, our core mission revolves around
@@ -99,19 +99,19 @@ export default function AboutPage(){
       <section className="values-section">
         <div className="values-grid">
  
-          <div className="value-card">
+          <div className="value-card" data-anim="scale-up">
             <span className="value-icon">◈</span>
             <h3>Individualized Attention</h3>
             <p>Every nurse receives personalized guidance tailored to their unique goals.</p>
           </div>
  
-          <div className="value-card">
+          <div className="value-card" data-anim="scale-up" data-anim-delay="75">
             <span className="value-icon">◉</span>
             <h3>Continuous Improvement</h3>
             <p>Always updated with the latest exam structures, syllabi and procedures.</p>
           </div>
  
-          <div className="value-card">
+          <div className="value-card" data-anim="scale-up" data-anim-delay="150">
             <span className="value-icon">◆</span>
             <h3>Dignity &amp; Respect</h3>
             <p>We honour your aspirations and treat every dream with the care it deserves.</p>
@@ -123,14 +123,14 @@ export default function AboutPage(){
       {/* ── TEAM ── */}
       <section className="team-section">
  
-        <div className="team-header">
+        <div className="team-header" data-anim="up">
           <span className="section-label blue">Our People</span>
           <h2 className="team-heading">Meet the Team</h2>
           <p className="team-sub">Dedicated professionals united by a passion for nursing excellence.</p>
         </div>
  
         {/* CEO & Director — top row of 2 */}
-        <div className="team-top-row">
+        <div className="team-top-row" data-anim="up" data-anim-delay="110">
  
           <div className="member-card card-leader">
             <div className="member-img-wrap">
@@ -167,7 +167,7 @@ export default function AboutPage(){
         </div>
  
         {/* Rest of team — 4 per row */}
-        <div className="team-grid">
+        <div className="team-grid" data-anim="up" data-anim-delay="200">
  
           <div className="member-card">
             <div className="member-img-wrap">
@@ -398,9 +398,9 @@ export default function AboutPage(){
       <section className="about-cta">
         <div className="cta-shape" />
         <div className="cta-inner">
-          <h2 className="cta-heading">Ready to Begin Your Journey?</h2>
-          <p className="cta-sub">Partner with us and experience the Mindtree difference.</p>
-          <Link href="/contact" className="cta-btn">Get in Touch</Link>
+          <h2 className="cta-heading" data-anim="up">Ready to Begin Your Journey?</h2>
+          <p className="cta-sub" data-anim="up" data-anim-delay="130">Partner with us and experience the Mindtree difference.</p>
+          <Link href="/contact" className="cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
         </div>
       </section>
  

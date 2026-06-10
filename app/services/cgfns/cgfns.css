@@ -535,3 +535,30 @@
   .cgfns-includes-section,
   .cgfns-cta { padding: 48px 20px; }
 }
+
+/* ── Hero entrance ── */
+@keyframes cgfnsHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cgfns-hero-badge   { animation: cgfnsHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.10s; }
+.cgfns-hero-title   { animation: cgfnsHeroIn 0.75s cubic-bezier(0.4,0,0.2,1) both 0.28s; }
+.cgfns-hero-divider { animation: cgfnsHeroIn 0.60s cubic-bezier(0.4,0,0.2,1) both 0.44s; }
+.cgfns-hero-sub     { animation: cgfnsHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.56s; }
+
+@keyframes cgfnsFloat1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes cgfnsFloat2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(14px) scale(0.97); }
+}
+.cgfns-hero-shape-1 { animation: cgfnsFloat1 10s ease-in-out infinite; }
+.cgfns-hero-shape-2 { animation: cgfnsFloat2 13s ease-in-out infinite; }
+
+@keyframes cgfnsCtaPulse {
+  0%, 100% { transform: translate(-50%,-50%) scale(1);    opacity: 1; }
+  50%      { transform: translate(-50%,-50%) scale(1.22); opacity: 0.65; }
+}
+.cgfns-cta-shape { animation: cgfnsCtaPulse 9s ease-in-out infinite; }
